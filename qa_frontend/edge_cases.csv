@@ -1,3 +1,7 @@
 Edge Case ID,Module,Scenario,Input/Action,Expected Behaviour,Actual Behaviour,Status,Severity,Bug ID,Evidence
 FE-EC-001,Login,Double click Sign in,1) Fill form 2) Double-click Sign in,1 login request (button disabled while submitting),1 login request(s),Pass,N/A,N/A,admin_frontend/qa_tests/e2e/auth.spec.ts
 FE-EC-002,Login,Tenant admin uses platform login,1) Open /login 2) Enter company admin credentials,Message explains to use the workspace URL,Invalid email or password,Fail,Low,FE-BUG-033,admin_frontend/qa_tests/e2e/auth.spec.ts
+FE-EC-003,Test Wizard,Refresh mid-form,1) Type name and code 2) Reload page,Draft kept or user warned before leaving,"Typed data lost, no warning",Fail,Medium,FE-BUG-020,admin_frontend/qa_tests/e2e/test-manager.spec.ts
+FE-EC-004,Test Wizard,Open step 3 directly,1) Open /wizard/step-3 with no test created,Redirect to step 1 or clear message,1. Create 2. Settings 3. Questions 4. Publish 5. Assign 6. Certificate Test Name * Description Source body p Words:,Pass,N/A,N/A,qa_frontend/screenshots/wizard-step3-direct.png
+FE-EC-005,Test Wizard,Step 99 in URL,1) Open /wizard/step-99,Redirect to step 1 or 404 page,/w/qa-demo/test-manager/wizard/step-1 :: QA Demo Institute Dashboard Test Manager Test Category Ques,Pass,N/A,N/A,admin_frontend/qa_tests/e2e/test-manager.spec.ts
+FE-EC-006,Test Wizard,Category dropdown lists all 25 categories,1) Mock GET /categories with 25 items 2) Open Create test 3) Open Category,25 options,25 options; requests: page=1&limit=20 | page=2&limit=20,Pass,N/A,N/A,qa_frontend/screenshots/wizard-category-25.png

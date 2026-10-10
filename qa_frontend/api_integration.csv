@@ -7,3 +7,6 @@ FE-TC-021,Test Manager list,GET /tests (4 s delay),slow,Loader visible while wai
 FE-TC-022,Test Manager list,GET /tests (offline),error,"Clear ""You are offline / network error"" message",Filters 1 Reset filters Import Tests Quick Assign Delete Create Tests S.No. Test Name Start Date End Date Status,Fail,FE-BUG-034
 FE-TC-023,Test Manager list,GET /tests (mocked 401),error,Redirect to login with redirect param,/w/qa-demo/login?redirect=%2Fw%2Fqa-demo%2Ftest-manager,Pass,N/A
 FE-TC-024,Companies page,GET /super-admin/companies (mocked 500),error,Error message,Companies Manage platform companies. Create Company Request failed with status code 500,Pass,N/A
+FE-TC-028,Workspaces page,GET /workspaces,success,"List of workspaces, or an error message if loading fails",GET /workspaces -> 404; cards=0; error text shown=false,Fail,FE-BUG-014
+FE-TC-042,Import Tests dialog,POST /tests/import-qti,success,Test imported,"POST /tests/import-qti -> 404; toast """"",Fail,FE-BUG-016
+FE-TC-055,/w/:slug/test-manager/wizard/step-1 (template picker),N/A,success,"Each template card shows a placeholder, no endless spinner","16 cards, 0 spinners after 10 s; download-url calls: 2 (503)",Pass,N/A

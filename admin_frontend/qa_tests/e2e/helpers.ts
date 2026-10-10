@@ -51,6 +51,23 @@ export async function loginAdmin(page: Page) {
   await page.waitForURL(/\/dashboard/)
 }
 
+// Production build served by `vite preview` (set by run-e2e.sh). The app sends window.location.origin as the
+// workspace URL, so map the preview host back to the seeded http://localhost:5173 URL.
+export const PROD = process.env.QA_PROD_URL ?? ''
+export async function useProd(page: Page) {
+  if (!PROD) return ''
+  await page.route('**/api/v1/companies/verify-workspace', (r) => r.continue({ postData: (r.request().postData() ?? '').replace(new URL(PROD).host, 'localhost:5173') }))
+  return PROD
+}
+
+export async function loginAdminAt(page: Page, base: string) {
+  await page.goto(`${base}/w/${DEMO.slug}/login`)
+  await page.fill('#email', DEMO.email)
+  await page.fill('#password', DEMO.password)
+  await page.click('button[type=submit]')
+  await page.waitForURL(/\/dashboard/)
+}
+
 export async function loginSuper(page: Page) {
   await page.goto('/login')
   await page.fill('#email', SUPER.email)

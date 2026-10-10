@@ -1,0 +1,21 @@
+$ grep -nE "\|\| true|git reset|npm install" .github/workflows/main.yml
+31:        run: npx eslint "src/**/*.ts" || true
+113:            git reset --hard origin/develop
+116:            npm install --omit=dev --no-audit --no-fund --maxsockets=1
+123:              npm install -g pm2
+
+$ git ls-files admin_backend | grep -i env  (at base commit 8ce0b36)
+(none = no .env.example)
+
+$ head -3 README.md
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+</p>
+
+$ ls src/database/migrations; grep -n synchronize src/config/database.config.ts
+ls: cannot access 'src/database/migrations': No such file or directory
+14:  synchronize: process.env.NODE_ENV !== 'production',
+
+$ grep -n db:create package.json; ls tsconfig.scripts.json
+21:    "db:create": "ts-node --project tsconfig.scripts.json scripts/create-database.ts",
+ls: cannot access 'tsconfig.scripts.json': No such file or directory

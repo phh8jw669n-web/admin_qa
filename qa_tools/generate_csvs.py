@@ -105,10 +105,10 @@ def backend():
         ("Lint", "npx eslint 'src/**/*.ts'", "0 errors", "116 errors, 3 warnings", "Fail", "ESLint", "qa_backend/evidence/eslint.txt"),
         ("Existing tests", "npm test", "Project tests pass", "No tests found", "Fail", "no tests", "qa_backend/evidence/existing-jest.txt"),
         ("Dependency audit", "npm audit", "0 high/critical", "2 critical, 5 high, 4 moderate", "Fail", "npm audit", "qa_backend/evidence/npm-audit.json"),
-        ("Env docs", "Look for .env.example / README setup", "Documented env and setup", "No .env.example; README is NestJS template", "Fail", ".env.example", "admin_backend/README.md"),
-        ("Migrations", "ls src/database/migrations; read database.config.ts", "Versioned migrations", "No migrations folder; synchronize used", "Fail", "migrations", "admin_backend/src/config/database.config.ts"),
-        ("Scripts", "npm run db:create", "Creates DB", "tsconfig.scripts.json missing", "Fail", "db:create", "admin_backend/package.json"),
-        ("CI config", "Read .github/workflows/main.yml", "Lint/test gate merges; deploy built artifact", "Lint '|| true'; deploy runs git reset + npm install on server", "Fail", "Deploy job", "admin_backend/.github/workflows/main.yml"),
+        ("Env docs", "git ls-tree -r 8ce0b36 admin_backend | grep -i env; head -3 README.md", "Documented env and setup", "No .env.example at the base commit; README is the NestJS template", "Fail", ".env.example", "qa_backend/evidence/static-config-checks.txt"),
+        ("Migrations", "ls src/database/migrations; grep -n synchronize src/config/database.config.ts", "Versioned migrations", "No migrations folder; synchronize: NODE_ENV !== production", "Fail", "migrations", "qa_backend/evidence/static-config-checks.txt"),
+        ("Scripts", "grep -n db:create package.json; ls tsconfig.scripts.json", "Script config exists", "db:create points to tsconfig.scripts.json, which does not exist", "Fail", "db:create", "qa_backend/evidence/static-config-checks.txt"),
+        ("CI config", "grep -nE '|| true|git reset|npm install' .github/workflows/main.yml", "Lint/test gate merges; deploy a built artifact", "Lint ends with '|| true' (line 31); deploy runs git reset --hard + npm install on the server (lines 113-116)", "Fail", "Deploy job", "qa_backend/evidence/static-config-checks.txt"),
         ("Seed", "npm run seed:super-admin", "Super admin created", "Created; idempotent", "Pass", "", "qa_backend/code_changes_log.csv"),
         ("Health", "GET /api/v1/health after start", "DB + Redis up", "Both up", "Pass", "", "curl"),
     ]
@@ -130,6 +130,9 @@ def backend():
         bid = ids.next("BE-BUG")
         b["id"] = bid
         rel = [key_to_id[k] for k in b.get("keys", []) if k in key_to_id]
+        for r in rows:
+            if r["key"] in b.get("keys", []) and r["status"] == "Pass":
+                PROBLEMS.append(f"backend bug '{b['title'][:50]}' linked to passing test {r['key']}")
         missing = [k for k in b.get("keys", []) if k not in key_to_id]
         if missing:
             PROBLEMS.append(f"backend bug '{b['title']}' refers to unknown keys {missing}")
@@ -200,8 +203,11 @@ def backend():
             continue
         fix = "; ".join(bug_by_id[b]["fix"] for b in dict.fromkeys(test_to_bugs.get(r["_id"], []))) or "None needed"
         err_rows.append([r["_id"], r["endpoint"], r["scenario"], r["expected"], f"{r['actualStatus']} {r['actual']}", r.get("leaks", "No"), r["status"], fix])
+    err_review = []
     for mod, scen, exp, act, leaks, status, fix in BF.ERR_AUTHORED:
-        err_rows.append([ids.next("BE-ERR"), mod, scen, exp, act, leaks, status, fix])
+        eid = ids.next("BE-ERR")
+        err_review.append((eid, status))
+        err_rows.append([eid, mod, scen, exp, act, leaks, status, fix])
     write(OUT_BE, "error_handling_logging.csv", ["Test ID", "Endpoint/Module", "Error Scenario", "Expected Handling", "Actual Handling", "Leaks Internal Info (Yes/No)", "Status", "Suggested Fix"], err_rows)
 
     # ---- simulations
@@ -295,7 +301,7 @@ def backend():
         ("Auth and permissions", [(r["_id"], r["status"]) for r in rows if r["_bucket"] == "auth"], "Every endpoint rejects no-login and wrong-role calls; no cross-tenant (IDOR) leak found"),
         ("Validation", [(r["_id"], r["status"]) for r in rows if r["_bucket"] == "validation"], "DTOs catch types and formats; business rules (dates, marks, passwords) and string-to-boolean are weak"),
         ("Edge cases", [(r["_id"], r["status"]) for r in rows if r["_bucket"] == "edge"], "Case-insensitive duplicates, multi-day times, time zone, parallel creates fail"),
-        ("Error handling", [(r["_id"], r["status"]) for r in rows if r["_bucket"] == "error"], "Consistent JSON errors; numeric overflow and bad dates still give 500"),
+        ("Error handling", [(r["_id"], r["status"]) for r in rows if r["_bucket"] == "error"] + err_review, "Consistent JSON errors; numeric overflow and bad dates still give 500; logging items are code review only (Not Run)"),
         ("Business flow simulations", [(r["_id"], r["status"]) for r in rows if r["_bucket"] == "sim"], "Onboarding, exam day and concurrent editing flows have blocking gaps"),
         ("Static checks", [(s["id"], s["status"]) for s in static_rows], "Install, lint, type check, audit and CI need work"),
     ]
@@ -303,7 +309,8 @@ def backend():
         st, sev = counts(rr)
         summary.append([name, len(rr), st["Pass"], st["Fail"], st["Blocked"], st["Not Run"], sev["Critical"], sev["High"], sev["Medium"], sev["Low"], take])
     summary.append(["Load tests (autocannon)", len(load), sum(1 for l in load if l["errorRate"] == 0), sum(1 for l in load if l["errorRate"] > 0), 0, 0, 0, 0, 0, 0, "0% errors at 10 connections; big lists 130-180 ms avg"])
-    all_rows = [(r["_id"], r["status"]) for r in rows] + [(s["id"], s["status"]) for s in static_rows]
+    load_rows = [(f"load-{i}", "Pass" if l["errorRate"] == 0 else "Fail") for i, l in enumerate(load)]
+    all_rows = [(r["_id"], r["status"]) for r in rows] + [(s["id"], s["status"]) for s in static_rows] + err_review + load_rows
     st = Counter(s for _, s in all_rows)
     sev_all = Counter(b["severity"] for b in bug_defs)
     summary.append(["ALL TESTS", len(all_rows), st["Pass"], st["Fail"], st["Blocked"], st["Not Run"], sev_all["Critical"], sev_all["High"], sev_all["Medium"], sev_all["Low"], f"{len(bug_defs)} bugs in bugs.csv; fix the Critical/High list first"])
@@ -426,9 +433,9 @@ def frontend(be):
         ("Format", "npm run format:check", "Clean", "31 files need formatting", "Fail", "Prettier", "qa_frontend/evidence/prettier-check.txt"),
         ("Build", "npx vite build", "Build, chunks < 500 KB", "Built; 2 chunks > 1.1 MB (warning)", "Fail", "bundle", "qa_frontend/evidence/vite-build.txt"),
         ("Dependency audit", "npm audit", "0 high", "2 high (axios, source-map-js)", "Fail", "npm audit", "qa_frontend/evidence/npm-audit.json"),
-        ("Existing tests", "Look for test script/files", "Tests exist", "None", "Fail", "No tests", "admin_frontend/package.json"),
-        ("Config review", "Read vite.config.ts, netlify.toml, _redirects, .gitignore", "HTTPS API from env; .env ignored", "Hard-coded http IP; .env committed", "Fail", "hard-coded public IP", "admin_frontend/vite.config.ts"),
-        ("Secrets in git", "git ls-files admin_frontend/.env", ".env not tracked", ".env is tracked (holds only VITE_API_BASE_URL and VITE_USE_MOCK_API today)", "Fail", ".env is committed", "admin_frontend/.gitignore"),
+        ("Existing tests", "grep -n '\"test\"' package.json; git ls-files | grep -E '.(test|spec).tsx?$'", "Tests exist", "No test script and no test files", "Fail", "No tests", "qa_frontend/evidence/static-config-checks.txt"),
+        ("Config review", "grep -n 35.154.32.169 vite.config.ts netlify.toml public/_redirects", "HTTPS API URL from env", "Hard-coded http://35.154.32.169:3000 in all three files", "Fail", "hard-coded public IP", "qa_frontend/evidence/static-config-checks.txt"),
+        ("Secrets in git", "git ls-files admin_frontend/.env", ".env not tracked", ".env is tracked (holds only VITE_API_BASE_URL and VITE_USE_MOCK_API today)", "Fail", ".env is committed", "qa_frontend/evidence/static-config-checks.txt"),
         ("Cross-browser", "Playwright projects firefox/webkit", "Run on Firefox and WebKit", "Browsers not installed in container (only Chromium 141)", "Blocked", "", "admin_frontend/qa_tests/playwright.config.ts"),
         ("Lighthouse", "lighthouse on production build", "Scores recorded", "Not run: tool not installed in the container; bundle size and timings measured instead", "Not Run", "", "qa_frontend/performance.csv"),
     ]
@@ -444,10 +451,13 @@ def frontend(be):
         bid = ids.next("FE-BUG")
         b["id"] = bid
         rel = []
+        status_of = {r["key"]: r["status"] for r in allrows}
         for k in b.get("keys", []):
             if k in key_to_id:
                 rel.append(key_to_id[k])
                 test_to_bugs[key_to_id[k]].append(bid)
+                if status_of.get(k) == "Pass":
+                    PROBLEMS.append(f"frontend bug '{b['title'][:50]}' linked to passing test {k}")
             else:
                 PROBLEMS.append(f"frontend bug '{b['title'][:50]}' unknown key {k}")
         for k in b.get("be_keys", []):
@@ -577,7 +587,6 @@ def frontend(be):
         size = float(raw_kb.replace(",", ""))
         perf.append([ids.next("FE-PERF"), f"Bundle: {name}", "Production asset size (vite build)", f"{raw_kb} kB ({gz_kb} kB gzip)", "< 500 kB raw / < 170 kB gzip per chunk", "Too large" if size > 500 else "OK", "Code-split routes and lazy-load CKEditor" if size > 500 else "None needed", "P2" if size > 500 else "P3"])
     perf.append([ids.next("FE-PERF"), "Test Manager list", "Re-renders", "Render loop 'Maximum update depth exceeded' while loading", "No render loop", "Wasted CPU and possible frozen tab", "Stable empty array; selection effect only on change", "P1"])
-    perf.append([ids.next("FE-PERF"), "Template picker", "Requests", "1 POST /files/download-url per template (16+) on every open, expiresIn 86400", "Batched or cached URLs", "Many requests", "Cache signed URLs; one batch endpoint", "P3"])
     perf.append([ids.next("FE-PERF"), "All pages (Lighthouse)", "Lighthouse score", "Not Run (tool not available in container)", "Performance >= 80", "N/A", "Run Lighthouse in CI on the production build", "P3"])
     write(OUT_FE, "performance.csv", ["Perf ID", "Page/Area", "Metric", "Measured Value", "Target Value", "Problem", "Suggested Fix", "Priority"], perf)
 
@@ -648,7 +657,7 @@ def frontend(be):
         ("Accessibility (axe + keyboard)", grp("a11y"), f"{len(a11y_pages)} pages scanned with axe; icon buttons and contrast are the main issues"),
         ("Responsive (Chromium)", grp("resp"), "Desktop OK; 360/768 px layouts squeeze content behind a fixed sidebar"),
         ("Performance", grp("perf"), "Test list waits for 50 requests; 1.2 MB main bundle"),
-        ("User simulations", grp("sim"), "New admin, power admin and mobile users get stuck"),
+        ("User simulations", grp("sim"), "New admin, power admin, careless, mobile and keyboard users get stuck; slow network passes on the production build"),
     ]:
         st, sev = counts(rr)
         summary.append([name, len(rr), st["Pass"], st["Fail"], st["Blocked"], st["Not Run"], sev["Critical"], sev["High"], sev["Medium"], sev["Low"], take])
@@ -682,7 +691,7 @@ BE_INDEX = [
     ("bugs.csv", "All backend bugs with steps, expected/actual, severity, related test ids and fix."),
     ("code_changes_log.csv", "Every file changed or added during QA and why."),
     ("static_checks.csv", "Extra: install, build, type check, lint, audit, migrations, CI config checks that were executed."),
-    ("evidence/", "Extra: raw output of eslint, tsc, npm audit, npm outdated and the project's own test command."),
+    ("evidence/", "Extra: raw output of eslint, tsc, npm audit, npm outdated, the project's own test command and the config greps (static-config-checks.txt)."),
 ]
 FE_INDEX = [
     ("00_summary.csv", "Totals per test category: passed, failed, blocked, not run, bugs by severity."),
@@ -703,7 +712,7 @@ FE_INDEX = [
     ("code_changes_log.csv", "Every file changed or added during QA and why."),
     ("frontend_backend_map.csv", "Extra: every API the frontend calls and whether the backend has it."),
     ("screenshots/", "Extra: screenshots referenced from the CSVs."),
-    ("evidence/", "Extra: raw output of oxlint, tsc, vite build, prettier, npm audit and npm outdated."),
+    ("evidence/", "Extra: raw output of oxlint, tsc, vite build, prettier, npm audit, npm outdated and the config greps (static-config-checks.txt)."),
 ]
 
 

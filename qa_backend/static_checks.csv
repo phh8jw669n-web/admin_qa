@@ -5,9 +5,9 @@ BE-TC-1288,Type check,npx tsc --noEmit -p tsconfig.json,0 errors,1 error TS4053 
 BE-TC-1289,Lint,npx eslint 'src/**/*.ts',0 errors,"116 errors, 3 warnings",Fail,BE-BUG-059,qa_backend/evidence/eslint.txt
 BE-TC-1290,Existing tests,npm test,Project tests pass,No tests found,Fail,BE-BUG-039,qa_backend/evidence/existing-jest.txt
 BE-TC-1291,Dependency audit,npm audit,0 high/critical,"2 critical, 5 high, 4 moderate",Fail,BE-BUG-014,qa_backend/evidence/npm-audit.json
-BE-TC-1292,Env docs,Look for .env.example / README setup,Documented env and setup,No .env.example; README is NestJS template,Fail,BE-BUG-038,admin_backend/README.md
-BE-TC-1293,Migrations,ls src/database/migrations; read database.config.ts,Versioned migrations,No migrations folder; synchronize used,Fail,BE-BUG-013,admin_backend/src/config/database.config.ts
-BE-TC-1294,Scripts,npm run db:create,Creates DB,tsconfig.scripts.json missing,Fail,BE-BUG-058,admin_backend/package.json
-BE-TC-1295,CI config,Read .github/workflows/main.yml,Lint/test gate merges; deploy built artifact,Lint '|| true'; deploy runs git reset + npm install on server,Fail,BE-BUG-015,admin_backend/.github/workflows/main.yml
+BE-TC-1292,Env docs,git ls-tree -r 8ce0b36 admin_backend | grep -i env; head -3 README.md,Documented env and setup,No .env.example at the base commit; README is the NestJS template,Fail,BE-BUG-038,qa_backend/evidence/static-config-checks.txt
+BE-TC-1293,Migrations,ls src/database/migrations; grep -n synchronize src/config/database.config.ts,Versioned migrations,No migrations folder; synchronize: NODE_ENV !== production,Fail,BE-BUG-013,qa_backend/evidence/static-config-checks.txt
+BE-TC-1294,Scripts,grep -n db:create package.json; ls tsconfig.scripts.json,Script config exists,"db:create points to tsconfig.scripts.json, which does not exist",Fail,BE-BUG-058,qa_backend/evidence/static-config-checks.txt
+BE-TC-1295,CI config,grep -nE '|| true|git reset|npm install' .github/workflows/main.yml,Lint/test gate merges; deploy a built artifact,Lint ends with '|| true' (line 31); deploy runs git reset --hard + npm install on the server (lines 113-116),Fail,BE-BUG-015,qa_backend/evidence/static-config-checks.txt
 BE-TC-1296,Seed,npm run seed:super-admin,Super admin created,Created; idempotent,Pass,N/A,qa_backend/code_changes_log.csv
 BE-TC-1297,Health,GET /api/v1/health after start,DB + Redis up,Both up,Pass,N/A,curl

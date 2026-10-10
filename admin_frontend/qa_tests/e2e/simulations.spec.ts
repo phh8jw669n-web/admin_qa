@@ -1,5 +1,5 @@
 import { expect, test, type Page } from '@playwright/test'
-import { DEMO, flush, loginAdmin, rec, shot, toastText, watch, WS } from './helpers'
+import { DEMO, flush, loginAdmin, rec, shot, toastText, useProd, watch, WS } from './helpers'
 
 const EV = 'admin_frontend/qa_tests/e2e/simulations.spec.ts'
 test.afterAll(() => flush('simulations'))
@@ -33,10 +33,13 @@ test('New admin: first login and first test', async ({ page }) => {
   const s: Step[] = []
   await loginAdmin(page)
   s.push({ name: 'Logs in', ok: true, note: 'Dashboard opens' })
-  const dash = await page.locator('main').innerText()
-  s.push({ name: 'Reads dashboard numbers', ok: /1,200/.test(dash), note: 'Shows 842 candidates / 128 tests (mock), real data is 1,200 / 1,101' })
-  await page.getByRole('link', { name: 'Test', exact: true }).click()
-  await page.getByRole('button', { name: /create tests/i }).click()
+  await page.locator('main h2').first().waitFor({ timeout: 30000 }).catch(() => undefined)
+  const dash = (await page.locator('main').innerText()).replace(/\s+/g, ' ')
+  s.push({ name: 'Reads dashboard numbers', ok: /1,?200/.test(dash), note: `Dashboard shows "${dash.slice(0, 90)}"; real data is 1,200 candidates / 1,101 tests` })
+  const testLink = page.getByRole('link', { name: 'Test', exact: true })
+  if (!(await testLink.isVisible())) await page.getByText('Test Manager', { exact: true }).click()
+  await testLink.click()
+  await page.getByRole('link', { name: /create tests/i }).click()
   await page.locator('#test-name').waitFor()
   s.push({ name: 'Opens Create Tests', ok: true, note: 'Wizard step 1' })
   await fillCreate(page)
@@ -104,7 +107,7 @@ test('Careless user: double click Next and Back mid-wizard', async ({ page }) =>
   await page.waitForTimeout(1500)
   const name = await page.locator('#test-name').inputValue().catch(() => '')
   s.push({ name: 'Presses Forward and expects data kept', ok: Boolean(name), note: name ? `Name kept "${name}"` : 'Form empty' })
-  sim('sim.fe.careless', 'Careless user', 'Create a test with double clicks and Back', s, 'Button disables during save', 'Depends on wizard state; see steps', 'Medium', 'Disable Next while saving; keep draft on Back/Forward')
+  sim('sim.fe.careless', 'Careless user', 'Create a test with double clicks and Back', s, 'Backend rejects the duplicate test code, so only one test is saved', 'Double click sends a second create request; Back then Forward empties the form', 'Medium', 'Disable Next while the form is submitting; keep the draft on Back/Forward')
 })
 
 test('Malicious user: XSS in test name and token theft', async ({ page }) => {
@@ -129,12 +132,15 @@ test('Malicious user: XSS in test name and token theft', async ({ page }) => {
 })
 
 test('Slow-network user: login on Slow 3G', async ({ page, context }) => {
+  test.setTimeout(300000)
   const s: Step[] = []
   const cdp = await context.newCDPSession(page)
   await cdp.send('Network.enable')
   await cdp.send('Network.emulateNetworkConditions', { offline: false, latency: 400, downloadThroughput: (400 * 1024) / 8, uploadThroughput: (400 * 1024) / 8 })
+  // production build (vite preview) when QA_PROD_URL is set; dev server ships ~19 MB of unbundled modules
+  const base = await useProd(page)
   const t0 = Date.now()
-  await page.goto(WS('/login'), { timeout: 85000 })
+  await page.goto(`${base}${WS('/login')}`, { timeout: 85000, waitUntil: 'commit' })
   const loaded = await page.locator('#email').waitFor({ timeout: 85000 }).then(() => true).catch(() => false)
   s.push({ name: 'Opens login page', ok: loaded && Date.now() - t0 < 15000, note: `${Date.now() - t0} ms` })
   if (loaded) {
@@ -148,7 +154,7 @@ test('Slow-network user: login on Slow 3G', async ({ page, context }) => {
     s.push({ name: 'Reaches dashboard', ok: /dashboard/.test(page.url()), note: `${Date.now() - t1} ms` })
   }
   await shot(page, 'sim-slow-network')
-  sim('sim.fe.slow-network', 'Slow-network user', 'Log in on a slow connection', s, 'Sign in button shows progress', 'Dev build loads hundreds of modules; production bundle is 1.25 MB + 1.16 MB JS', 'Medium', 'Code-split CKEditor and routes; lazy load pages')
+  sim('sim.fe.slow-network', 'Slow-network user', 'Log in on a slow connection', s, 'Sign in button shows progress', `Login form waits for the whole JS bundle (${base ? 'production build' : 'dev server'}); main chunk 1.25 MB, CKEditor chunk 1.17 MB`, 'Medium', 'Code-split CKEditor and routes; lazy load pages')
 })
 
 test('Mobile user: login and navigate at 360px', async ({ page }) => {
@@ -156,6 +162,8 @@ test('Mobile user: login and navigate at 360px', async ({ page }) => {
   await page.setViewportSize({ width: 360, height: 760 })
   await loginAdmin(page)
   s.push({ name: 'Logs in on phone', ok: true, note: 'Login form fits' })
+  await page.locator('main').waitFor({ timeout: 30000 })
+  await page.waitForTimeout(1000)
   const m = await page.evaluate(() => ({ main: Math.round(document.querySelector('main')!.getBoundingClientRect().width), overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth }))
   s.push({ name: 'Reads dashboard', ok: m.main > 300 && m.overflow <= 2, note: `content width ${m.main}px, sideways scroll ${m.overflow}px` })
   await page.goto(WS('/test-manager'))

@@ -52,7 +52,7 @@ BUGS = [
          severity="High", priority="P2", keys=["tcm.move-test"],
          file=f"{BE}/modules/test-candidate-mappings/test-candidate-mappings.service.ts (update)",
          fix="Load the mapping without relations before merge, or set the relation objects (test/candidate/group) instead of only the id columns"),
-    dict(module="Candidate Auth", title="Exam date uses UTC, so candidates are refused after 18:30 UTC (00:00-05:30 IST)",
+    dict(module="Candidate Auth", title="Exam-day login checks the UTC date, so candidates mapped for today are refused from 00:00 to 05:30 IST",
          steps="1) Map candidate to centre for the Indian date (e.g. 11 Oct) 2) Candidate logs in at 01:00 IST (still 10 Oct in UTC)",
          expected="Login allowed on the exam date at the centre", actual="403 You are not mapped to this centre for this date",
          severity="High", priority="P2", keys=["cand.login.timezone"],
@@ -332,14 +332,12 @@ PERF_PROBLEMS = {
 
 # ---------------------------------------------------------------- error handling & logging authored rows
 ERR_AUTHORED = [
-    ("Global", "Unhandled exception", "Generic 500, details only in server log", "ApiExceptionFilter logs message+stack and returns 'Something went wrong. Please try again.'", "No", "Pass", "Keep; add request id to the response and log"),
-    ("Global", "Postgres numeric overflow (22003) and invalid date (22008)", "400 with field", "500 (not mapped in QueryFailedFilter)", "No", "Fail", "Map 22003/22008/22P02 to 400"),
-    ("Global", "Validation error format", "Same shape everywhere", "Validation errors use 'errors' array, others use 'message' string; clients must handle both", "No", "Pass", "Document the envelope; consider always sending message + errors"),
-    ("Global", "Malformed JSON", "400 without parser internals", "400 with JSON.parse message (position) - harmless", "No", "Pass", "Return 'Invalid JSON body'"),
-    ("Logging", "Login success/failure, delete, permission/password change", "Audit entries with who/when/what", "Nothing logged except 5xx errors", "No", "Fail", "Add audit logging (BE-SEC)"),
-    ("Logging", "Secrets in logs", "Passwords/tokens never logged", "No request body logging found; S3 errors log message only", "No", "Pass", "Keep"),
-    ("Logging", "Correlation", "Request id in logs", "No request id; logs cannot be tied to a user call", "No", "Fail", "Add a request-id middleware and include it in logs and error responses"),
-    ("Redis down", "Redis unavailable", "API keeps working without cache", "Cache helpers catch errors and fall back to DB; lockout uses Redis directly and would throw 500", "No", "Not Run", "Wrap lockout Redis calls in try/catch with in-memory fallback (code review; Redis outage not simulated)"),
+    # Found by reading the code only, so Status is "Not Run". Executed error checks are in qa_tests/specs/08 and the edge specs.
+    ("Global", "Validation error format", "Same shape everywhere", "Code review only: validation errors use an 'errors' array, other errors a 'message' string; clients must handle both", "No", "Not Run", "Document the envelope; always send message plus errors"),
+    ("Logging", "Login success/failure, delete, permission/password change", "Audit entries with who/when/what", "Code review only: nothing is logged except 5xx errors (ApiExceptionFilter)", "No", "Not Run", "Add audit logging for logins, deletes and password/role changes"),
+    ("Logging", "Secrets in logs", "Passwords/tokens never logged", "Code review only: no request body logging found; S3 errors log the message only", "No", "Not Run", "Keep; add a test that greps logs for tokens"),
+    ("Logging", "Correlation", "Request id in logs", "Code review only: no request-id middleware; logs cannot be tied to a user call", "No", "Not Run", "Add a request-id middleware and include it in logs and error responses"),
+    ("Redis down", "Redis unavailable", "API keeps working without cache", "Code review only: cache helpers catch errors and fall back to DB; lockout calls Redis directly and would throw 500", "No", "Not Run", "Wrap lockout Redis calls in try/catch with in-memory fallback (Redis outage not simulated)"),
 ]
 
 # ---------------------------------------------------------------- module inventory

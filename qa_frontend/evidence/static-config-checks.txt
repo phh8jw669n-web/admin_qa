@@ -1,0 +1,10 @@
+$ grep -n "35.154.32.169" vite.config.ts netlify.toml public/_redirects
+vite.config.ts:9:const API_PROXY_TARGET = process.env.QA_API_PROXY_TARGET ?? 'http://35.154.32.169:3000'
+netlify.toml:8:  to = "http://35.154.32.169:3000/api/:splat"
+public/_redirects:1:/api/*  http://35.154.32.169:3000/api/:splat  200!
+
+$ git ls-files .env
+.env
+
+$ grep -n "\"test\"" package.json; git ls-files | grep -E "\.(test|spec)\.tsx?$" | grep -v qa_tests
+(no output = no test script and no test files)

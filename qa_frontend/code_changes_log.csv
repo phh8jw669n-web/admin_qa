@@ -1,5 +1,5 @@
 Change ID,File Path,What Was Changed,Why (to run/to test/to unblock),Affects Real Behaviour (Yes/No),Should Be Kept in Main Code (Yes/No)
 FE-CHG-001,admin_frontend/vite.config.ts,API proxy target can be overridden with QA_API_PROXY_TARGET (default unchanged),To run against the local backend,No,Yes (read target from env)
 FE-CHG-002,"admin_frontend/package.json, package-lock.json","Added devDependencies @playwright/test 1.56.1, @axe-core/playwright, vitest, @testing-library/react, jest-dom, user-event, jsdom",To test,No,Yes
-FE-CHG-003,admin_frontend/qa_tests/**,"New QA suites: Vitest unit/component tests, Playwright e2e (auth, super admin, test manager, states, a11y, responsive, perf, simulations), run-e2e.sh",To test,No,Yes
+FE-CHG-003,admin_frontend/qa_tests/**,"New QA suites: Vitest unit/component tests, Playwright e2e (auth, super admin, test manager, states, a11y, responsive, perf, simulations, wizard extra checks), run-e2e.sh; qa_tests/.gitignore ignores Playwright artifacts",To test,No,Yes
 FE-CHG-004,Runtime (not code),Vite dev server on :5173 with proxy to http://localhost:3000; demo workspace qa-demo seeded through the backend,To run,No,No

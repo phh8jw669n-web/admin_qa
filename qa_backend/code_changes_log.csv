@@ -4,6 +4,6 @@ BE-CHG-002,admin_backend/.env (not committed) and admin_backend/.env.example.qa,
 BE-CHG-003,admin_backend/.env,LOGIN_THROTTLE_LIMIT=500 for the main QA server; second server on :3001 uses 10,To test (suite logs in many times),No,No
 BE-CHG-004,"admin_backend/package.json, package-lock.json",Added devDependency autocannon@8.0.0,To test (load tests),No,Optional
 BE-CHG-005,admin_backend/qa_tests/**,"New QA suite: Jest config, helpers, 12 spec files, seed, load test, run-all.sh",To test,No,Yes (as integration tests)
-BE-CHG-006,admin_backend/.gitignore,Ignore qa_tests/.fixtures.json (contains short-lived test tokens),To test,No,Yes
+BE-CHG-006,admin_backend/.gitignore,Ignore qa_tests/.fixtures.json (short-lived test tokens) and dump.rdb (local Redis snapshot written while testing),To test,No,Yes
 BE-CHG-007,Local database admin_qa,"Seeded super admin (npm run seed:super-admin) and demo workspace qa-demo with 1,200 candidates, 1,101 tests, 35+ companies (qa_tests/seed/seed-large.ts)",To test,No,No
 BE-CHG-008,External services,AWS_ENABLED=false so S3/SES are never called (uploads return 503); no real emails sent,To run safely (mock/stub),No,No

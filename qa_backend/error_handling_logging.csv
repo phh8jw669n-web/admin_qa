@@ -16,11 +16,8 @@ BE-ERR-014,POST /api/v1/tests,Trigger DB overflow (totalMarks 1e9),"Generic mess
 BE-ERR-015,GET /api/v1/candidates/:id,Compare shape with other modules,success + message + data,200 Candidate fetched successfully,No,Pass,None needed
 BE-ERR-016,PUT /api/v1/groups/:id,Wrong HTTP method,404/405 with JSON body,404 Cannot PUT /api/v1/groups/bf56307a-1142-477a-88a6-5aa286255251,No,Pass,None needed
 BE-ERR-017,POST /api/v1/files/upload,AWS_ENABLED=false (QA env),503 File uploads are temporarily unavailable,503 File uploads are temporarily unavailable. Please try again later.,No,Pass,None needed
-BE-ERR-018,Global,Unhandled exception,"Generic 500, details only in server log",ApiExceptionFilter logs message+stack and returns 'Something went wrong. Please try again.',No,Pass,Keep; add request id to the response and log
-BE-ERR-019,Global,Postgres numeric overflow (22003) and invalid date (22008),400 with field,500 (not mapped in QueryFailedFilter),No,Fail,Map 22003/22008/22P02 to 400
-BE-ERR-020,Global,Validation error format,Same shape everywhere,"Validation errors use 'errors' array, others use 'message' string; clients must handle both",No,Pass,Document the envelope; consider always sending message + errors
-BE-ERR-021,Global,Malformed JSON,400 without parser internals,400 with JSON.parse message (position) - harmless,No,Pass,Return 'Invalid JSON body'
-BE-ERR-022,Logging,"Login success/failure, delete, permission/password change",Audit entries with who/when/what,Nothing logged except 5xx errors,No,Fail,Add audit logging (BE-SEC)
-BE-ERR-023,Logging,Secrets in logs,Passwords/tokens never logged,No request body logging found; S3 errors log message only,No,Pass,Keep
-BE-ERR-024,Logging,Correlation,Request id in logs,No request id; logs cannot be tied to a user call,No,Fail,Add a request-id middleware and include it in logs and error responses
-BE-ERR-025,Redis down,Redis unavailable,API keeps working without cache,Cache helpers catch errors and fall back to DB; lockout uses Redis directly and would throw 500,No,Not Run,Wrap lockout Redis calls in try/catch with in-memory fallback (code review; Redis outage not simulated)
+BE-ERR-018,Global,Validation error format,Same shape everywhere,"Code review only: validation errors use an 'errors' array, other errors a 'message' string; clients must handle both",No,Not Run,Document the envelope; always send message plus errors
+BE-ERR-019,Logging,"Login success/failure, delete, permission/password change",Audit entries with who/when/what,Code review only: nothing is logged except 5xx errors (ApiExceptionFilter),No,Not Run,"Add audit logging for logins, deletes and password/role changes"
+BE-ERR-020,Logging,Secrets in logs,Passwords/tokens never logged,Code review only: no request body logging found; S3 errors log the message only,No,Not Run,Keep; add a test that greps logs for tokens
+BE-ERR-021,Logging,Correlation,Request id in logs,Code review only: no request-id middleware; logs cannot be tied to a user call,No,Not Run,Add a request-id middleware and include it in logs and error responses
+BE-ERR-022,Redis down,Redis unavailable,API keeps working without cache,Code review only: cache helpers catch errors and fall back to DB; lockout calls Redis directly and would throw 500,No,Not Run,Wrap lockout Redis calls in try/catch with in-memory fallback (Redis outage not simulated)

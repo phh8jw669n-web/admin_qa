@@ -1,10 +1,11 @@
 {
  "backend": {
-  "total": 1408,
+  "total": 1423,
   "status": {
-   "Pass": 1291,
+   "Pass": 1301,
    "Fail": 115,
-   "Blocked": 2
+   "Blocked": 2,
+   "Not Run": 5
   },
   "bugs": {
    "Critical": 2,
@@ -15,20 +16,20 @@
   "nbugs": 59
  },
  "frontend": {
-  "total": 132,
+  "total": 187,
   "status": {
-   "Fail": 60,
-   "Pass": 58,
-   "Blocked": 13,
+   "Fail": 89,
+   "Pass": 80,
+   "Blocked": 17,
    "Not Run": 1
   },
   "bugs": {
    "Critical": 2,
    "High": 10,
    "Medium": 16,
-   "Low": 11
+   "Low": 10
   },
-  "nbugs": 39,
+  "nbugs": 38,
   "a11yPages": 12
  }
 }
