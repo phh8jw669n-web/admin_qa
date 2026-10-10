@@ -1,0 +1,233 @@
+{
+  "config": {
+    "configFile": "/home/user/admin_qa/admin_frontend/qa_tests/playwright.config.ts",
+    "rootDir": "/home/user/admin_qa/admin_frontend/qa_tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "./results/playwright-report.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/home/user/admin_qa/admin_frontend/qa_tests/results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/home/user/admin_qa/admin_frontend/qa_tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "pages-states.spec.ts",
+      "file": "pages-states.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Placeholder and mock pages",
+          "file": "pages-states.spec.ts",
+          "line": 8,
+          "column": 6,
+          "specs": [
+            {
+              "title": "question bank filter Apply does nothing",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 3562,
+                      "error": {
+                        "message": "Error: fe.question-bank.filter: expected \"Results update or button is hidden until feature exists\" but got \"0 data API calls; no visible change (onSearch is a no-op)\"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: fe.question-bank.filter: expected \"Results update or button is hidden until feature exists\" but got \"0 data API calls; no visible change (onSearch is a no-op)\"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at expectFn (/home/user/admin_qa/admin_frontend/qa_tests/e2e/pages-states.spec.ts:5:57)\n    at verdict (/home/user/admin_qa/admin_frontend/qa_tests/e2e/helpers.ts:109:3)\n    at /home/user/admin_qa/admin_frontend/qa_tests/e2e/pages-states.spec.ts:36:5",
+                        "location": {
+                          "file": "/home/user/admin_qa/admin_frontend/qa_tests/e2e/pages-states.spec.ts",
+                          "column": 57,
+                          "line": 5
+                        },
+                        "snippet": "  3 |\n  4 | const EV = 'admin_frontend/qa_tests/e2e/pages-states.spec.ts'\n> 5 | const ok = (v: boolean, m: string) => expect.soft(v, m).toBe(true)\n    |                                                         ^\n  6 | test.afterAll(() => flush('pages-states'))\n  7 |\n  8 | test.describe('Placeholder and mock pages', () => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/user/admin_qa/admin_frontend/qa_tests/e2e/pages-states.spec.ts",
+                            "column": 57,
+                            "line": 5
+                          },
+                          "message": "Error: fe.question-bank.filter: expected \"Results update or button is hidden until feature exists\" but got \"0 data API calls; no visible change (onSearch is a no-op)\"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  3 |\n  4 | const EV = 'admin_frontend/qa_tests/e2e/pages-states.spec.ts'\n> 5 | const ok = (v: boolean, m: string) => expect.soft(v, m).toBe(true)\n    |                                                         ^\n  6 | test.afterAll(() => flush('pages-states'))\n  7 |\n  8 | test.describe('Placeholder and mock pages', () => {\n    at expectFn (/home/user/admin_qa/admin_frontend/qa_tests/e2e/pages-states.spec.ts:5:57)\n    at verdict (/home/user/admin_qa/admin_frontend/qa_tests/e2e/helpers.ts:109:3)\n    at /home/user/admin_qa/admin_frontend/qa_tests/e2e/pages-states.spec.ts:36:5"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T19:39:23.999Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/user/admin_qa/admin_frontend/qa_tests/results/artifacts/pages-states-Placeholder-a-c7f7f-k-filter-Apply-does-nothing-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/user/admin_qa/admin_frontend/qa_tests/results/artifacts/pages-states-Placeholder-a-c7f7f-k-filter-Apply-does-nothing-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/user/admin_qa/admin_frontend/qa_tests/e2e/pages-states.spec.ts",
+                        "column": 57,
+                        "line": 5
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4939cb62a9a9d1a95578-1d2534f76c69fae0f927",
+              "file": "pages-states.spec.ts",
+              "line": 27,
+              "column": 3
+            }
+          ]
+        },
+        {
+          "title": "Loading, empty and error states (Test Manager list)",
+          "file": "pages-states.spec.ts",
+          "line": 48,
+          "column": 6,
+          "specs": [
+            {
+              "title": "offline while using the list",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 90000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 6542,
+                      "error": {
+                        "message": "Error: fe.state.offline: expected \"Clear \"You are offline / network error\" message\" but got \"Filters 1 Reset filters Import Tests Quick Assign Delete Create Tests S.No. Test Name Start Date End Date Status \"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m",
+                        "stack": "Error: fe.state.offline: expected \"Clear \"You are offline / network error\" message\" but got \"Filters 1 Reset filters Import Tests Quick Assign Delete Create Tests S.No. Test Name Start Date End Date Status \"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n    at expectFn (/home/user/admin_qa/admin_frontend/qa_tests/e2e/pages-states.spec.ts:5:57)\n    at verdict (/home/user/admin_qa/admin_frontend/qa_tests/e2e/helpers.ts:109:3)\n    at /home/user/admin_qa/admin_frontend/qa_tests/e2e/pages-states.spec.ts:94:5",
+                        "location": {
+                          "file": "/home/user/admin_qa/admin_frontend/qa_tests/e2e/pages-states.spec.ts",
+                          "column": 57,
+                          "line": 5
+                        },
+                        "snippet": "  3 |\n  4 | const EV = 'admin_frontend/qa_tests/e2e/pages-states.spec.ts'\n> 5 | const ok = (v: boolean, m: string) => expect.soft(v, m).toBe(true)\n    |                                                         ^\n  6 | test.afterAll(() => flush('pages-states'))\n  7 |\n  8 | test.describe('Placeholder and mock pages', () => {"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/user/admin_qa/admin_frontend/qa_tests/e2e/pages-states.spec.ts",
+                            "column": 57,
+                            "line": 5
+                          },
+                          "message": "Error: fe.state.offline: expected \"Clear \"You are offline / network error\" message\" but got \"Filters 1 Reset filters Import Tests Quick Assign Delete Create Tests S.No. Test Name Start Date End Date Status \"\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m\n\n  3 |\n  4 | const EV = 'admin_frontend/qa_tests/e2e/pages-states.spec.ts'\n> 5 | const ok = (v: boolean, m: string) => expect.soft(v, m).toBe(true)\n    |                                                         ^\n  6 | test.afterAll(() => flush('pages-states'))\n  7 |\n  8 | test.describe('Placeholder and mock pages', () => {\n    at expectFn (/home/user/admin_qa/admin_frontend/qa_tests/e2e/pages-states.spec.ts:5:57)\n    at verdict (/home/user/admin_qa/admin_frontend/qa_tests/e2e/helpers.ts:109:3)\n    at /home/user/admin_qa/admin_frontend/qa_tests/e2e/pages-states.spec.ts:94:5"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-10T19:39:28.264Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/user/admin_qa/admin_frontend/qa_tests/results/artifacts/pages-states-Loading-empty-1a566-ffline-while-using-the-list-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/home/user/admin_qa/admin_frontend/qa_tests/results/artifacts/pages-states-Loading-empty-1a566-ffline-while-using-the-list-chromium/error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/user/admin_qa/admin_frontend/qa_tests/e2e/pages-states.spec.ts",
+                        "column": 57,
+                        "line": 5
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "4939cb62a9a9d1a95578-23c843f0141622775f80",
+              "file": "pages-states.spec.ts",
+              "line": 82,
+              "column": 3
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-10-10T19:39:23.220Z",
+    "duration": 11763.059,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 2,
+    "flaky": 0
+  }
+}

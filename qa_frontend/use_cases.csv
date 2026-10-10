@@ -1,0 +1,14 @@
+Use Case ID,Module,Actor (Role),Goal,Preconditions,Main Flow,Alternate Flows,Expected Outcome,Priority
+FE-UC-001,Login,Company admin,Sign in to my workspace,Workspace active; account exists,1) Open workspace link 2) Enter email and password 3) Sign in,Wrong password: inline error; inactive: message,Dashboard opens,P1
+FE-UC-014,Login,Super admin,Sign in to the platform,Super admin account,1) Open /login 2) Sign in,Company admin uses /login: error,Workspaces page opens,P1
+FE-UC-003,Forgot Password,Company admin,Reset a forgotten password,Email exists,1) Forgot password 2) Enter email 3) Enter OTP 4) New password,Wrong OTP; expired OTP,Can sign in with new password,P2
+FE-UC-004,Workspace Gate,Anyone,Open a workspace link,Company active,1) Open /w/slug/login,Unknown slug: Not found page,Branded login page,P1
+FE-UC-005,Companies,Super admin,Create a company,Logged in,1) Companies 2) Create Company 3) Fill form 4) Create,Duplicate URL/email/GST: error,Company listed; owner can sign in at the workspace link,P1
+FE-UC-015,Companies,Super admin,Enable/disable/edit/delete a company,Company exists,1) Row menu 2) Choose action 3) Confirm,API error: toast,Only intended fields change,P1
+FE-UC-007,Workspaces,Super admin,See all workspaces,Logged in,1) Open Workspaces,API error: message,List of workspaces with links,P3
+FE-UC-008,Dashboard,Company admin,See key numbers,Logged in,1) Open Dashboard,API error: message,Real totals for candidates and tests,P2
+FE-UC-009,Test Manager,Company admin,Find and manage tests,Tests exist,1) Open Test Manager 2) Filter 3) Select 4) Delete,No tests: empty state,Correct list and actions,P1
+FE-UC-010,Test Wizard,Company admin,Create a test with settings and questions,Master data exists,1) Create Tests 2) Step 1 details 3) Step 2 settings 4) Step 3 questions,Validation errors inline; API error toast,Test saved with settings and questions,P1
+FE-UC-011,Question Bank,Company admin,Browse questions by subject,Questions exist,1) Open Question Bank 2) Filter,-,Questions listed,P3
+FE-UC-012,Category Management,Company admin,Manage categories,Logged in,1) Open Category 2) Add/edit,-,Category tree,P3
+FE-UC-013,Layout,Any admin,"Navigate, switch theme, log out",Logged in,1) Use sidebar 2) Theme toggle 3) Profile > Log out,-,Correct page; session cleared on logout,P2

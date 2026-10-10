@@ -1,0 +1,30 @@
+Dep ID,Package,Current Version,Latest Version,Known Vulnerability,Risk,Suggested Action
+BE-DEP-001,@nestjs/platform-express,11.2.1,12.1.2,Through multer,High,npm audit fix
+BE-DEP-002,@nestjs/swagger,11.4.7,12.0.2,Through js-yaml,Moderate,Upgrade @nestjs/swagger to 12.0.2
+BE-DEP-003,argparse,2.0.1,3.0.2,Through sprintf-js,Moderate,Upgrade @nestjs/swagger to 12.0.2
+BE-DEP-004,brace-expansion,1.1.18,5.0.12,"brace-expansion: Quadratic-time expansion of the `{a},b}` rewrite causes CPU denial of service; brace-expansion: Quadratic-time expansion of the `{a},b}` rewrite causes CPU denial of service",High,npm audit fix
+BE-DEP-005,fast-uri,3.1.5,4.2.2,fast-uri vulnerable to host confusion via skipped IDN canonicalization on scheme-relative references; fast-uri vulnerable to server-side request forgery via malformed IPv6 normalization,High,npm audit fix
+BE-DEP-006,handlebars,4.7.9,4.7.10,Handlebars: JavaScript Injection via Unsafe Inline Embedding of Precompiled Templates; Handlebars: JavaScript Injection via AST Type Confusion in compile (bypass of CVE-2026-33937),Critical,npm audit fix
+BE-DEP-007,js-yaml,4.3.1,5.4.3,js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources; js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources,High,Upgrade @nestjs/swagger to 12.0.2
+BE-DEP-008,multer,2.2.0,2.4.0,multer vulnerable to Denial of Service via crafted multipart field names; multer vulnerable to Denial of Service via file descriptor leak on aborted uploads,High,npm audit fix
+BE-DEP-009,proxy-addr,2.0.7,2.0.8,proxy-addr vulnerable to IP spoofing via IPv4-mapped IPv6 trust subnet,Critical,npm audit fix
+BE-DEP-010,qs,6.15.3,6.16.0,qs array-limit bypass via bracket-key comma parsing; qs: Denial of Service via Attacker Controlled isBuffer,Moderate,npm audit fix
+BE-DEP-011,sprintf-js,1.0.3,1.1.3,sprintf-js vulnerable to denial of service through unbounded precision specifiers,Moderate,Upgrade @nestjs/swagger to 12.0.2
+BE-DEP-012,@eslint/js,9.39.5,10.0.1,None known (major version behind),Low,Plan upgrade to 10.0.1 (breaking changes)
+BE-DEP-013,@nestjs/cli,11.0.24,12.0.8,None known (major version behind),Low,Plan upgrade to 12.0.8 (breaking changes)
+BE-DEP-014,@nestjs/common,11.2.1,12.1.2,None known (major version behind),Low,Plan upgrade to 12.1.2 (breaking changes)
+BE-DEP-015,@nestjs/config,4.0.4,12.0.1,None known (major version behind),Low,Plan upgrade to 12.0.1 (breaking changes)
+BE-DEP-016,@nestjs/core,11.2.1,12.1.2,None known (major version behind),Low,Plan upgrade to 12.1.2 (breaking changes)
+BE-DEP-017,@nestjs/jwt,11.0.2,12.0.2,None known (major version behind),Low,Plan upgrade to 12.0.2 (breaking changes)
+BE-DEP-018,@nestjs/platform-express,11.2.1,12.1.2,None known (major version behind),Low,Plan upgrade to 12.1.2 (breaking changes)
+BE-DEP-019,@nestjs/schematics,11.1.0,12.0.0,None known (major version behind),Low,Plan upgrade to 12.0.0 (breaking changes)
+BE-DEP-020,@nestjs/swagger,11.4.7,12.0.2,None known (major version behind),Low,Plan upgrade to 12.0.2 (breaking changes)
+BE-DEP-021,@nestjs/terminus,11.1.1,12.1.0,None known (major version behind),Low,Plan upgrade to 12.1.0 (breaking changes)
+BE-DEP-022,@nestjs/testing,11.2.1,12.1.2,None known (major version behind),Low,Plan upgrade to 12.1.2 (breaking changes)
+BE-DEP-023,@nestjs/typeorm,11.0.3,12.0.2,None known (major version behind),Low,Plan upgrade to 12.0.2 (breaking changes)
+BE-DEP-024,@types/node,22.20.1,26.6.5,None known (major version behind),Low,Plan upgrade to 26.6.5 (breaking changes)
+BE-DEP-025,@types/supertest,6.0.3,7.2.1,None known (major version behind),Low,Plan upgrade to 7.2.1 (breaking changes)
+BE-DEP-026,eslint,9.39.5,10.12.0,None known (major version behind),Low,Plan upgrade to 10.12.0 (breaking changes)
+BE-DEP-027,globals,16.5.0,17.13.0,None known (major version behind),Low,Plan upgrade to 17.13.0 (breaking changes)
+BE-DEP-028,ioredis,5.11.1,6.0.0,None known (major version behind),Low,Plan upgrade to 6.0.0 (breaking changes)
+BE-DEP-029,typescript,5.9.3,7.0.2,None known (major version behind),Low,Plan upgrade to 7.0.2 (breaking changes)

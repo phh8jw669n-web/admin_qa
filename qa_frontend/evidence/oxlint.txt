@@ -1,0 +1,11 @@
+src/features/company/components/color-field.tsx:34:17: warning react(only-export-components): Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.
+src/features/test-manager/components/step-3-questions.tsx:358:63: warning react-hooks(exhaustive-deps): React Hook useEffect has missing dependencies: 'editingQuestion', and 'options' help: Either include it or remove the dependency array.
+src/features/test-manager/components/step-3-questions.tsx:377:31: warning react-hooks(exhaustive-deps): React Hook useEffect has missing dependencies: 'editingQuestion', 'options', and 'options.saved' help: Either include it or remove the dependency array.
+src/components/providers/app-providers.tsx:48:17: warning react(only-export-components): Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.
+src/components/ui/badge.tsx:32:17: warning react(only-export-components): Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.
+src/components/ui/button.tsx:50:18: warning react(only-export-components): Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.
+src/components/shared/data-table/sortable-header.tsx:30:17: warning react(only-export-components): Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.
+src/features/test-manager/components/question-entry-sections.tsx:25:17: warning react(only-export-components): Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.
+src/features/test-manager/components/question-entry-sections.tsx:29:17: warning react(only-export-components): Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.
+src/features/dashboard/components/summary-stat-card.tsx:28:14: warning react(only-export-components): Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components.
+exit=0

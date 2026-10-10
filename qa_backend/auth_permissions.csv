@@ -1,0 +1,738 @@
+Test ID,Endpoint,Role Used (or No Login),Action Tried,Should Be Allowed (Yes/No),Was Allowed (Yes/No),Status,Severity,Bug ID
+BE-TC-003,POST /api/v1/auth/logout,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-004,POST /api/v1/auth/logout,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-005,POST /api/v1/auth/logout,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-006,GET /api/v1/auth/me,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-007,GET /api/v1/auth/me,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-008,GET /api/v1/auth/me,Super admin,Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-009,GET /api/v1/auth/me,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-010,GET /api/v1/auth/me,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-011,POST /api/v1/super-admin/logout,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-012,POST /api/v1/super-admin/logout,Company admin (A),Call with Company admin (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-013,POST /api/v1/super-admin/logout,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-014,POST /api/v1/super-admin/logout,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-015,POST /api/v1/super-admin/companies,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-016,POST /api/v1/super-admin/companies,Company admin (A),Call with Company admin (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-017,POST /api/v1/super-admin/companies,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-018,POST /api/v1/super-admin/companies,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-019,GET /api/v1/super-admin/companies,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-020,GET /api/v1/super-admin/companies,Company admin (A),Call with Company admin (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-021,GET /api/v1/super-admin/companies,Super admin,Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-022,GET /api/v1/super-admin/companies,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-023,GET /api/v1/super-admin/companies,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-024,GET /api/v1/super-admin/companies/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-025,GET /api/v1/super-admin/companies/:id,Company admin (A),Call with Company admin (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-026,GET /api/v1/super-admin/companies/:id,Super admin,Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-027,GET /api/v1/super-admin/companies/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-028,GET /api/v1/super-admin/companies/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-029,PUT /api/v1/super-admin/companies/:id,No login,Call with No login (PUT),No,No,Pass,N/A,N/A
+BE-TC-030,PUT /api/v1/super-admin/companies/:id,Company admin (A),Call with Company admin (A) (PUT),No,No,Pass,N/A,N/A
+BE-TC-031,PUT /api/v1/super-admin/companies/:id,Candidate (A),Call with Candidate (A) (PUT),No,No,Pass,N/A,N/A
+BE-TC-032,PUT /api/v1/super-admin/companies/:id,Centre user (A),Call with Centre user (A) (PUT),No,No,Pass,N/A,N/A
+BE-TC-033,DELETE /api/v1/super-admin/companies/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-034,DELETE /api/v1/super-admin/companies/:id,Company admin (A),Call with Company admin (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-035,DELETE /api/v1/super-admin/companies/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-036,DELETE /api/v1/super-admin/companies/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-037,GET /api/v1/companies/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-038,GET /api/v1/companies/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-039,GET /api/v1/companies/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-040,GET /api/v1/companies/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-041,GET /api/v1/companies/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-042,PATCH /api/v1/companies/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-043,PATCH /api/v1/companies/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-044,PATCH /api/v1/companies/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-045,PATCH /api/v1/companies/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-046,POST /api/v1/admins,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-047,POST /api/v1/admins,Company admin (A),Call with Company admin (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-048,POST /api/v1/admins,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-049,POST /api/v1/admins,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-050,GET /api/v1/admins,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-051,GET /api/v1/admins,Company admin (A),Call with Company admin (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-052,GET /api/v1/admins,Super admin,Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-053,GET /api/v1/admins,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-054,GET /api/v1/admins,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-055,GET /api/v1/admins/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-056,GET /api/v1/admins/:id,Company admin (A),Call with Company admin (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-057,GET /api/v1/admins/:id,Super admin,Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-058,GET /api/v1/admins/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-059,GET /api/v1/admins/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-060,PUT /api/v1/admins/:id,No login,Call with No login (PUT),No,No,Pass,N/A,N/A
+BE-TC-061,PUT /api/v1/admins/:id,Company admin (A),Call with Company admin (A) (PUT),No,No,Pass,N/A,N/A
+BE-TC-062,PUT /api/v1/admins/:id,Candidate (A),Call with Candidate (A) (PUT),No,No,Pass,N/A,N/A
+BE-TC-063,PUT /api/v1/admins/:id,Centre user (A),Call with Centre user (A) (PUT),No,No,Pass,N/A,N/A
+BE-TC-064,DELETE /api/v1/admins/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-065,DELETE /api/v1/admins/:id,Company admin (A),Call with Company admin (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-066,DELETE /api/v1/admins/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-067,DELETE /api/v1/admins/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-068,POST /api/v1/super-admin/templates,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-069,POST /api/v1/super-admin/templates,Company admin (A),Call with Company admin (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-070,POST /api/v1/super-admin/templates,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-071,POST /api/v1/super-admin/templates,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-072,GET /api/v1/super-admin/templates,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-073,GET /api/v1/super-admin/templates,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-074,GET /api/v1/super-admin/templates,Super admin,Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-075,GET /api/v1/super-admin/templates,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-076,GET /api/v1/super-admin/templates,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-077,GET /api/v1/super-admin/templates/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-078,GET /api/v1/super-admin/templates/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-079,GET /api/v1/super-admin/templates/:id,Super admin,Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-080,GET /api/v1/super-admin/templates/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-081,GET /api/v1/super-admin/templates/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-082,PATCH /api/v1/super-admin/templates/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-083,PATCH /api/v1/super-admin/templates/:id,Company admin (A),Call with Company admin (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-084,PATCH /api/v1/super-admin/templates/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-085,PATCH /api/v1/super-admin/templates/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-086,DELETE /api/v1/super-admin/templates/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-087,DELETE /api/v1/super-admin/templates/:id,Company admin (A),Call with Company admin (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-088,DELETE /api/v1/super-admin/templates/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-089,DELETE /api/v1/super-admin/templates/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-090,POST /api/v1/languages,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-091,POST /api/v1/languages,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-092,POST /api/v1/languages,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-093,POST /api/v1/languages,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-094,GET /api/v1/languages,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-095,GET /api/v1/languages,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-096,GET /api/v1/languages,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-097,GET /api/v1/languages,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-098,GET /api/v1/languages,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-099,GET /api/v1/languages/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-100,GET /api/v1/languages/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-101,GET /api/v1/languages/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-102,GET /api/v1/languages/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-103,GET /api/v1/languages/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-104,PATCH /api/v1/languages/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-105,PATCH /api/v1/languages/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-106,PATCH /api/v1/languages/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-107,PATCH /api/v1/languages/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-108,DELETE /api/v1/languages/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-109,DELETE /api/v1/languages/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-110,DELETE /api/v1/languages/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-111,DELETE /api/v1/languages/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-112,POST /api/v1/difficulties,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-113,POST /api/v1/difficulties,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-114,POST /api/v1/difficulties,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-115,POST /api/v1/difficulties,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-116,GET /api/v1/difficulties,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-117,GET /api/v1/difficulties,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-118,GET /api/v1/difficulties,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-119,GET /api/v1/difficulties,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-120,GET /api/v1/difficulties,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-121,GET /api/v1/difficulties/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-122,GET /api/v1/difficulties/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-123,GET /api/v1/difficulties/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-124,GET /api/v1/difficulties/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-125,GET /api/v1/difficulties/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-126,PATCH /api/v1/difficulties/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-127,PATCH /api/v1/difficulties/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-128,PATCH /api/v1/difficulties/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-129,PATCH /api/v1/difficulties/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-130,DELETE /api/v1/difficulties/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-131,DELETE /api/v1/difficulties/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-132,DELETE /api/v1/difficulties/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-133,DELETE /api/v1/difficulties/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-134,POST /api/v1/categories,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-135,POST /api/v1/categories,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-136,POST /api/v1/categories,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-137,POST /api/v1/categories,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-138,GET /api/v1/categories,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-139,GET /api/v1/categories,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-140,GET /api/v1/categories,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-141,GET /api/v1/categories,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-142,GET /api/v1/categories,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-143,GET /api/v1/categories/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-144,GET /api/v1/categories/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-145,GET /api/v1/categories/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-146,GET /api/v1/categories/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-147,GET /api/v1/categories/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-148,PATCH /api/v1/categories/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-149,PATCH /api/v1/categories/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-150,PATCH /api/v1/categories/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-151,PATCH /api/v1/categories/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-152,DELETE /api/v1/categories/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-153,DELETE /api/v1/categories/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-154,DELETE /api/v1/categories/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-155,DELETE /api/v1/categories/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-156,POST /api/v1/subjects,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-157,POST /api/v1/subjects,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-158,POST /api/v1/subjects,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-159,POST /api/v1/subjects,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-160,GET /api/v1/subjects,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-161,GET /api/v1/subjects,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-162,GET /api/v1/subjects,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-163,GET /api/v1/subjects,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-164,GET /api/v1/subjects,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-165,GET /api/v1/subjects/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-166,GET /api/v1/subjects/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-167,GET /api/v1/subjects/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-168,GET /api/v1/subjects/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-169,GET /api/v1/subjects/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-170,PATCH /api/v1/subjects/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-171,PATCH /api/v1/subjects/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-172,PATCH /api/v1/subjects/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-173,PATCH /api/v1/subjects/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-174,DELETE /api/v1/subjects/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-175,DELETE /api/v1/subjects/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-176,DELETE /api/v1/subjects/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-177,DELETE /api/v1/subjects/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-178,POST /api/v1/topics,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-179,POST /api/v1/topics,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-180,POST /api/v1/topics,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-181,POST /api/v1/topics,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-182,GET /api/v1/topics,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-183,GET /api/v1/topics,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-184,GET /api/v1/topics,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-185,GET /api/v1/topics,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-186,GET /api/v1/topics,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-187,GET /api/v1/topics/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-188,GET /api/v1/topics/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-189,GET /api/v1/topics/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-190,GET /api/v1/topics/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-191,GET /api/v1/topics/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-192,PATCH /api/v1/topics/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-193,PATCH /api/v1/topics/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-194,PATCH /api/v1/topics/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-195,PATCH /api/v1/topics/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-196,DELETE /api/v1/topics/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-197,DELETE /api/v1/topics/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-198,DELETE /api/v1/topics/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-199,DELETE /api/v1/topics/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-200,POST /api/v1/category-subject-topic-mappings,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-201,POST /api/v1/category-subject-topic-mappings,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-202,POST /api/v1/category-subject-topic-mappings,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-203,POST /api/v1/category-subject-topic-mappings,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-204,GET /api/v1/category-subject-topic-mappings,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-205,GET /api/v1/category-subject-topic-mappings,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-206,GET /api/v1/category-subject-topic-mappings,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-207,GET /api/v1/category-subject-topic-mappings,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-208,GET /api/v1/category-subject-topic-mappings,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-209,GET /api/v1/category-subject-topic-mappings/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-210,GET /api/v1/category-subject-topic-mappings/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-211,GET /api/v1/category-subject-topic-mappings/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-212,GET /api/v1/category-subject-topic-mappings/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-213,GET /api/v1/category-subject-topic-mappings/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-214,PATCH /api/v1/category-subject-topic-mappings/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-215,PATCH /api/v1/category-subject-topic-mappings/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-216,PATCH /api/v1/category-subject-topic-mappings/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-217,PATCH /api/v1/category-subject-topic-mappings/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-218,DELETE /api/v1/category-subject-topic-mappings/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-219,DELETE /api/v1/category-subject-topic-mappings/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-220,DELETE /api/v1/category-subject-topic-mappings/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-221,DELETE /api/v1/category-subject-topic-mappings/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-222,POST /api/v1/instructions,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-223,POST /api/v1/instructions,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-224,POST /api/v1/instructions,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-225,POST /api/v1/instructions,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-226,GET /api/v1/instructions,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-227,GET /api/v1/instructions,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-228,GET /api/v1/instructions,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-229,GET /api/v1/instructions,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-230,GET /api/v1/instructions,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-231,GET /api/v1/instructions/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-232,GET /api/v1/instructions/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-233,GET /api/v1/instructions/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-234,GET /api/v1/instructions/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-235,GET /api/v1/instructions/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-236,PATCH /api/v1/instructions/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-237,PATCH /api/v1/instructions/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-238,PATCH /api/v1/instructions/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-239,PATCH /api/v1/instructions/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-240,DELETE /api/v1/instructions/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-241,DELETE /api/v1/instructions/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-242,DELETE /api/v1/instructions/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-243,DELETE /api/v1/instructions/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-244,POST /api/v1/groups,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-245,POST /api/v1/groups,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-246,POST /api/v1/groups,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-247,POST /api/v1/groups,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-248,GET /api/v1/groups,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-249,GET /api/v1/groups,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-250,GET /api/v1/groups,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-251,GET /api/v1/groups,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-252,GET /api/v1/groups,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-253,GET /api/v1/groups/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-254,GET /api/v1/groups/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-255,GET /api/v1/groups/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-256,GET /api/v1/groups/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-257,GET /api/v1/groups/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-258,PATCH /api/v1/groups/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-259,PATCH /api/v1/groups/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-260,PATCH /api/v1/groups/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-261,PATCH /api/v1/groups/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-262,DELETE /api/v1/groups/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-263,DELETE /api/v1/groups/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-264,DELETE /api/v1/groups/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-265,DELETE /api/v1/groups/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-266,POST /api/v1/zones,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-267,POST /api/v1/zones,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-268,POST /api/v1/zones,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-269,POST /api/v1/zones,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-270,GET /api/v1/zones,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-271,GET /api/v1/zones,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-272,GET /api/v1/zones,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-273,GET /api/v1/zones,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-274,GET /api/v1/zones,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-275,GET /api/v1/zones/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-276,GET /api/v1/zones/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-277,GET /api/v1/zones/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-278,GET /api/v1/zones/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-279,GET /api/v1/zones/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-280,PATCH /api/v1/zones/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-281,PATCH /api/v1/zones/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-282,PATCH /api/v1/zones/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-283,PATCH /api/v1/zones/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-284,DELETE /api/v1/zones/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-285,DELETE /api/v1/zones/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-286,DELETE /api/v1/zones/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-287,DELETE /api/v1/zones/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-288,POST /api/v1/regions,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-289,POST /api/v1/regions,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-290,POST /api/v1/regions,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-291,POST /api/v1/regions,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-292,GET /api/v1/regions,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-293,GET /api/v1/regions,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-294,GET /api/v1/regions,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-295,GET /api/v1/regions,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-296,GET /api/v1/regions,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-297,GET /api/v1/regions/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-298,GET /api/v1/regions/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-299,GET /api/v1/regions/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-300,GET /api/v1/regions/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-301,GET /api/v1/regions/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-302,PATCH /api/v1/regions/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-303,PATCH /api/v1/regions/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-304,PATCH /api/v1/regions/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-305,PATCH /api/v1/regions/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-306,DELETE /api/v1/regions/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-307,DELETE /api/v1/regions/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-308,DELETE /api/v1/regions/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-309,DELETE /api/v1/regions/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-310,POST /api/v1/centres,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-311,POST /api/v1/centres,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-312,POST /api/v1/centres,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-313,POST /api/v1/centres,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-314,GET /api/v1/centres,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-315,GET /api/v1/centres,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-316,GET /api/v1/centres,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-317,GET /api/v1/centres,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-318,GET /api/v1/centres,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-319,GET /api/v1/centres/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-320,GET /api/v1/centres/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-321,GET /api/v1/centres/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-322,GET /api/v1/centres/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-323,GET /api/v1/centres/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-324,PATCH /api/v1/centres/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-325,PATCH /api/v1/centres/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-326,PATCH /api/v1/centres/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-327,PATCH /api/v1/centres/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-328,DELETE /api/v1/centres/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-329,DELETE /api/v1/centres/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-330,DELETE /api/v1/centres/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-331,DELETE /api/v1/centres/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-332,POST /api/v1/labs,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-333,POST /api/v1/labs,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-334,POST /api/v1/labs,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-335,POST /api/v1/labs,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-336,GET /api/v1/labs,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-337,GET /api/v1/labs,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-338,GET /api/v1/labs,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-339,GET /api/v1/labs,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-340,GET /api/v1/labs,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-341,GET /api/v1/labs/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-342,GET /api/v1/labs/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-343,GET /api/v1/labs/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-344,GET /api/v1/labs/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-345,GET /api/v1/labs/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-346,PATCH /api/v1/labs/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-347,PATCH /api/v1/labs/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-348,PATCH /api/v1/labs/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-349,PATCH /api/v1/labs/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-350,DELETE /api/v1/labs/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-351,DELETE /api/v1/labs/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-352,DELETE /api/v1/labs/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-353,DELETE /api/v1/labs/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-354,POST /api/v1/events,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-355,POST /api/v1/events,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-356,POST /api/v1/events,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-357,POST /api/v1/events,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-358,GET /api/v1/events,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-359,GET /api/v1/events,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-360,GET /api/v1/events,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-361,GET /api/v1/events,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-362,GET /api/v1/events,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-363,GET /api/v1/events/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-364,GET /api/v1/events/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-365,GET /api/v1/events/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-366,GET /api/v1/events/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-367,GET /api/v1/events/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-368,PATCH /api/v1/events/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-369,PATCH /api/v1/events/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-370,PATCH /api/v1/events/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-371,PATCH /api/v1/events/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-372,DELETE /api/v1/events/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-373,DELETE /api/v1/events/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-374,DELETE /api/v1/events/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-375,DELETE /api/v1/events/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-376,POST /api/v1/sessions,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-377,POST /api/v1/sessions,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-378,POST /api/v1/sessions,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-379,POST /api/v1/sessions,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-380,GET /api/v1/sessions,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-381,GET /api/v1/sessions,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-382,GET /api/v1/sessions,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-383,GET /api/v1/sessions,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-384,GET /api/v1/sessions,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-385,GET /api/v1/sessions/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-386,GET /api/v1/sessions/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-387,GET /api/v1/sessions/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-388,GET /api/v1/sessions/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-389,GET /api/v1/sessions/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-390,PATCH /api/v1/sessions/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-391,PATCH /api/v1/sessions/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-392,PATCH /api/v1/sessions/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-393,PATCH /api/v1/sessions/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-394,DELETE /api/v1/sessions/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-395,DELETE /api/v1/sessions/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-396,DELETE /api/v1/sessions/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-397,DELETE /api/v1/sessions/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-398,POST /api/v1/tests,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-399,POST /api/v1/tests,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-400,POST /api/v1/tests,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-401,POST /api/v1/tests,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-402,GET /api/v1/tests,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-403,GET /api/v1/tests,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-404,GET /api/v1/tests,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-405,GET /api/v1/tests,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-406,GET /api/v1/tests,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-407,GET /api/v1/tests/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-408,GET /api/v1/tests/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-409,GET /api/v1/tests/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-410,GET /api/v1/tests/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-411,GET /api/v1/tests/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-412,PATCH /api/v1/tests/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-413,PATCH /api/v1/tests/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-414,PATCH /api/v1/tests/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-415,PATCH /api/v1/tests/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-416,DELETE /api/v1/tests/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-417,DELETE /api/v1/tests/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-418,DELETE /api/v1/tests/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-419,DELETE /api/v1/tests/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-420,POST /api/v1/questions,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-421,POST /api/v1/questions,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-422,POST /api/v1/questions,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-423,POST /api/v1/questions,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-424,GET /api/v1/questions,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-425,GET /api/v1/questions,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-426,GET /api/v1/questions,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-427,GET /api/v1/questions,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-428,GET /api/v1/questions,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-429,GET /api/v1/questions/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-430,GET /api/v1/questions/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-431,GET /api/v1/questions/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-432,GET /api/v1/questions/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-433,GET /api/v1/questions/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-434,PATCH /api/v1/questions/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-435,PATCH /api/v1/questions/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-436,PATCH /api/v1/questions/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-437,PATCH /api/v1/questions/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-438,DELETE /api/v1/questions/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-439,DELETE /api/v1/questions/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-440,DELETE /api/v1/questions/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-441,DELETE /api/v1/questions/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-442,POST /api/v1/candidates,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-443,POST /api/v1/candidates,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-444,POST /api/v1/candidates,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-445,POST /api/v1/candidates,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-446,GET /api/v1/candidates,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-447,GET /api/v1/candidates,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-448,GET /api/v1/candidates,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-449,GET /api/v1/candidates,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-450,GET /api/v1/candidates,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-451,GET /api/v1/candidates/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-452,GET /api/v1/candidates/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-453,GET /api/v1/candidates/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-454,GET /api/v1/candidates/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-455,GET /api/v1/candidates/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-456,PATCH /api/v1/candidates/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-457,PATCH /api/v1/candidates/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-458,PATCH /api/v1/candidates/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-459,PATCH /api/v1/candidates/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-460,DELETE /api/v1/candidates/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-461,DELETE /api/v1/candidates/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-462,DELETE /api/v1/candidates/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-463,DELETE /api/v1/candidates/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-464,POST /api/v1/candidate-centre-mappings,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-465,POST /api/v1/candidate-centre-mappings,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-466,POST /api/v1/candidate-centre-mappings,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-467,POST /api/v1/candidate-centre-mappings,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-468,GET /api/v1/candidate-centre-mappings,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-469,GET /api/v1/candidate-centre-mappings,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-470,GET /api/v1/candidate-centre-mappings,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-471,GET /api/v1/candidate-centre-mappings,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-472,GET /api/v1/candidate-centre-mappings,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-473,GET /api/v1/candidate-centre-mappings/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-474,GET /api/v1/candidate-centre-mappings/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-475,GET /api/v1/candidate-centre-mappings/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-476,GET /api/v1/candidate-centre-mappings/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-477,GET /api/v1/candidate-centre-mappings/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-478,PATCH /api/v1/candidate-centre-mappings/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-479,PATCH /api/v1/candidate-centre-mappings/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-480,PATCH /api/v1/candidate-centre-mappings/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-481,PATCH /api/v1/candidate-centre-mappings/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-482,DELETE /api/v1/candidate-centre-mappings/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-483,DELETE /api/v1/candidate-centre-mappings/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-484,DELETE /api/v1/candidate-centre-mappings/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-485,DELETE /api/v1/candidate-centre-mappings/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-486,POST /api/v1/test-candidate-mappings,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-487,POST /api/v1/test-candidate-mappings,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-488,POST /api/v1/test-candidate-mappings,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-489,POST /api/v1/test-candidate-mappings,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-490,GET /api/v1/test-candidate-mappings,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-491,GET /api/v1/test-candidate-mappings,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-492,GET /api/v1/test-candidate-mappings,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-493,GET /api/v1/test-candidate-mappings,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-494,GET /api/v1/test-candidate-mappings,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-495,GET /api/v1/test-candidate-mappings/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-496,GET /api/v1/test-candidate-mappings/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-497,GET /api/v1/test-candidate-mappings/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-498,GET /api/v1/test-candidate-mappings/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-499,GET /api/v1/test-candidate-mappings/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-500,PATCH /api/v1/test-candidate-mappings/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-501,PATCH /api/v1/test-candidate-mappings/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-502,PATCH /api/v1/test-candidate-mappings/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-503,PATCH /api/v1/test-candidate-mappings/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-504,DELETE /api/v1/test-candidate-mappings/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-505,DELETE /api/v1/test-candidate-mappings/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-506,DELETE /api/v1/test-candidate-mappings/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-507,DELETE /api/v1/test-candidate-mappings/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-508,POST /api/v1/centre-users,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-509,POST /api/v1/centre-users,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-510,POST /api/v1/centre-users,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-511,POST /api/v1/centre-users,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-512,GET /api/v1/centre-users,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-513,GET /api/v1/centre-users,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-514,GET /api/v1/centre-users,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-515,GET /api/v1/centre-users,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-516,GET /api/v1/centre-users,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-517,GET /api/v1/centre-users/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-518,GET /api/v1/centre-users/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-519,GET /api/v1/centre-users/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-520,GET /api/v1/centre-users/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-521,GET /api/v1/centre-users/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-522,PATCH /api/v1/centre-users/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-523,PATCH /api/v1/centre-users/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-524,PATCH /api/v1/centre-users/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-525,PATCH /api/v1/centre-users/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-526,DELETE /api/v1/centre-users/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-527,DELETE /api/v1/centre-users/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-528,DELETE /api/v1/centre-users/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-529,DELETE /api/v1/centre-users/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-530,PATCH /api/v1/difficulties/:id/status,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-531,PATCH /api/v1/difficulties/:id/status,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-532,PATCH /api/v1/difficulties/:id/status,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-533,PATCH /api/v1/difficulties/:id/status,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-534,GET /api/v1/tests/:id/stats,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-535,GET /api/v1/tests/:id/stats,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-536,GET /api/v1/tests/:id/stats,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-537,GET /api/v1/tests/:id/stats,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-538,GET /api/v1/tests/:id/stats,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-539,POST /api/v1/instructions/:instructionId/languages,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-540,POST /api/v1/instructions/:instructionId/languages,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-541,POST /api/v1/instructions/:instructionId/languages,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-542,POST /api/v1/instructions/:instructionId/languages,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-543,GET /api/v1/instructions/:instructionId/languages,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-544,GET /api/v1/instructions/:instructionId/languages,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-545,GET /api/v1/instructions/:instructionId/languages,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-546,GET /api/v1/instructions/:instructionId/languages,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-547,GET /api/v1/instructions/:instructionId/languages,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-548,GET /api/v1/instructions/:instructionId/languages/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-549,GET /api/v1/instructions/:instructionId/languages/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-550,GET /api/v1/instructions/:instructionId/languages/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-551,GET /api/v1/instructions/:instructionId/languages/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-552,GET /api/v1/instructions/:instructionId/languages/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-553,PATCH /api/v1/instructions/:instructionId/languages/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-554,PATCH /api/v1/instructions/:instructionId/languages/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-555,PATCH /api/v1/instructions/:instructionId/languages/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-556,PATCH /api/v1/instructions/:instructionId/languages/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-557,DELETE /api/v1/instructions/:instructionId/languages/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-558,DELETE /api/v1/instructions/:instructionId/languages/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-559,DELETE /api/v1/instructions/:instructionId/languages/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-560,DELETE /api/v1/instructions/:instructionId/languages/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-561,POST /api/v1/candidates/:candidateId/documents,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-562,POST /api/v1/candidates/:candidateId/documents,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-563,POST /api/v1/candidates/:candidateId/documents,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-564,POST /api/v1/candidates/:candidateId/documents,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-565,GET /api/v1/candidates/:candidateId/documents,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-566,GET /api/v1/candidates/:candidateId/documents,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-567,GET /api/v1/candidates/:candidateId/documents,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-568,GET /api/v1/candidates/:candidateId/documents,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-569,GET /api/v1/candidates/:candidateId/documents,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-570,GET /api/v1/candidates/:candidateId/documents/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-571,GET /api/v1/candidates/:candidateId/documents/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-572,GET /api/v1/candidates/:candidateId/documents/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-573,GET /api/v1/candidates/:candidateId/documents/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-574,GET /api/v1/candidates/:candidateId/documents/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-575,PATCH /api/v1/candidates/:candidateId/documents/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-576,PATCH /api/v1/candidates/:candidateId/documents/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-577,PATCH /api/v1/candidates/:candidateId/documents/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-578,PATCH /api/v1/candidates/:candidateId/documents/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-579,DELETE /api/v1/candidates/:candidateId/documents/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-580,DELETE /api/v1/candidates/:candidateId/documents/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-581,DELETE /api/v1/candidates/:candidateId/documents/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-582,DELETE /api/v1/candidates/:candidateId/documents/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-583,POST /api/v1/test-settings,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-584,POST /api/v1/test-settings,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-585,POST /api/v1/test-settings,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-586,POST /api/v1/test-settings,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-587,GET /api/v1/test-settings/test/:testId,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-588,GET /api/v1/test-settings/test/:testId,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-589,GET /api/v1/test-settings/test/:testId,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-590,GET /api/v1/test-settings/test/:testId,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-591,GET /api/v1/test-settings/test/:testId,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-592,GET /api/v1/test-settings/:id,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-593,GET /api/v1/test-settings/:id,Company admin (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-594,GET /api/v1/test-settings/:id,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-595,GET /api/v1/test-settings/:id,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-596,GET /api/v1/test-settings/:id,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-597,PATCH /api/v1/test-settings/:id,No login,Call with No login (PATCH),No,No,Pass,N/A,N/A
+BE-TC-598,PATCH /api/v1/test-settings/:id,Super admin,Call with Super admin (PATCH),No,No,Pass,N/A,N/A
+BE-TC-599,PATCH /api/v1/test-settings/:id,Candidate (A),Call with Candidate (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-600,PATCH /api/v1/test-settings/:id,Centre user (A),Call with Centre user (A) (PATCH),No,No,Pass,N/A,N/A
+BE-TC-601,DELETE /api/v1/test-settings/:id,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-602,DELETE /api/v1/test-settings/:id,Super admin,Call with Super admin (DELETE),No,No,Pass,N/A,N/A
+BE-TC-603,DELETE /api/v1/test-settings/:id,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-604,DELETE /api/v1/test-settings/:id,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-605,POST /api/v1/test-candidate-mappings/assign-groups,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-606,POST /api/v1/test-candidate-mappings/assign-groups,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-607,POST /api/v1/test-candidate-mappings/assign-groups,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-608,POST /api/v1/test-candidate-mappings/assign-groups,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-609,POST /api/v1/test-candidate-mappings/assign-email,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-610,POST /api/v1/test-candidate-mappings/assign-email,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-611,POST /api/v1/test-candidate-mappings/assign-email,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-612,POST /api/v1/test-candidate-mappings/assign-email,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-613,POST /api/v1/candidates/logout,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-614,POST /api/v1/candidates/logout,Company admin (A),Call with Company admin (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-615,POST /api/v1/candidates/logout,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-616,POST /api/v1/candidates/logout,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-617,GET /api/v1/candidates/me,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-618,GET /api/v1/candidates/me,Company admin (A),Call with Company admin (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-619,GET /api/v1/candidates/me,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-620,GET /api/v1/candidates/me,Candidate (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-621,GET /api/v1/candidates/me,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-622,GET /api/v1/candidates/tests/:testId,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-623,GET /api/v1/candidates/tests/:testId,Company admin (A),Call with Company admin (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-624,GET /api/v1/candidates/tests/:testId,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-625,GET /api/v1/candidates/tests/:testId,Candidate (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-626,GET /api/v1/candidates/tests/:testId,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-627,GET /api/v1/candidates/tests/:testId/questions,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-628,GET /api/v1/candidates/tests/:testId/questions,Company admin (A),Call with Company admin (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-629,GET /api/v1/candidates/tests/:testId/questions,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-630,GET /api/v1/candidates/tests/:testId/questions,Candidate (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-631,GET /api/v1/candidates/tests/:testId/questions,Centre user (A),Call with Centre user (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-632,POST /api/v1/candidates/tests/:testId/feedback,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-633,POST /api/v1/candidates/tests/:testId/feedback,Company admin (A),Call with Company admin (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-634,POST /api/v1/candidates/tests/:testId/feedback,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-635,POST /api/v1/candidates/tests/:testId/feedback,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-636,POST /api/v1/centre-users/logout,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-637,POST /api/v1/centre-users/logout,Company admin (A),Call with Company admin (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-638,POST /api/v1/centre-users/logout,Super admin,Call with Super admin (POST),No,No,Pass,N/A,N/A
+BE-TC-639,POST /api/v1/centre-users/logout,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-640,GET /api/v1/centre-users/me,No login,Call with No login (GET),No,No,Pass,N/A,N/A
+BE-TC-641,GET /api/v1/centre-users/me,Company admin (A),Call with Company admin (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-642,GET /api/v1/centre-users/me,Super admin,Call with Super admin (GET),No,No,Pass,N/A,N/A
+BE-TC-643,GET /api/v1/centre-users/me,Candidate (A),Call with Candidate (A) (GET),No,No,Pass,N/A,N/A
+BE-TC-644,GET /api/v1/centre-users/me,Centre user (A),Allowed role reads data (GET),Yes,Yes,Pass,N/A,N/A
+BE-TC-645,POST /api/v1/files/upload,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-646,POST /api/v1/files/upload,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-647,POST /api/v1/files/upload,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-648,PUT /api/v1/files,No login,Call with No login (PUT),No,No,Pass,N/A,N/A
+BE-TC-649,PUT /api/v1/files,Candidate (A),Call with Candidate (A) (PUT),No,No,Pass,N/A,N/A
+BE-TC-650,PUT /api/v1/files,Centre user (A),Call with Centre user (A) (PUT),No,No,Pass,N/A,N/A
+BE-TC-651,POST /api/v1/files/upload-url,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-652,POST /api/v1/files/upload-url,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-653,POST /api/v1/files/upload-url,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-654,POST /api/v1/files/download-url,No login,Call with No login (POST),No,No,Pass,N/A,N/A
+BE-TC-655,POST /api/v1/files/download-url,Candidate (A),Call with Candidate (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-656,POST /api/v1/files/download-url,Centre user (A),Call with Centre user (A) (POST),No,No,Pass,N/A,N/A
+BE-TC-657,DELETE /api/v1/files,No login,Call with No login (DELETE),No,No,Pass,N/A,N/A
+BE-TC-658,DELETE /api/v1/files,Candidate (A),Call with Candidate (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-659,DELETE /api/v1/files,Centre user (A),Call with Centre user (A) (DELETE),No,No,Pass,N/A,N/A
+BE-TC-660,GET /api/v1/companies/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-661,PATCH /api/v1/companies/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-662,GET /api/v1/languages/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-663,PATCH /api/v1/languages/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-664,DELETE /api/v1/languages/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-665,GET /api/v1/difficulties/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-666,PATCH /api/v1/difficulties/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-667,DELETE /api/v1/difficulties/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-668,GET /api/v1/categories/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-669,PATCH /api/v1/categories/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-670,DELETE /api/v1/categories/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-671,GET /api/v1/subjects/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-672,PATCH /api/v1/subjects/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-673,DELETE /api/v1/subjects/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-674,GET /api/v1/topics/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-675,PATCH /api/v1/topics/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-676,DELETE /api/v1/topics/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-677,GET /api/v1/category-subject-topic-mappings/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-678,PATCH /api/v1/category-subject-topic-mappings/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-679,DELETE /api/v1/category-subject-topic-mappings/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-680,GET /api/v1/instructions/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-681,PATCH /api/v1/instructions/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-682,DELETE /api/v1/instructions/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-683,GET /api/v1/groups/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-684,PATCH /api/v1/groups/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-685,DELETE /api/v1/groups/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-686,GET /api/v1/zones/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-687,PATCH /api/v1/zones/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-688,DELETE /api/v1/zones/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-689,GET /api/v1/regions/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-690,PATCH /api/v1/regions/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-691,DELETE /api/v1/regions/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-692,GET /api/v1/centres/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-693,PATCH /api/v1/centres/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-694,DELETE /api/v1/centres/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-695,GET /api/v1/labs/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-696,PATCH /api/v1/labs/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-697,DELETE /api/v1/labs/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-698,GET /api/v1/events/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-699,PATCH /api/v1/events/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-700,DELETE /api/v1/events/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-701,GET /api/v1/sessions/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-702,PATCH /api/v1/sessions/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-703,DELETE /api/v1/sessions/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-704,GET /api/v1/tests/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-705,PATCH /api/v1/tests/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-706,DELETE /api/v1/tests/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-707,GET /api/v1/questions/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-708,PATCH /api/v1/questions/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-709,DELETE /api/v1/questions/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-710,GET /api/v1/candidates/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-711,PATCH /api/v1/candidates/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-712,DELETE /api/v1/candidates/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-713,GET /api/v1/candidate-centre-mappings/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-714,PATCH /api/v1/candidate-centre-mappings/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-715,DELETE /api/v1/candidate-centre-mappings/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-716,GET /api/v1/test-candidate-mappings/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-717,PATCH /api/v1/test-candidate-mappings/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-718,DELETE /api/v1/test-candidate-mappings/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-719,GET /api/v1/centre-users/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-720,PATCH /api/v1/centre-users/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-721,DELETE /api/v1/centre-users/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-722,PATCH /api/v1/difficulties/:id/status,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-723,GET /api/v1/tests/:id/stats,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-724,GET /api/v1/instructions/:instructionId/languages,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-725,GET /api/v1/instructions/:instructionId/languages/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-726,PATCH /api/v1/instructions/:instructionId/languages/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-727,DELETE /api/v1/instructions/:instructionId/languages/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-728,GET /api/v1/candidates/:candidateId/documents,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-729,GET /api/v1/candidates/:candidateId/documents/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-730,PATCH /api/v1/candidates/:candidateId/documents/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-731,DELETE /api/v1/candidates/:candidateId/documents/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-732,GET /api/v1/test-settings/test/:testId,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-733,GET /api/v1/test-settings/:id,Company admin (B),Admin of company B uses an id that belongs to company A (GET),No,No,Pass,N/A,N/A
+BE-TC-734,PATCH /api/v1/test-settings/:id,Company admin (B),Admin of company B uses an id that belongs to company A (PATCH),No,No,Pass,N/A,N/A
+BE-TC-735,DELETE /api/v1/test-settings/:id,Company admin (B),Admin of company B uses an id that belongs to company A (DELETE),No,No,Pass,N/A,N/A
+BE-TC-736,GET /api/v1/candidates/tests/:testId/questions,Candidate (B),Candidate from company B asks for company A test (GET),No,No,Pass,N/A,N/A
+BE-TC-1047,POST /api/v1/super-admin/templates,Company admin (A),Company admin token (POST),No,No,Pass,N/A,N/A
+BE-TC-1227,GET /api/v1/candidates/tests/:testId,N/A,Other test in same company (GET),No,No,Pass,N/A,N/A
+BE-TC-1245,GET /api/v1/candidate-centre-mappings,Centre user (A),Centre user lists candidates of own centre (GET),Yes,No,Fail,Medium,BE-BUG-035

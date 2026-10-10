@@ -1,0 +1,2 @@
+src/modules/candidates/candidate-exam.controller.ts(64,3): error TS4053: Return type of public method from exported class has or is using name 'ExamQuestion' from external module "/home/user/admin_qa/admin_backend/src/modules/candidates/candidate-exam.service" but cannot be named.
+exit=2

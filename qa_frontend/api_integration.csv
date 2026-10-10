@@ -1,0 +1,9 @@
+Test ID,Page/Component,API Called,Scenario (success/error/slow/empty),Expected UI Behaviour,Actual UI Behaviour,Status,Bug ID
+FE-TC-014,Forgot password page,POST /auth/forgot-password,success,OTP step shown (API exists),404 Request failed with status code 404,Fail,FE-BUG-010
+FE-TC-015,Dashboard,"GET /dashboard (forced mock, not called)",success,Total candidates 1200 and total tests 1101,"API called=false; cards: Dashboard Overview of candidates, tests, and live activity. Total Candidates 842 Total Tests 128 Candidate Count Test All Tests From To 01 Aug 02 Aug 03 Aug 0",Fail,FE-BUG-011
+FE-TC-019,Test Manager list,GET /tests (mocked 500),error,Error message with Retry button,Error shown; retry button=false,Fail,FE-BUG-034
+FE-TC-020,Test Manager list,GET /tests (mocked empty),empty,Friendly empty state with Create Tests action,.No. Test Name Start Date End Date Status Question Test Category Test Template Active Published Action No results.,Pass,N/A
+FE-TC-021,Test Manager list,GET /tests (4 s delay),slow,Loader visible while waiting,2 loader element(s),Pass,N/A
+FE-TC-022,Test Manager list,GET /tests (offline),error,"Clear ""You are offline / network error"" message",Filters 1 Reset filters Import Tests Quick Assign Delete Create Tests S.No. Test Name Start Date End Date Status,Fail,FE-BUG-034
+FE-TC-023,Test Manager list,GET /tests (mocked 401),error,Redirect to login with redirect param,/w/qa-demo/login?redirect=%2Fw%2Fqa-demo%2Ftest-manager,Pass,N/A
+FE-TC-024,Companies page,GET /super-admin/companies (mocked 500),error,Error message,Companies Manage platform companies. Create Company Request failed with status code 500,Pass,N/A

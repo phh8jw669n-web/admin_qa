@@ -1,0 +1,232 @@
+Test ID,Endpoint,Field,Rule Checked,Input Used,Expected Result,Actual Result,Status,Bug ID
+BE-TC-825,GET /api/v1/super-admin/companies/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-826,PUT /api/v1/super-admin/companies/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-827,DELETE /api/v1/super-admin/companies/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-828,GET /api/v1/companies/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-829,PATCH /api/v1/companies/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-830,GET /api/v1/admins/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-831,PUT /api/v1/admins/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-832,DELETE /api/v1/admins/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-833,GET /api/v1/super-admin/templates/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-834,PATCH /api/v1/super-admin/templates/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-835,DELETE /api/v1/super-admin/templates/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-836,GET /api/v1/languages/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-837,PATCH /api/v1/languages/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-838,DELETE /api/v1/languages/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-839,GET /api/v1/difficulties/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-840,PATCH /api/v1/difficulties/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-841,DELETE /api/v1/difficulties/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-842,GET /api/v1/categories/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-843,PATCH /api/v1/categories/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-844,DELETE /api/v1/categories/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-845,GET /api/v1/subjects/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-846,PATCH /api/v1/subjects/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-847,DELETE /api/v1/subjects/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-848,GET /api/v1/topics/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-849,PATCH /api/v1/topics/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-850,DELETE /api/v1/topics/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-851,GET /api/v1/category-subject-topic-mappings/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-852,PATCH /api/v1/category-subject-topic-mappings/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-853,DELETE /api/v1/category-subject-topic-mappings/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-854,GET /api/v1/instructions/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-855,PATCH /api/v1/instructions/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-856,DELETE /api/v1/instructions/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-857,GET /api/v1/groups/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-858,PATCH /api/v1/groups/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-859,DELETE /api/v1/groups/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-860,GET /api/v1/zones/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-861,PATCH /api/v1/zones/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-862,DELETE /api/v1/zones/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-863,GET /api/v1/regions/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-864,PATCH /api/v1/regions/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-865,DELETE /api/v1/regions/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-866,GET /api/v1/centres/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-867,PATCH /api/v1/centres/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-868,DELETE /api/v1/centres/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-869,GET /api/v1/labs/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-870,PATCH /api/v1/labs/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-871,DELETE /api/v1/labs/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-872,GET /api/v1/events/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-873,PATCH /api/v1/events/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-874,DELETE /api/v1/events/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-875,GET /api/v1/sessions/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-876,PATCH /api/v1/sessions/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-877,DELETE /api/v1/sessions/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-878,GET /api/v1/tests/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-879,PATCH /api/v1/tests/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-880,DELETE /api/v1/tests/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-881,GET /api/v1/questions/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-882,PATCH /api/v1/questions/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-883,DELETE /api/v1/questions/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-884,GET /api/v1/candidates/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-885,PATCH /api/v1/candidates/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-886,DELETE /api/v1/candidates/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-887,GET /api/v1/candidate-centre-mappings/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-888,PATCH /api/v1/candidate-centre-mappings/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-889,DELETE /api/v1/candidate-centre-mappings/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-890,GET /api/v1/test-candidate-mappings/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-891,PATCH /api/v1/test-candidate-mappings/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-892,DELETE /api/v1/test-candidate-mappings/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-893,GET /api/v1/centre-users/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-894,PATCH /api/v1/centre-users/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-895,DELETE /api/v1/centre-users/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-896,PATCH /api/v1/difficulties/:id/status,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-897,GET /api/v1/tests/:id/stats,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-898,GET /api/v1/instructions/:instructionId/languages,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-899,GET /api/v1/instructions/:instructionId/languages/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-900,PATCH /api/v1/instructions/:instructionId/languages/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-901,DELETE /api/v1/instructions/:instructionId/languages/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-902,GET /api/v1/candidates/:candidateId/documents,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-903,GET /api/v1/candidates/:candidateId/documents/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-904,PATCH /api/v1/candidates/:candidateId/documents/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-905,DELETE /api/v1/candidates/:candidateId/documents/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-906,GET /api/v1/test-settings/test/:testId,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-907,GET /api/v1/test-settings/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-908,PATCH /api/v1/test-settings/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-909,DELETE /api/v1/test-settings/:id,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-910,GET /api/v1/candidates/tests/:testId,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-911,GET /api/v1/candidates/tests/:testId/questions,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-912,POST /api/v1/candidates/tests/:testId/feedback,id (path),Must be a UUID,id=abc,400 400 Please provide a valid ID,400 Please provide a valid ID,Pass,N/A
+BE-TC-913,POST /api/v1/auth/login,email,DTO validation,"{""email"":""x""}",400 400 with field error list,400 companyToken must be a jwt string; email must be an email; password must be longer than or equal to 8 characters; password must be a string,Pass,N/A
+BE-TC-914,POST /api/v1/auth/refresh,(empty body),DTO validation,{},400 400 with field error list,400 refreshToken should not be empty; refreshToken must be a string,Pass,N/A
+BE-TC-915,POST /api/v1/super-admin/login,email,DTO validation,"{""email"":""bad""}",400 400 with field error list,400 email must be an email; password must be longer than or equal to 8 characters; password must be a string,Pass,N/A
+BE-TC-916,POST /api/v1/super-admin/companies,name,DTO validation,"{""name"":""""}",400 400 with field error list,400 name should not be empty; workspaceUrl should not be empty; workspaceUrl must be a string; addressLine1 should not be empty; addressLine1 must be a string; pinC...,Pass,N/A
+BE-TC-917,PUT /api/v1/super-admin/companies/:id,gstNo,DTO validation,"{""gstNo"":""BAD""}",400 400 with field error list,400 gstNo must be a valid 15-character GST number,Pass,N/A
+BE-TC-918,POST /api/v1/companies/verify-workspace,workspaceUrl,DTO validation,"{""workspaceUrl"":""""}",400 400 with field error list,400 workspaceUrl should not be empty,Pass,N/A
+BE-TC-919,PATCH /api/v1/companies/:id,yearFounded,DTO validation,"{""yearFounded"":1500}",400 400 with field error list,400 yearFounded must not be less than 1800,Pass,N/A
+BE-TC-920,POST /api/v1/admins,role,DTO validation,"{""role"":""root""}",400 400 with field error list,400 companyId must be a UUID; firstName must be shorter than or equal to 100 characters; firstName should not be empty; firstName must be a string; lastName must be...,Pass,N/A
+BE-TC-921,PUT /api/v1/admins/:id,email,DTO validation,"{""email"":""nope""}",400 400 with field error list,400 email must be an email,Pass,N/A
+BE-TC-922,POST /api/v1/super-admin/templates,ranking,DTO validation,"{""ranking"":0}",400 400 with field error list,400 name must be shorter than or equal to 200 characters; name should not be empty; name must be a string; ranking must not be less than 1; imageKey must be shorter...,Pass,N/A
+BE-TC-923,PATCH /api/v1/super-admin/templates/:id,ranking,DTO validation,"{""ranking"":-1}",400 400 with field error list,400 ranking must not be less than 1,Pass,N/A
+BE-TC-924,POST /api/v1/languages,name,DTO validation,"{""name"":""""}",400 400 with field error list,400 name should not be empty,Pass,N/A
+BE-TC-925,PATCH /api/v1/languages/:id,unknownField,DTO validation,"{""unknownField"":1}",400 400 with field error list,400 property unknownField should not exist,Pass,N/A
+BE-TC-926,POST /api/v1/difficulties,"name, languageId",DTO validation,"{""name"":""x"",""languageId"":""nope""}",400 400 with field error list,400 languageId must be a UUID,Pass,N/A
+BE-TC-927,PATCH /api/v1/difficulties/:id,unknownField,DTO validation,"{""unknownField"":1}",400 400 with field error list,400 property unknownField should not exist,Pass,N/A
+BE-TC-928,POST /api/v1/categories,"name, ranking",DTO validation,"{""name"":""x"",""ranking"":-1}",400 400 with field error list,400 ranking must not be less than 0,Pass,N/A
+BE-TC-929,PATCH /api/v1/categories/:id,unknownField,DTO validation,"{""unknownField"":1}",400 400 with field error list,400 property unknownField should not exist,Pass,N/A
+BE-TC-930,POST /api/v1/subjects,ranking,DTO validation,"{""ranking"":""x""}",400 400 with field error list,400 name should not be empty; name must be a string; ranking must not be greater than 2147483647; ranking must not be less than 0; ranking must be an integer number,Pass,N/A
+BE-TC-931,PATCH /api/v1/subjects/:id,unknownField,DTO validation,"{""unknownField"":1}",400 400 with field error list,400 property unknownField should not exist,Pass,N/A
+BE-TC-932,POST /api/v1/topics,name,DTO validation,"{""name"":5}",400 400 with field error list,400 ranking must not be greater than 2147483647; ranking must not be less than 0; ranking must be an integer number,Pass,N/A
+BE-TC-933,PATCH /api/v1/topics/:id,unknownField,DTO validation,"{""unknownField"":1}",400 400 with field error list,400 property unknownField should not exist,Pass,N/A
+BE-TC-934,POST /api/v1/category-subject-topic-mappings,categoryId,DTO validation,"{""categoryId"":""x""}",400 400 with field error list,400 categoryId must be a UUID; subjectId must be a UUID; topicId must be a UUID; ranking must not be greater than 2147483647; ranking must not be less than 0; ranki...,Pass,N/A
+BE-TC-935,PATCH /api/v1/category-subject-topic-mappings/:id,unknownField,DTO validation,"{""unknownField"":1}",400 400 with field error list,400 property unknownField should not exist,Pass,N/A
+BE-TC-936,POST /api/v1/instructions,name,DTO validation,"{""name"":""""}",400 400 with field error list,400 name should not be empty; ranking must not be greater than 2147483647; ranking must not be less than 0; ranking must be an integer number,Pass,N/A
+BE-TC-937,PATCH /api/v1/instructions/:id,unknownField,DTO validation,"{""unknownField"":1}",400 400 with field error list,400 property unknownField should not exist,Pass,N/A
+BE-TC-938,POST /api/v1/groups,name,DTO validation,"{""name"":""""}",400 400 with field error list,400 name should not be empty,Pass,N/A
+BE-TC-939,PATCH /api/v1/groups/:id,unknownField,DTO validation,"{""unknownField"":1}",400 400 with field error list,400 property unknownField should not exist,Pass,N/A
+BE-TC-940,POST /api/v1/zones,name,DTO validation,"{""name"":""""}",400 400 with field error list,400 name should not be empty,Pass,N/A
+BE-TC-941,PATCH /api/v1/zones/:id,unknownField,DTO validation,"{""unknownField"":1}",400 400 with field error list,400 property unknownField should not exist,Pass,N/A
+BE-TC-942,POST /api/v1/regions,latitude,DTO validation,"{""latitude"":200}",400 400 with field error list,400 zoneId should not be empty; zoneId must be a UUID; name must be shorter than or equal to 250 characters; name should not be empty; name must be a string; latitu...,Pass,N/A
+BE-TC-943,PATCH /api/v1/regions/:id,unknownField,DTO validation,"{""unknownField"":1}",400 400 with field error list,400 property unknownField should not exist,Pass,N/A
+BE-TC-944,POST /api/v1/centres,seats,DTO validation,"{""seats"":-1}",400 400 with field error list,400 zoneId must be a UUID; regionId must be a UUID; name must be shorter than or equal to 250 characters; name should not be empty; name must be a string; code must...,Pass,N/A
+BE-TC-945,PATCH /api/v1/centres/:id,unknownField,DTO validation,"{""unknownField"":1}",400 400 with field error list,400 property unknownField should not exist,Pass,N/A
+BE-TC-946,POST /api/v1/labs,seats,DTO validation,"{""seats"":""x""}",400 400 with field error list,400 zoneId must be a UUID; regionId must be a UUID; centreId must be a UUID; name must be shorter than or equal to 250 characters; name should not be empty; name mu...,Pass,N/A
+BE-TC-947,PATCH /api/v1/labs/:id,unknownField,DTO validation,"{""unknownField"":1}",400 400 with field error list,400 property unknownField should not exist,Pass,N/A
+BE-TC-948,POST /api/v1/events,examType,DTO validation,"{""examType"":""x""}",400 400 with field error list,400 name must be shorter than or equal to 255 characters; name should not be empty; name must be a string; eventCode must be shorter than or equal to 50 characters;...,Pass,N/A
+BE-TC-949,PATCH /api/v1/events/:id,unknownField,DTO validation,"{""unknownField"":1}",400 400 with field error list,400 property unknownField should not exist,Pass,N/A
+BE-TC-950,POST /api/v1/sessions,startTime,DTO validation,"{""startTime"":""25:00""}",400 400 with field error list,400 name must be shorter than or equal to 200 characters; name should not be empty; name must be a string; startDate must be a valid ISO 8601 date string; endDate m...,Pass,N/A
+BE-TC-951,PATCH /api/v1/sessions/:id,unknownField,DTO validation,"{""unknownField"":1}",400 400 with field error list,400 property unknownField should not exist,Pass,N/A
+BE-TC-952,POST /api/v1/tests,durationMinutes,DTO validation,"{""durationMinutes"":0}",400 400 with field error list,400 name must be shorter than or equal to 200 characters; name should not be empty; name must be a string; testCode must be shorter than or equal to 10 characters; ...,Pass,N/A
+BE-TC-953,PATCH /api/v1/tests/:id,unknownField,DTO validation,"{""unknownField"":1}",400 400 with field error list,400 property unknownField should not exist,Pass,N/A
+BE-TC-954,POST /api/v1/questions,questionType,DTO validation,"{""questionType"":""essay""}",400 400 with field error list,"400 testId must be a UUID; subjectId must be a UUID; topicId must be a UUID; questionType must be one of the following values: multiple_choice, single_choice, fill_...",Pass,N/A
+BE-TC-955,PATCH /api/v1/questions/:id,unknownField,DTO validation,"{""unknownField"":1}",400 400 with field error list,400 property unknownField should not exist,Pass,N/A
+BE-TC-956,POST /api/v1/candidates,email,DTO validation,"{""email"":""bad""}",400 400 with field error list,400 name must be shorter than or equal to 255 characters; name should not be empty; name must be a string; enrollmentNumber must be shorter than or equal to 100 cha...,Pass,N/A
+BE-TC-957,PATCH /api/v1/candidates/:id,unknownField,DTO validation,"{""unknownField"":1}",400 400 with field error list,400 property unknownField should not exist,Pass,N/A
+BE-TC-958,POST /api/v1/candidate-centre-mappings,examDate,DTO validation,"{""examDate"":""2031-13-40""}",400 400 with field error list,400 candidateId must be a UUID; centreId must be a UUID; examDate must be a valid ISO 8601 date string,Pass,N/A
+BE-TC-959,PATCH /api/v1/candidate-centre-mappings/:id,unknownField,DTO validation,"{""unknownField"":1}",400 400 with field error list,400 property unknownField should not exist,Pass,N/A
+BE-TC-960,POST /api/v1/test-candidate-mappings,attemptNo,DTO validation,"{""attemptNo"":0}",400 400 with field error list,400 groupId must be a UUID; candidateId must be a UUID; testId must be a UUID; attemptNo must not be less than 1,Pass,N/A
+BE-TC-961,PATCH /api/v1/test-candidate-mappings/:id,unknownField,DTO validation,"{""unknownField"":1}",400 400 with field error list,400 property unknownField should not exist,Pass,N/A
+BE-TC-962,POST /api/v1/centre-users,email,DTO validation,"{""email"":""bad""}",400 400 with field error list,400 centreId must be a UUID; centreId should not be empty; email must be an email,Pass,N/A
+BE-TC-963,PATCH /api/v1/centre-users/:id,unknownField,DTO validation,"{""unknownField"":1}",400 400 with field error list,400 property unknownField should not exist,Pass,N/A
+BE-TC-964,PATCH /api/v1/difficulties/:id/status,isActive,DTO validation,"{""isActive"":""yes""}",400 400 with field error list,200 Difficulty updated successfully,Fail,BE-BUG-006
+BE-TC-965,POST /api/v1/instructions/:instructionId/languages,content,DTO validation,"{""content"":""""}",400 400 with field error list,400 languageId must be a UUID; content should not be empty,Pass,N/A
+BE-TC-966,PATCH /api/v1/instructions/:instructionId/languages/:id,content,DTO validation,"{""content"":""""}",400 400 with field error list,400 content should not be empty,Pass,N/A
+BE-TC-967,POST /api/v1/candidates/:candidateId/documents,documentType,DTO validation,"{""documentType"":""passport""}",400 400 with field error list,"400 documentType must be one of the following values: profile_pic, signature, id_proof, other_identification_name_1, other_identification_name_2, other_identificati...",Pass,N/A
+BE-TC-968,PATCH /api/v1/candidates/:candidateId/documents/:id,documentName,DTO validation,"{""documentName"":5}",400 400 with field error list,400 documentName must be shorter than or equal to 255 characters; documentName must be a string,Pass,N/A
+BE-TC-969,POST /api/v1/test-settings,testId,DTO validation,"{""testId"":""x""}",400 400 with field error list,400 testId must be a UUID,Pass,N/A
+BE-TC-970,PATCH /api/v1/test-settings/:id,clockFormat,DTO validation,"{""clockFormat"":""x""}",400 400 with field error list,"400 clockFormat must be one of the following values: hh_mm, mm_ss",Pass,N/A
+BE-TC-971,POST /api/v1/test-candidate-mappings/assign-groups,groupIds,DTO validation,"{""groupIds"":[]}",400 400 with field error list,400 testId must be a UUID; groupIds should not be empty,Pass,N/A
+BE-TC-972,POST /api/v1/test-candidate-mappings/assign-email,email,DTO validation,"{""email"":""not-an-email""}",400 400 with field error list,400 testId must be a UUID; each value in email must be an email,Pass,N/A
+BE-TC-973,POST /api/v1/candidates/login,enrollmentNumber,DTO validation,"{""enrollmentNumber"":""""}",400 400 with field error list,400 companyToken must be a jwt string; enrollmentNumber should not be empty; password must be longer than or equal to 8 characters; password must be a string; centr...,Pass,N/A
+BE-TC-974,POST /api/v1/candidates/refresh,(empty body),DTO validation,{},400 400 with field error list,400 refreshToken should not be empty; refreshToken must be a string,Pass,N/A
+BE-TC-975,POST /api/v1/candidates/tests/:testId/feedback,rating,DTO validation,"{""rating"":9}",400 400 with field error list,400 rating must not be greater than 5,Pass,N/A
+BE-TC-976,POST /api/v1/centre-users/login,email,DTO validation,"{""email"":""x""}",400 400 with field error list,400 companyToken must be a jwt string; email must be an email; password must be longer than or equal to 8 characters; password must be a string,Pass,N/A
+BE-TC-977,POST /api/v1/centre-users/refresh,(empty body),DTO validation,{},400 400 with field error list,400 refreshToken should not be empty; refreshToken must be a string,Pass,N/A
+BE-TC-978,POST /api/v1/files/upload-url,"fileName, contentType",DTO validation,"{""fileName"":""a.exe"",""contentType"":""application/x-msdownload""}",400 400 with field error list,400 This file type is not allowed; This file type is not allowed,Pass,N/A
+BE-TC-979,POST /api/v1/files/download-url,key,DTO validation,"{""key"":""../etc/passwd""}",400 400 with field error list,400 Invalid file path,Pass,N/A
+BE-TC-986,POST /api/v1/auth/login,password,MinLength 8,N/A,400 400 password must be longer than or equal to 8 characters,400 password must be longer than or equal to 8 characters,Pass,N/A
+BE-TC-1010,POST /api/v1/super-admin/companies,gstNo,GST pattern,N/A,400 400 gstNo must be a valid 15-character GST number,400 gstNo must be a valid 15-character GST number,Pass,N/A
+BE-TC-1011,POST /api/v1/super-admin/companies,name,Max length 200 (DB),N/A,400 400 with message naming the field (name max 200),400 This value is too long,Fail,BE-BUG-045
+BE-TC-1012,POST /api/v1/super-admin/companies,name,"Required, trimmed",N/A,400 400 name should not be empty,400 name should not be empty,Pass,N/A
+BE-TC-1013,POST /api/v1/super-admin/companies,primaryColor,Hex color,N/A,400 400 primaryColor must be a hex color,201 Company created successfully,Fail,BE-BUG-027
+BE-TC-1014,POST /api/v1/super-admin/companies,workspaceUrl,URL / slug format,N/A,400 400 workspaceUrl must be a valid URL or slug,201 Company created successfully,Fail,BE-BUG-027
+BE-TC-1015,POST /api/v1/super-admin/companies,phone,Phone format,N/A,400 400 phone must be a valid phone number,201 Company created successfully,Fail,BE-BUG-027
+BE-TC-1016,POST /api/v1/super-admin/companies,yearFounded,Max current year,N/A,400 400 yearFounded must not be greater than current year,400 yearFounded must not be greater than 2026,Pass,N/A
+BE-TC-1017,POST /api/v1/super-admin/companies,planEndsAt,Future date,N/A,400 400 plan end must be in the future,201 Company created successfully,Fail,BE-BUG-027
+BE-TC-1020,GET /api/v1/super-admin/companies,limit,Max 200,N/A,400 400 limit must not be greater than 200,400 limit must not be greater than 200,Pass,N/A
+BE-TC-1035,PATCH /api/v1/companies/:id,panNo,PAN pattern,N/A,400 400 panNo format,"400 panNo must be 5 letters, followed by 4 digits, followed by 1 letter",Pass,N/A
+BE-TC-1039,POST /api/v1/admins,password,Strength rule (UI requires it),N/A,"400 400 password must contain upper, lower, number, symbol (same rule as UI)",201 Admin created successfully,Fail,BE-BUG-028
+BE-TC-1042,PUT /api/v1/admins/:id,firstName,Not empty on update,N/A,400 400 firstName should not be empty,200 Admin updated successfully,Fail,BE-BUG-042
+BE-TC-1043,PUT /api/v1/admins/:id,isActive,Boolean type,N/A,400 400 isActive must be a boolean value (or treated as false),200 Admin updated successfully,Fail,BE-BUG-006
+BE-TC-1057,POST /api/v1/languages,name,Max length,N/A,400 400 error that names the field and the limit,400 This value is too long,Fail,BE-BUG-045
+BE-TC-1068,POST /api/v1/difficulties,name,Max length,N/A,400 400 error that names the field and the limit,400 name must be shorter than or equal to 100 characters,Pass,N/A
+BE-TC-1079,POST /api/v1/categories,name,Max length,N/A,400 400 error that names the field and the limit,400 This value is too long,Fail,BE-BUG-045
+BE-TC-1090,POST /api/v1/subjects,name,Max length,N/A,400 400 error that names the field and the limit,400 This value is too long,Fail,BE-BUG-045
+BE-TC-1101,POST /api/v1/topics,name,Max length,N/A,400 400 error that names the field and the limit,400 This value is too long,Fail,BE-BUG-045
+BE-TC-1112,POST /api/v1/instructions,name,Max length,N/A,400 400 error that names the field and the limit,400 This value is too long,Fail,BE-BUG-045
+BE-TC-1123,POST /api/v1/groups,name,Max length,N/A,400 400 error that names the field and the limit,400 This value is too long,Fail,BE-BUG-045
+BE-TC-1129,GET /api/v1/categories,page,Min 1,N/A,400 400 page must not be less than 1,400 page must not be less than 1,Pass,N/A
+BE-TC-1130,GET /api/v1/categories,limit,Min 1,N/A,400 400 limit must not be less than 1,400 limit must not be less than 1,Pass,N/A
+BE-TC-1131,GET /api/v1/categories,limit,Integer,N/A,400 400 limit must be an integer,400 limit must not be greater than 200; limit must not be less than 1; limit must be an integer number,Pass,N/A
+BE-TC-1132,GET /api/v1/categories,page,Integer,N/A,400 400 page must be an integer,400 page must be an integer number,Pass,N/A
+BE-TC-1133,GET /api/v1/categories,sort,Whitelist,N/A,400 400 property sort should not exist (no sorting support),400 property sort should not exist,Pass,N/A
+BE-TC-1134,POST /api/v1/categories,ranking,Min 0,N/A,400 400 ranking must not be less than 0,400 ranking must not be less than 0,Pass,N/A
+BE-TC-1135,POST /api/v1/categories,ranking,Integer,N/A,400 400 ranking must be an integer,400 ranking must be an integer number,Pass,N/A
+BE-TC-1136,POST /api/v1/categories,ranking,Max int4,N/A,400 400 ranking must not be greater than 2147483647,400 ranking must not be greater than 2147483647,Pass,N/A
+BE-TC-1137,POST /api/v1/categories,ranking,Integer,N/A,201 or 400 Either converted or 400 - consistent,201 Category created successfully,Pass,N/A
+BE-TC-1141,PATCH /api/v1/groups/:id,isActive,"Boolean type (implicit conversion makes ""false"" true)",N/A,400 400 isActive must be a boolean value,200 Group updated successfully,Fail,BE-BUG-006
+BE-TC-1153,POST /api/v1/tests,isDraft/isPublished,Mutually exclusive,N/A,400 400 a draft cannot be published,201 Test created successfully,Fail,BE-BUG-009
+BE-TC-1154,POST /api/v1/tests,handicappedDurationMinutes,>= durationMinutes,N/A,400 400 Handicapped duration must be >= duration (UI marks the field optional),400 Handicapped duration must be greater than or equal to normal duration,Pass,N/A
+BE-TC-1155,POST /api/v1/tests,handicappedDurationMinutes,>= durationMinutes,N/A,201 201 (backend allows equal; UI rejects equal - mismatch),201 Test created successfully,Pass,N/A
+BE-TC-1156,POST /api/v1/tests,passingMarks,<= totalMarks,N/A,400 400 Passing marks cannot be greater than total marks,400 Passing marks cannot be greater than total marks,Pass,N/A
+BE-TC-1157,POST /api/v1/tests,graceMarks,<= totalMarks,N/A,400 400 grace marks cannot exceed total marks,201 Test created successfully,Fail,BE-BUG-040
+BE-TC-1158,POST /api/v1/tests,durationMinutes,Integer,N/A,400 400 durationMinutes must be an integer,400 durationMinutes must be an integer number,Pass,N/A
+BE-TC-1159,POST /api/v1/tests,totalQuestions,Min 1,N/A,400 400 totalQuestions must not be less than 1,400 totalQuestions must not be less than 1,Pass,N/A
+BE-TC-1160,POST /api/v1/tests,testCode,Max 10,N/A,400 400 testCode must be <= 10 characters,400 testCode must be shorter than or equal to 10 characters,Pass,N/A
+BE-TC-1161,POST /api/v1/tests,endDate,>= startDate,N/A,400 400 End date must be on or after start date,400 End date must be on or after start date,Pass,N/A
+BE-TC-1162,POST /api/v1/tests,endTime,"Compare date+time, not time only",N/A,201 201 (end is 2 days later; UI accepts it),400 End time must be after start time,Fail,BE-BUG-021
+BE-TC-1163,POST /api/v1/tests,startDate,Real calendar date,N/A,400 400 startDate must be a valid date,500 Something went wrong. Please try again.,Fail,BE-BUG-017
+BE-TC-1164,POST /api/v1/tests,startDate,Not in past,N/A,400 400 dates must not be in the past,201 Test created successfully,Fail,BE-BUG-040
+BE-TC-1165,POST /api/v1/tests,startBufferTime,HH:MM(:SS),N/A,400 400 startBufferTime must match HH:MM,400 startBufferTime must match /^([01]\d|2[0-3]):[0-5]\d(:[0-5]\d)?$/ regular expression,Pass,N/A
+BE-TC-1178,PATCH /api/v1/test-settings/:id,submissionMessage,Max length,N/A,400 400 message too long (no max length today),200 Test setting updated successfully,Fail,BE-BUG-046
+BE-TC-1183,POST /api/v1/questions,questionData.options,Exactly 1 correct,N/A,400 400 SCQ exactly 1 correct,400 questionData.0.SCQ options must include at least 2 choices and exactly 1 correctOptions id,Pass,N/A
+BE-TC-1184,POST /api/v1/questions,questionData.options,Unique option ids,N/A,400 400,400 questionData.0.SCQ options must include at least 2 choices and exactly 1 correctOptions id,Pass,N/A
+BE-TC-1185,POST /api/v1/questions,questionData.options,Non-empty text,N/A,400 400,400 questionData.0.SCQ options must include at least 2 choices and exactly 1 correctOptions id,Pass,N/A
+BE-TC-1186,POST /api/v1/questions,questionData.options,Min 2 options,N/A,400 400 at least 2 choices,400 questionData.0.SCQ options must include at least 2 choices and exactly 1 correctOptions id,Pass,N/A
+BE-TC-1187,POST /api/v1/questions,questionData.options.answer,Numeric when answerType=numbers,N/A,400 400,"400 questionData.0.Fill in the blanks options must be { answerType: alphanumeric|numbers, answer }",Pass,N/A
+BE-TC-1188,POST /api/v1/questions,questionData.questionType,Match parent,N/A,400 400 questionData.questionType must match,400 questionData.0.MCQ options must include at least 2 choices and at least 2 valid correctOptions ids,Pass,N/A
+BE-TC-1189,POST /api/v1/questions,questionData.languageId,Unique per question,N/A,400 400 duplicate languageId,400 questionData cannot contain duplicate languageId,Pass,N/A
+BE-TC-1190,POST /api/v1/questions,negativeMarks,<= rightMarks,N/A,400 400 negative marks cannot exceed right marks,201 Question created successfully,Fail,BE-BUG-023
+BE-TC-1191,POST /api/v1/questions,rightMarks,Min 0,N/A,400 400 rightMarks must be >= 0,201 Question created successfully,Fail,BE-BUG-023
+BE-TC-1192,POST /api/v1/questions,topicId,Must be mapped (CST),N/A,400 400 topic is not part of this subject/category,201 Question created successfully,Fail,BE-BUG-041
+BE-TC-1201,POST /api/v1/candidates,groupIds,Not empty,N/A,400 400 groupIds should not be empty,400 groupIds should not be empty,Pass,N/A
+BE-TC-1203,POST /api/v1/candidates,mobile,Phone format,N/A,400 400 mobile must be a phone number,201 Candidate created successfully,Fail,BE-BUG-043
+BE-TC-1204,POST /api/v1/candidates,dateOfBirth,Past date,N/A,400 400 dateOfBirth must be in the past,201 Candidate created successfully,Fail,BE-BUG-043
+BE-TC-1205,POST /api/v1/candidates,dateOfBirth,Real calendar date,N/A,400 400 invalid date,400 dateOfBirth must be a valid ISO 8601 date string,Pass,N/A
+BE-TC-1206,POST /api/v1/candidates,password,Strength,N/A,400 400 weak password,201 Candidate created successfully,Fail,BE-BUG-028
+BE-TC-1228,POST /api/v1/candidates/tests/:testId/feedback,rating,1-5,N/A,400 400 rating must not be greater than 5,400 rating must not be greater than 5,Pass,N/A
+BE-TC-1229,POST /api/v1/candidates/tests/:testId/feedback,rating,Integer,N/A,400 400 rating must be an integer,400 rating must be an integer number,Pass,N/A
+BE-TC-1230,POST /api/v1/candidates/tests/:testId/feedback,comment,Max 2000,N/A,400 400 comment too long,400 comment must be shorter than or equal to 2000 characters,Pass,N/A
+BE-TC-1234,POST /api/v1/regions,latitude,-90..90,N/A,400 400 latitude must be a latitude,400 latitude must be a latitude string or number,Pass,N/A
+BE-TC-1236,POST /api/v1/centres,N/A,regionId not in zoneId,N/A,404 404 Region not found,404 Region not found,Pass,N/A
+BE-TC-1237,POST /api/v1/labs,seats,<= centre seats,N/A,400 400 lab seats cannot exceed centre seats,201 Lab created successfully,Fail,BE-BUG-048
+BE-TC-1247,POST /api/v1/events,eventClosingAt,> eventOpeningAt,N/A,400 400 Event closing time must be after opening time,400 Event closing time must be after opening time,Pass,N/A
+BE-TC-1248,POST /api/v1/events,instructionAt,Within window,N/A,400 400 instructionAt must be inside the event window,201 Event created successfully,Fail,BE-BUG-048
+BE-TC-1250,POST /api/v1/sessions,endDate,>= startDate,N/A,"201 201 (a session can be on one day, like tests)",400 End date must be after start date,Fail,BE-BUG-048
+BE-TC-1256,POST /api/v1/test-candidate-mappings,groupId,Candidate in group,N/A,400 400 candidate is not a member of the group,201 Test candidate mapping created successfully,Fail,BE-BUG-029
+BE-TC-1257,PATCH /api/v1/test-candidate-mappings/:id,percentage,0-100,N/A,400 400 percentage must be <= 100,200 Test candidate mapping updated successfully,Fail,BE-BUG-029
+BE-TC-1258,PATCH /api/v1/test-candidate-mappings/:id,correctAnswers,correct+wrong <= attempted,N/A,400 400 counts do not add up,200 Test candidate mapping updated successfully,Fail,BE-BUG-029
+BE-TC-1259,PATCH /api/v1/test-candidate-mappings/:id,completedAt,> startedAt,N/A,400 400 completedAt must be after startedAt,200 Test candidate mapping updated successfully,Fail,BE-BUG-029
+BE-TC-1262,POST /api/v1/candidate-centre-mappings,examDate,One centre per day,N/A,409 409 a candidate can only sit at one centre per day,201 Candidate centre mapping created successfully,Fail,BE-BUG-030
+BE-TC-1263,POST /api/v1/candidate-centre-mappings,examDate,Today or later,N/A,400 400 exam date in the past,201 Candidate centre mapping created successfully,Fail,BE-BUG-030
+BE-TC-1267,POST /api/v1/groups,name,String type,N/A,400 400 name must be a string,201 Group created successfully,Fail,BE-BUG-056

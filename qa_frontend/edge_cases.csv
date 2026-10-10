@@ -1,0 +1,3 @@
+Edge Case ID,Module,Scenario,Input/Action,Expected Behaviour,Actual Behaviour,Status,Severity,Bug ID,Evidence
+FE-EC-001,Login,Double click Sign in,1) Fill form 2) Double-click Sign in,1 login request (button disabled while submitting),1 login request(s),Pass,N/A,N/A,admin_frontend/qa_tests/e2e/auth.spec.ts
+FE-EC-002,Login,Tenant admin uses platform login,1) Open /login 2) Enter company admin credentials,Message explains to use the workspace URL,Invalid email or password,Fail,Low,FE-BUG-033,admin_frontend/qa_tests/e2e/auth.spec.ts

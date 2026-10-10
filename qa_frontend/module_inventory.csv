@@ -1,0 +1,13 @@
+Module,Page/Route,Main Components,APIs Used,User Roles With Access,Description,Notes
+Login,"/login, /w/:workspaceSlug/login","LoginPage, AuthMarketingPanel","POST /super-admin/login, POST /auth/login",Anyone,Platform login for super admin; workspace login for company admins,Workspace login needs company token from verify-workspace
+Forgot Password,"/forgot-password, /w/:slug/forgot-password",ForgotPasswordPage (3 steps),"POST /auth/forgot-password, /verify, /reset (missing in backend)",Anyone,Email OTP and reset,Backend endpoints do not exist
+Workspace Gate,/w/:workspaceSlug/*,"WorkspaceGate, WorkspaceNotFound",POST /companies/verify-workspace,Anyone,"Resolves workspace slug, applies brand colors",Builds workspaceUrl from window.location.origin
+Workspaces,/workspaces,WorkspacesPage,GET /workspaces (missing in backend),Super admin,List of tenant workspaces,Lands here after super admin login
+Companies,/companies,"CompaniesPage, CompanyCreateDialog, CompanyEditDialog, CompanyInfoDialog, DataTable","GET/POST /super-admin/companies, GET/PUT/DELETE /super-admin/companies/:id",Super admin,Manage companies,Client-side pagination of first 20 rows
+Dashboard,/w/:slug/dashboard,"SummaryStatCard, CandidateChartPanel, ActivityLog",GET /dashboard (forced mock),Company admin,Overview numbers and charts,Mock data only
+Test Manager,/w/:slug/test-manager,"TestListFilterBar, TestActionBar, DataTable, QtiImportDialog, ConfirmDialog","GET /tests, DELETE /tests/:id, GET /categories, GET /super-admin/templates, POST /tests/import-qti (missing)",Company admin,"List, filter, delete tests",Loads all pages client side
+Test Wizard,/w/:slug/test-manager/wizard/step-:n,"WizardShell, Step1CreateForm, Step2Settings, Step3Questions, TestTemplatePicker, RichTextEditor","POST/PATCH /tests, GET /tests/:id, POST/PATCH /test-settings, GET /test-settings/test/:id, GET/POST/PATCH /questions, GET /subjects, /topics, /languages, /difficulties, /instructions, POST /files/upload, /files/download-url",Company admin,"Create test (step 1), settings (2), questions (3); steps 4-6 placeholders","Steps 4-6 (Publish, Assign, Certificate) not implemented"
+Question Bank,/w/:slug/question-bank,"DynamicFilterBar, Cards",None,Company admin,Placeholder,Scaffold text only
+Category Management,/w/:slug/category-management,"DynamicFilterBar, Card",None,Company admin,Placeholder,Scaffold text only
+Layout,All protected pages,"AppLayout, Sidebar, UserProfileMenu, ThemeToggle, MainLoader",POST /auth/logout,"Super admin, company admin","Navigation, theme, profile, logout",Sidebar always visible
+Auth Store / Routing,All,"ProtectedRoute, RootRedirect, AuthHydrationGate, useAuthStore",-,All,Session persistence and route guards,Tokens in localStorage

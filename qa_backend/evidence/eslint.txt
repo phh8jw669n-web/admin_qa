@@ -1,0 +1,250 @@
+
+/home/user/admin_qa/admin_backend/src/common/auth/company-context.service.ts
+  23:39  error  Replace `⏎········apiError('Please·sign·in·again'),⏎······` with `apiError('Please·sign·in·again')`  prettier/prettier
+  33:39  error  Replace `⏎········apiError('Please·sign·in·again'),⏎······` with `apiError('Please·sign·in·again')`  prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/common/constants/auth.constants.ts
+  3:34  error  Delete `⏎···`  prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/common/filters/api-exception.filter.ts
+  28:38  warning  Unsafe argument of type `QueryFailedError<any>` assigned to a parameter of type `QueryFailedError<Error>`  @typescript-eslint/no-unsafe-argument
+
+/home/user/admin_qa/admin_backend/src/common/filters/query-failed.filter.ts
+  99:38  error  '_host' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/user/admin_qa/admin_backend/src/common/guards/jwt-auth.guard.ts
+  81:11  error  Replace `⏎········typeof·payload.tv·!==·'number'·||⏎········payload.tv·!==·admin.tokenVersion⏎······` with `typeof·payload.tv·!==·'number'·||·payload.tv·!==·admin.tokenVersion`  prettier/prettier
+  85:41  error  Replace `⏎··········apiError('Please·sign·in·to·continue'),⏎········` with `apiError('Please·sign·in·to·continue')`                                                               prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/common/guards/login-throttler.guard.ts
+  13:3  error  Async method 'getTracker' has no 'await' expression  @typescript-eslint/require-await
+  18:5  error  '_context' is defined but never used                 @typescript-eslint/no-unused-vars
+  19:5  error  '_throttlerLimitDetail' is defined but never used    @typescript-eslint/no-unused-vars
+
+/home/user/admin_qa/admin_backend/src/common/utils/boolean.util.ts
+  1:62  error  'unknown' overrides all other types in this union type  @typescript-eslint/no-redundant-type-constituents
+
+/home/user/admin_qa/admin_backend/src/common/utils/string.util.ts
+  48:1  error  Delete `⏎`  prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/main.ts
+  117:1  warning  Promises must be awaited, end with a call to .catch, end with a call to .then with a rejection handler or be explicitly marked as ignored with the `void` operator  @typescript-eslint/no-floating-promises
+
+/home/user/admin_qa/admin_backend/src/modules/admins/dto/query-admin.dto.ts
+  14:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/admins/dto/update-admin.dto.ts
+  5:3  error  'IsEnum' is defined but never used  @typescript-eslint/no-unused-vars
+
+/home/user/admin_qa/admin_backend/src/modules/auth/auth.service.ts
+  88:52  error  Replace `⏎········?·admin.passwordHash⏎·······` with `·?·admin.passwordHash`                                                                                                prettier/prettier
+  96:9   error  Replace `⏎······!admin·||⏎······admin.role·===·AdminRole.SUPER_ADMIN·||⏎······!passwordValid⏎····` with `!admin·||·admin.role·===·AdminRole.SUPER_ADMIN·||·!passwordValid`  prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/candidate-centre-mappings/candidate-centre-mappings.module.ts
+  18:46  error  Insert `⏎`  prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/candidate-centre-mappings/candidate-centre-mappings.service.ts
+  118:9   error  Replace `⏎······candidateId·!==·mapping.candidateId·||⏎······centreId·!==·mapping.centreId⏎····` with `candidateId·!==·mapping.candidateId·||·centreId·!==·mapping.centreId`  prettier/prettier
+  130:23  error  Replace `⏎······'Candidate·centre·mapping·updated·successfully',⏎······saved,⏎····` with `'Candidate·centre·mapping·updated·successfully',·saved`                             prettier/prettier
+  202:13  error  Replace `⏎········?·[candidateCentreMappingsCache.itemKey(this.companyId,·id)]⏎·······` with `·?·[candidateCentreMappingsCache.itemKey(this.companyId,·id)]`                  prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/candidates/candidates-auth.service.ts
+  237:9  error  Replace `⏎······!candidate.examCentreId·||⏎······candidate.examDate·!==·examDate⏎····` with `!candidate.examCentreId·||·candidate.examDate·!==·examDate`  prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/candidates/documents/dto/query-document.dto.ts
+  13:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/candidates/dto/candidate-login.dto.ts
+  2:9  error  Replace `·IsJWT,·IsNotEmpty,·IsString,·MaxLength,·MinLength·` with `⏎··IsJWT,⏎··IsNotEmpty,⏎··IsString,⏎··MaxLength,⏎··MinLength,⏎`  prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/candidates/dto/query-candidate.dto.ts
+  43:56  error  Unsafe member access .isEnroll on an `any` value  @typescript-eslint/no-unsafe-member-access
+  48:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/candidates/entities/candidate.entity.ts
+  163:58  error  Replace `·onDelete:·'RESTRICT'` with `⏎····onDelete:·'RESTRICT',⏎·`  prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/categories/dto/query-category.dto.ts
+  28:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/categories/entities/category.entity.ts
+  25:8  error  Replace `⏎··'UQ_categories_company_id_name_no_language',⏎··['companyId',·'name'],⏎·` with `'UQ_categories_company_id_name_no_language',·['companyId',·'name'],`  prettier/prettier
+  29:1  error  Replace `····` with `··`                                                                                                                                         prettier/prettier
+  30:1  error  Delete `··`                                                                                                                                                      prettier/prettier
+  31:1  error  Replace `··},⏎` with `}`                                                                                                                                         prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/category-subject-topic-mappings/dto/query-category-subject-topic-mapping.dto.ts
+  24:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/centre-users/centre-users-auth.service.ts
+   26:9   error  Replace `⏎··AuthCentreUser,⏎··CentreUserAuthTokens,⏎` with `·AuthCentreUser,·CentreUserAuthTokens·`                                                        prettier/prettier
+   84:23  error  Replace `·await·this.centreUsersService.findActiveById(⏎······centreUserId,⏎····` with `⏎······await·this.centreUsersService.findActiveById(centreUserId`  prettier/prettier
+  123:39  error  Replace `apiError(AUTH_ERRORS.INVALID_CREDENTIALS)` with `⏎········apiError(AUTH_ERRORS.INVALID_CREDENTIALS),⏎······`                                      prettier/prettier
+  215:22  error  Insert `⏎·······`                                                                                                                                          prettier/prettier
+  216:9   error  Insert `··`                                                                                                                                                prettier/prettier
+  217:1   error  Replace `········` with `··········`                                                                                                                       prettier/prettier
+  218:1   error  Insert `··`                                                                                                                                                prettier/prettier
+  219:13  error  Insert `··`                                                                                                                                                prettier/prettier
+  220:11  error  Insert `··`                                                                                                                                                prettier/prettier
+  221:1   error  Insert `··`                                                                                                                                                prettier/prettier
+  222:1   error  Insert `··`                                                                                                                                                prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/centre-users/centre-users.service.ts
+  1:9  error  Replace `⏎··Injectable,⏎··NotFoundException,⏎` with `·Injectable,·NotFoundException·`  prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/centre-users/dto/query-centre-user.dto.ts
+  18:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/centres/centres.service.ts
+  151:20  error  Replace `⏎····code:·string,⏎····companyId:·string,⏎··` with `code:·string,·companyId:·string`  prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/centres/dto/query-centre.dto.ts
+  29:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/companies/companies.controller.ts
+  11:9  error  Replace `·ApiBearerAuth,·ApiOperation,·ApiResponse,·ApiTags·` with `⏎··ApiBearerAuth,⏎··ApiOperation,⏎··ApiResponse,⏎··ApiTags,⏎`  prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/companies/dto/create-company.dto.ts
+   24:30  error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+   30:5   error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+   62:30  error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+   84:5   error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+   98:5   error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+  114:5   error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+  156:30  error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+  162:30  error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+
+/home/user/admin_qa/admin_backend/src/modules/companies/dto/query-company.dto.ts
+  20:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/companies/dto/update-company.dto.ts
+   22:30  error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+   28:5   error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+   60:30  error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+   82:5   error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+   97:5   error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+  113:5   error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+
+/home/user/admin_qa/admin_backend/src/modules/companies/dto/update-own-company.dto.ts
+   17:30  error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+   48:30  error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+   70:5   error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+   85:5   error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+  100:5   error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+
+/home/user/admin_qa/admin_backend/src/modules/companies/dto/verify-workspace.dto.ts
+  6:30  error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+
+/home/user/admin_qa/admin_backend/src/modules/difficulties/dto/query-difficulty.dto.ts
+  18:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/events/dto/query-event.dto.ts
+  28:56  error  Unsafe member access .isPublish on an `any` value  @typescript-eslint/no-unsafe-member-access
+  33:56  error  Unsafe member access .isActive on an `any` value   @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/files/files.service.ts
+   85:37  error  Replace `dto.key·||·this.buildKey(dto.folder,·dto.fileName)` with `⏎······dto.key·||·this.buildKey(dto.folder,·dto.fileName),⏎····`                                   prettier/prettier
+  106:51  error  Replace `this.assertOwnedKey(dto.key),` with `⏎······this.assertOwnedKey(dto.key),⏎·····`                                                                             prettier/prettier
+  107:1   error  Insert `··`                                                                                                                                                           prettier/prettier
+  108:5   error  Replace `}` with `··},⏎····`                                                                                                                                          prettier/prettier
+  147:26  error  Unsafe member access .code on an `any` value                                                                                                                          @typescript-eslint/no-unsafe-member-access
+  182:9   error  Replace `⏎······!isSafeStoragePath(normalized)·||⏎······!normalized.startsWith(prefix)⏎····` with `!isSafeStoragePath(normalized)·||·!normalized.startsWith(prefix)`  prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/files/utils/storage-path.util.ts
+  10:20  error  Replace `.split('/')` with `⏎····.split('/')⏎····`          prettier/prettier
+  11:1   error  Replace `····(segment)·=>⏎·····` with `······(segment)·=>`  prettier/prettier
+  13:1   error  Insert `··`                                                 prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/files/validators/allowed-upload-file-type.validator.ts
+  14:43  error  Replace `⏎··implements·ValidatorConstraintInterface⏎` with `·implements·ValidatorConstraintInterface·`  prettier/prettier
+  40:40  error  Replace `⏎··implements·ValidatorConstraintInterface⏎` with `·implements·ValidatorConstraintInterface·`  prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/files/validators/safe-storage-path.validator.ts
+  7:9  error  Replace `·INVALID_STORAGE_PATH_MESSAGE,·isSafeStoragePath·` with `⏎··INVALID_STORAGE_PATH_MESSAGE,⏎··isSafeStoragePath,⏎`  prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/groups/dto/query-group.dto.ts
+  14:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/instructions/dto/query-instruction.dto.ts
+  18:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/instructions/instruction-languages/dto/query-instruction-language.dto.ts
+  12:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/instructions/instruction-languages/entities/instruction-language.entity.ts
+  40:14  error  Replace `()·=>·Instruction,·(instruction)·=>·instruction.instructionLanguages,` with `⏎····()·=>·Instruction,⏎····(instruction)·=>·instruction.instructionLanguages,⏎···`  prettier/prettier
+  41:1   error  Insert `··`                                                                                                                                                                prettier/prettier
+  42:3   error  Replace `}` with `··},⏎··`                                                                                                                                                 prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/labs/dto/query-lab.dto.ts
+  26:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/labs/labs.module.ts
+  10:13  error  Replace `⏎····TypeOrmModule.forFeature([Lab]),⏎····RegionsModule,⏎····CentresModule,⏎··` with `TypeOrmModule.forFeature([Lab]),·RegionsModule,·CentresModule`  prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/languages/dto/query-language.dto.ts
+  14:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/questions/dto/query-question.dto.ts
+  25:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/questions/validators/question-options.validator.ts
+  113:45  error  Replace `⏎··implements·ValidatorConstraintInterface⏎` with `·implements·ValidatorConstraintInterface·`  prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/regions/dto/query-region.dto.ts
+  23:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/sessions/dto/query-session.dto.ts
+  19:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/subjects/dto/query-subject.dto.ts
+  32:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/subjects/entities/subject.entity.ts
+  25:8  error  Replace `⏎··'UQ_subjects_company_id_name_no_language',⏎··['companyId',·'name'],⏎·` with `'UQ_subjects_company_id_name_no_language',·['companyId',·'name'],`  prettier/prettier
+  29:1  error  Replace `····` with `··`                                                                                                                                     prettier/prettier
+  30:1  error  Delete `··`                                                                                                                                                  prettier/prettier
+  31:1  error  Replace `··},⏎` with `}`                                                                                                                                     prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/super-admin/super-admin-auth.service.ts
+  47:9  error  Replace `⏎······!admin·||⏎······admin.role·!==·AdminRole.SUPER_ADMIN·||⏎······!passwordValid⏎····` with `!admin·||·admin.role·!==·AdminRole.SUPER_ADMIN·||·!passwordValid`  prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/templates/dto/query-template.dto.ts
+  19:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/test-candidate-mappings/dto/assign-test-email.dto.ts
+  17:5  error  Unsafe return of a value of type `any`  @typescript-eslint/no-unsafe-return
+
+/home/user/admin_qa/admin_backend/src/modules/test-candidate-mappings/test-candidate-mappings.controller.ts
+  24:15  error  Replace `⏎····private·readonly·mappingsService:·TestCandidateMappingsService,⏎··` with `private·readonly·mappingsService:·TestCandidateMappingsService`  prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/tests/dto/publish-test.swagger.ts
+  1:9  error  Replace `⏎··IsBoolean,⏎··IsDateString,⏎··Matches,⏎` with `·IsBoolean,·IsDateString,·Matches·`  prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/tests/dto/query-test.dto.ts
+  27:56  error  Unsafe member access .isDraft on an `any` value      @typescript-eslint/no-unsafe-member-access
+  32:56  error  Unsafe member access .isPublished on an `any` value  @typescript-eslint/no-unsafe-member-access
+  37:56  error  Unsafe member access .isActive on an `any` value     @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/topics/dto/query-topic.dto.ts
+  36:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/modules/topics/entities/topic.entity.ts
+  25:8  error  Replace `⏎··'UQ_topics_company_id_name_no_language',⏎··['companyId',·'name'],⏎·` with `'UQ_topics_company_id_name_no_language',·['companyId',·'name'],`  prettier/prettier
+  29:1  error  Replace `····` with `··`                                                                                                                                 prettier/prettier
+  30:1  error  Delete `··`                                                                                                                                              prettier/prettier
+  31:1  error  Replace `··},⏎` with `}`                                                                                                                                 prettier/prettier
+
+/home/user/admin_qa/admin_backend/src/modules/zones/dto/query-zone.dto.ts
+  14:56  error  Unsafe member access .isActive on an `any` value  @typescript-eslint/no-unsafe-member-access
+
+/home/user/admin_qa/admin_backend/src/scripts/seed-super-admin.ts
+  19:1  warning  Promises must be awaited, end with a call to .catch, end with a call to .then with a rejection handler or be explicitly marked as ignored with the `void` operator  @typescript-eslint/no-floating-promises
+
+/home/user/admin_qa/admin_backend/src/seeders/super-admin/super-admin-seeder.service.ts
+  45:14  error  This assertion is unnecessary since it does not change the type of the expression  @typescript-eslint/no-unnecessary-type-assertion
+
+✖ 119 problems (116 errors, 3 warnings)
+  61 errors and 0 warnings potentially fixable with the `--fix` option.
+
+exit=1

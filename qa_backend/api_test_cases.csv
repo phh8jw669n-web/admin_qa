@@ -1,0 +1,318 @@
+Test ID,API ID,Endpoint,Scenario,Request Data,Expected Status Code,Expected Response,Actual Status Code,Actual Response (short),Status,Bug ID,Evidence
+BE-TC-001,BE-API-002,GET /api/v1/health,Health check with DB and Redis up,N/A,200,200 with database and redis status up,200,Health check passed successfully,Pass,N/A,qa_tests/specs/00-smoke.qa.spec.ts
+BE-TC-002,BE-API-001,GET /api/v1,Root welcome message,N/A,200,200 with welcome message,200,"Hello, welcome to the CBT admin backend",Pass,N/A,qa_tests/specs/00-smoke.qa.spec.ts
+BE-TC-737,BE-API-011,GET /api/v1/super-admin/companies/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Company not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-738,BE-API-012,PUT /api/v1/super-admin/companies/:id,Unknown but valid UUID,"{""city"":""Pune""}",404,404 with a clear not-found message,404,Company not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-739,BE-API-013,DELETE /api/v1/super-admin/companies/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Company not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-740,BE-API-015,GET /api/v1/companies/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Company not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-741,BE-API-016,PATCH /api/v1/companies/:id,Unknown but valid UUID,"{""city"":""Pune""}",404,404 with a clear not-found message,404,Company not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-742,BE-API-019,GET /api/v1/admins/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Admin not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-743,BE-API-020,PUT /api/v1/admins/:id,Unknown but valid UUID,"{""firstName"":""Hacked""}",404,404 with a clear not-found message,404,Admin not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-744,BE-API-021,DELETE /api/v1/admins/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Admin not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-745,BE-API-024,GET /api/v1/super-admin/templates/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Template not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-746,BE-API-025,PATCH /api/v1/super-admin/templates/:id,Unknown but valid UUID,"{""name"":""Hacked""}",404,404 with a clear not-found message,404,Template not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-747,BE-API-026,DELETE /api/v1/super-admin/templates/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Template not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-748,BE-API-029,GET /api/v1/languages/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Language not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-749,BE-API-030,PATCH /api/v1/languages/:id,Unknown but valid UUID,"{""isActive"":true}",404,404 with a clear not-found message,404,Language not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-750,BE-API-031,DELETE /api/v1/languages/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Language not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-751,BE-API-034,GET /api/v1/difficulties/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Difficulty not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-752,BE-API-035,PATCH /api/v1/difficulties/:id,Unknown but valid UUID,"{""isActive"":true}",404,404 with a clear not-found message,404,Difficulty not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-753,BE-API-036,DELETE /api/v1/difficulties/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Difficulty not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-754,BE-API-039,GET /api/v1/categories/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Category not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-755,BE-API-040,PATCH /api/v1/categories/:id,Unknown but valid UUID,"{""isActive"":true}",404,404 with a clear not-found message,404,Category not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-756,BE-API-041,DELETE /api/v1/categories/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Category not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-757,BE-API-044,GET /api/v1/subjects/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Subject not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-758,BE-API-045,PATCH /api/v1/subjects/:id,Unknown but valid UUID,"{""isActive"":true}",404,404 with a clear not-found message,404,Subject not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-759,BE-API-046,DELETE /api/v1/subjects/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Subject not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-760,BE-API-049,GET /api/v1/topics/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Topic not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-761,BE-API-050,PATCH /api/v1/topics/:id,Unknown but valid UUID,"{""isActive"":true}",404,404 with a clear not-found message,404,Topic not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-762,BE-API-051,DELETE /api/v1/topics/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Topic not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-763,BE-API-054,GET /api/v1/category-subject-topic-mappings/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Category subject topic mapping not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-764,BE-API-055,PATCH /api/v1/category-subject-topic-mappings/:id,Unknown but valid UUID,"{""ranking"":3}",404,404 with a clear not-found message,404,Category subject topic mapping not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-765,BE-API-056,DELETE /api/v1/category-subject-topic-mappings/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Category subject topic mapping not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-766,BE-API-059,GET /api/v1/instructions/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Instruction not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-767,BE-API-060,PATCH /api/v1/instructions/:id,Unknown but valid UUID,"{""isActive"":true}",404,404 with a clear not-found message,404,Instruction not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-768,BE-API-061,DELETE /api/v1/instructions/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Instruction not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-769,BE-API-064,GET /api/v1/groups/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Group not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-770,BE-API-065,PATCH /api/v1/groups/:id,Unknown but valid UUID,"{""isActive"":true}",404,404 with a clear not-found message,404,Group not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-771,BE-API-066,DELETE /api/v1/groups/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Group not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-772,BE-API-069,GET /api/v1/zones/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Zone not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-773,BE-API-070,PATCH /api/v1/zones/:id,Unknown but valid UUID,"{""isActive"":true}",404,404 with a clear not-found message,404,Zone not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-774,BE-API-071,DELETE /api/v1/zones/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Zone not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-775,BE-API-074,GET /api/v1/regions/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Region not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-776,BE-API-075,PATCH /api/v1/regions/:id,Unknown but valid UUID,"{""isActive"":true}",404,404 with a clear not-found message,404,Region not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-777,BE-API-076,DELETE /api/v1/regions/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Region not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-778,BE-API-079,GET /api/v1/centres/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Centre not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-779,BE-API-080,PATCH /api/v1/centres/:id,Unknown but valid UUID,"{""isActive"":true}",404,404 with a clear not-found message,404,Centre not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-780,BE-API-081,DELETE /api/v1/centres/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Centre not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-781,BE-API-084,GET /api/v1/labs/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Lab not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-782,BE-API-085,PATCH /api/v1/labs/:id,Unknown but valid UUID,"{""isActive"":true}",404,404 with a clear not-found message,404,Lab not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-783,BE-API-086,DELETE /api/v1/labs/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Lab not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-784,BE-API-089,GET /api/v1/events/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Event not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-785,BE-API-090,PATCH /api/v1/events/:id,Unknown but valid UUID,"{""name"":""Renamed event""}",404,404 with a clear not-found message,404,Event not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-786,BE-API-091,DELETE /api/v1/events/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Event not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-787,BE-API-094,GET /api/v1/sessions/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Session not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-788,BE-API-095,PATCH /api/v1/sessions/:id,Unknown but valid UUID,"{""isActive"":true}",404,404 with a clear not-found message,404,Session not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-789,BE-API-096,DELETE /api/v1/sessions/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Session not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-790,BE-API-099,GET /api/v1/tests/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Test not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-791,BE-API-100,PATCH /api/v1/tests/:id,Unknown but valid UUID,"{""isActive"":true}",404,404 with a clear not-found message,404,Test not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-792,BE-API-101,DELETE /api/v1/tests/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Test not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-793,BE-API-104,GET /api/v1/questions/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Question not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-794,BE-API-105,PATCH /api/v1/questions/:id,Unknown but valid UUID,"{""isActive"":true}",404,404 with a clear not-found message,404,Question not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-795,BE-API-106,DELETE /api/v1/questions/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Question not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-796,BE-API-109,GET /api/v1/candidates/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Candidate not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-797,BE-API-110,PATCH /api/v1/candidates/:id,Unknown but valid UUID,"{""isActive"":true}",404,404 with a clear not-found message,404,Candidate not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-798,BE-API-111,DELETE /api/v1/candidates/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Candidate not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-799,BE-API-114,GET /api/v1/candidate-centre-mappings/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Candidate centre mapping not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-800,BE-API-115,PATCH /api/v1/candidate-centre-mappings/:id,Unknown but valid UUID,"{""examDate"":""2031-01-02""}",404,404 with a clear not-found message,404,Candidate centre mapping not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-801,BE-API-116,DELETE /api/v1/candidate-centre-mappings/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Candidate centre mapping not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-802,BE-API-119,GET /api/v1/test-candidate-mappings/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Test candidate mapping not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-803,BE-API-120,PATCH /api/v1/test-candidate-mappings/:id,Unknown but valid UUID,"{""status"":""not_started""}",404,404 with a clear not-found message,404,Test candidate mapping not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-804,BE-API-121,DELETE /api/v1/test-candidate-mappings/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Test candidate mapping not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-805,BE-API-124,GET /api/v1/centre-users/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Centre user not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-806,BE-API-125,PATCH /api/v1/centre-users/:id,Unknown but valid UUID,"{""isActive"":true}",404,404 with a clear not-found message,404,Centre user not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-807,BE-API-126,DELETE /api/v1/centre-users/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Centre user not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-808,BE-API-127,PATCH /api/v1/difficulties/:id/status,Unknown but valid UUID,"{""isActive"":true}",404,404 with a clear not-found message,404,Difficulty not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-809,BE-API-128,GET /api/v1/tests/:id/stats,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Test not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-810,BE-API-130,GET /api/v1/instructions/:instructionId/languages,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Instruction not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-811,BE-API-131,GET /api/v1/instructions/:instructionId/languages/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Instruction language not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-812,BE-API-132,PATCH /api/v1/instructions/:instructionId/languages/:id,Unknown but valid UUID,"{""content"":""Hacked""}",404,404 with a clear not-found message,404,Instruction language not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-813,BE-API-133,DELETE /api/v1/instructions/:instructionId/languages/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Instruction language not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-814,BE-API-135,GET /api/v1/candidates/:candidateId/documents,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Candidate not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-815,BE-API-136,GET /api/v1/candidates/:candidateId/documents/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Candidate document not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-816,BE-API-137,PATCH /api/v1/candidates/:candidateId/documents/:id,Unknown but valid UUID,"{""documentName"":""Hacked""}",404,404 with a clear not-found message,404,Candidate document not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-817,BE-API-138,DELETE /api/v1/candidates/:candidateId/documents/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Candidate document not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-818,BE-API-140,GET /api/v1/test-settings/test/:testId,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Test not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-819,BE-API-141,GET /api/v1/test-settings/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Test setting not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-820,BE-API-142,PATCH /api/v1/test-settings/:id,Unknown but valid UUID,"{""enableBackspace"":true}",404,404 with a clear not-found message,404,Test setting not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-821,BE-API-143,DELETE /api/v1/test-settings/:id,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Test setting not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-822,BE-API-150,GET /api/v1/candidates/tests/:testId,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Test not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-823,BE-API-151,GET /api/v1/candidates/tests/:testId/questions,Unknown but valid UUID,N/A,404,404 with a clear not-found message,404,Test not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-824,BE-API-152,POST /api/v1/candidates/tests/:testId/feedback,Unknown but valid UUID,"{""rating"":5}",404,404 with a clear not-found message,404,Test not found,Pass,N/A,qa_tests/specs/01-matrix.qa.spec.ts
+BE-TC-980,BE-API-003,POST /api/v1/auth/login,"Valid company token, email and password","{""email"":""admin.amv2s7yz1@qa.test"",""password"":""***"",""companyToken"":""<A>""}",200,200 with access and refresh token,200,Logged in successfully,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-981,BE-API-003,POST /api/v1/auth/login,"Correct email, wrong password","{""email"":""fresh.wrongpw.1791660206080@qa.test"",""password"":""Wrong@12345""}",401,401 Invalid email or password,401,Invalid email or password,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-982,BE-API-003,POST /api/v1/auth/login,Email that does not exist,"{""email"":""nobody@qa.test""}",401,401 same generic message (no user enumeration),401,Invalid email or password,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-983,BE-API-003,POST /api/v1/auth/login,Company A admin uses company B token,N/A,401,401 Invalid email or password,401,Invalid email or password,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-984,BE-API-003,POST /api/v1/auth/login,Super admin credentials on company login,N/A,401,401 rejected,401,Invalid email or password,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-985,BE-API-003,POST /api/v1/auth/login,Company token signed with a wrong secret,N/A,401,401 Invalid or expired company token,401,Invalid or expired company token,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-987,BE-API-003,POST /api/v1/auth/login,Inactive account with the correct password,N/A,401,401 with the same generic message as a wrong password,401,This account is inactive. Please contact support.,Fail,BE-BUG-050,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-988,BE-API-003,POST /api/v1/auth/login,Log in a new company admin with DEFAULT_ADMIN_PASSWORD from .env,Company created from the UI form (no adminPassword field),401 or 403,Shared default password must not work; admin should set a password via invite link,200,Logged in successfully,Fail,BE-BUG-002,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-989,BE-API-006,GET /api/v1/auth/me,Valid access token,N/A,200,"200 profile, no password or token hash",200,Profile retrieved successfully,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-990,BE-API-004,POST /api/v1/auth/refresh,Valid refresh token,N/A,200 or 201,200 new token pair,201,Token refreshed successfully,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-991,BE-API-004,POST /api/v1/auth/refresh,Reuse the old refresh token after rotation,N/A,401,401 Invalid refresh token,401,Invalid refresh token,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-992,BE-API-005,POST /api/v1/auth/logout,Logout with valid token,N/A,200,200 Logged out successfully,200,Logged out successfully,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-993,BE-API-006,GET /api/v1/auth/me,Use access token after logout,N/A,401,401 Please sign in to continue,401,Please sign in to continue,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-994,BE-API-004,POST /api/v1/auth/refresh,Use refresh token after logout,N/A,401,401 Invalid refresh token,401,Invalid refresh token,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-995,BE-API-006,GET /api/v1/auth/me,Old access token after the password was reset,N/A,401,401 old sessions end after a password reset,200,Profile retrieved successfully,Fail,BE-BUG-004,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-996,BE-API-004,POST /api/v1/auth/refresh,Old refresh token after the password was reset,N/A,401,401 refresh token revoked,201,Token refreshed successfully,Fail,BE-BUG-004,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-997,BE-API-098,GET /api/v1/tests,Access token of an admin that was just deactivated,N/A,401,401 Invalid access token,401,Invalid access token,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-998,BE-API-006,GET /api/v1/auth/me,Token expired one minute ago,N/A,401,401 Invalid or expired access token,401,Invalid or expired access token,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-999,BE-API-018,GET /api/v1/admins,Unsigned JWT (alg none) claiming super admin,N/A,401,401 rejected,401,Invalid or expired access token,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-1000,BE-API-018,GET /api/v1/admins,Company admin edits the role claim in the token,N/A,401,401 signature check fails,401,Invalid or expired access token,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-1001,BE-API-006,GET /api/v1/auth/me,Candidate token sent to admin endpoint,N/A,401,401,401,Invalid or expired access token,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-1002,BE-API-003,POST /api/v1/auth/login,6th attempt after 5 wrong passwords,N/A,429,429 Too many failed login attempts,429,Too many failed login attempts. Please try again later.,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-1003,BE-API-003,POST /api/v1/auth/login,Real user with the right password after an attacker used 5 wrong passwords,N/A,200,"Real user can still log in (lock by IP + account, or CAPTCHA), not a 15 minute lockout",429,Too many failed login attempts. Please try again later.,Fail,BE-BUG-005,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-1004,BE-API-003,POST /api/v1/auth/login,Same email is admin in company A and B. A is locked. Log in to B.,N/A,200,200 company B login is not affected by failures in company A,429,Too many failed login attempts. Please try again later.,Fail,BE-BUG-016,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-1005,BE-API-146,POST /api/v1/candidates/login,Enrollment number reused in company B after failures in company A,N/A,200,200 company B candidate can log in,429,Too many failed login attempts. Please try again later.,Fail,BE-BUG-016,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-1006,BE-API-007,POST /api/v1/super-admin/login,Valid super admin credentials,N/A,200,200 tokens with role super_admin,200,Super-Admin logged in successfully,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-1007,BE-API-007,POST /api/v1/super-admin/login,Company admin credentials on super admin login,N/A,401,401 Invalid email or password,401,Invalid email or password,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-1008,BE-API-007,POST /api/v1/super-admin/login,Wrong password,N/A,401,401 Invalid email or password,401,Invalid email or password,Pass,N/A,qa_tests/specs/02-auth.qa.spec.ts
+BE-TC-1009,BE-API-009,POST /api/v1/super-admin/companies,Valid company body,N/A,201,201 company with code CO-xx,201,Company created successfully,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1018,BE-API-009,POST /api/v1/super-admin/companies,name with <script> tag,N/A,201,201 stored as text; UI must escape it,201,Company created successfully,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1019,BE-API-010,GET /api/v1/super-admin/companies,Default page,N/A,200,"200 items + metadata, limit 20",200,Companies fetched successfully,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1021,BE-API-010,GET /api/v1/super-admin/companies,name=% (LIKE wildcard),N/A,200,200 with 0 items (wildcard escaped),200,Companies fetched successfully,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1022,BE-API-010,GET /api/v1/super-admin/companies,name=' OR 1=1 --,N/A,200,"200 with 0 items, no SQL error",200,Companies fetched successfully,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1023,BE-API-011,GET /api/v1/super-admin/companies/:id,Existing company,N/A,200,200 company,200,Company fetched successfully,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1024,BE-API-012,PUT /api/v1/super-admin/companies/:id,Change city,N/A,200,200 city updated,200,Company updated successfully,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1025,BE-API-012,PUT /api/v1/super-admin/companies/:id,status=inactive,N/A,200,200 isActive false,200,Company updated successfully,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1026,BE-API-014,POST /api/v1/companies/verify-workspace,Verify workspace of an inactive company,N/A,400,400 Invalid workspace or company is not active,400,Invalid workspace or company is not active,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1027,BE-API-013,DELETE /api/v1/super-admin/companies/:id,Delete created company,N/A,200,200 Company deleted successfully,200,Company deleted successfully,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1028,BE-API-018,GET /api/v1/admins,List admins after company delete,N/A,200,Admins of the deleted company are inactive or deleted,200,Admins fetched successfully,Fail,BE-BUG-054,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1029,BE-API-014,POST /api/v1/companies/verify-workspace,Active workspace URL,N/A,200,"200 companyToken, name, colors",200,Workspace verified successfully,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1030,BE-API-014,POST /api/v1/companies/verify-workspace,URL not registered,N/A,400,400 Invalid workspace or company is not active,400,Invalid workspace or company is not active,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1031,BE-API-014,POST /api/v1/companies/verify-workspace,40 quick guesses of workspace URLs,N/A,429,429 after a reasonable number of guesses,400,Invalid workspace or company is not active,Fail,BE-BUG-055,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1032,BE-API-015,GET /api/v1/companies/:id,Own company id,N/A,200,200 company,200,Company fetched successfully,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1033,BE-API-016,PATCH /api/v1/companies/:id,website change,N/A,200,200 website updated,200,Company updated successfully,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1034,BE-API-016,PATCH /api/v1/companies/:id,Body has plan=enterprise,N/A,400,400 property plan should not exist,400,property plan should not exist; property planEndsAt should not exist,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1036,BE-API-017,POST /api/v1/admins,Valid admin for company A,N/A,201,201 admin without password hash,201,Admin created successfully,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1037,BE-API-017,POST /api/v1/admins,role=super_admin,N/A,400,400 Super-Admin accounts cannot be created,400,Super-Admin accounts cannot be created from this screen,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1038,BE-API-017,POST /api/v1/admins,Random companyId,N/A,404,404 Company not found,404,Company not found,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1040,BE-API-018,GET /api/v1/admins,Default,N/A,200,200 items + metadata,200,Admins fetched successfully,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1041,BE-API-020,PUT /api/v1/admins/:id,firstName change,N/A,200,200 updated,200,Admin updated successfully,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1044,BE-API-021,DELETE /api/v1/admins/:id,Delete created admin,N/A,200,200 Admin deleted successfully,200,Admin deleted successfully,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1045,BE-API-019,GET /api/v1/admins/:id,After delete,N/A,404,404 Admin not found,404,Admin not found,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1046,BE-API-022,POST /api/v1/super-admin/templates,Valid,N/A,201,201 template,201,Template created successfully,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1048,BE-API-023,GET /api/v1/super-admin/templates,Company admin token,N/A,200,200 list,200,Templates fetched successfully,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1049,BE-API-025,PATCH /api/v1/super-admin/templates/:id,Rename,N/A,200,200,200,Template updated successfully,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1050,BE-API-026,DELETE /api/v1/super-admin/templates/:id,Template referenced by an existing test,N/A,409,409 Template is used by tests,200,Template deleted successfully,Fail,BE-BUG-010,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1051,BE-API-026,DELETE /api/v1/super-admin/templates/:id,Unused,N/A,200,200,200,Template deleted successfully,Pass,N/A,qa_tests/specs/03-companies-admins-templates.qa.spec.ts
+BE-TC-1052,BE-API-027,POST /api/v1/languages,Valid body,N/A,201,201 created,201,Language created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1053,BE-API-028,GET /api/v1/languages,limit=200,N/A,200,200 list contains new id,200,Languages fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1054,BE-API-028,GET /api/v1/languages,name=<first 6 chars>,N/A,200,200 item found,200,Languages fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1055,BE-API-029,GET /api/v1/languages/:id,New id,N/A,200,200 item,200,Language fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1056,BE-API-030,PATCH /api/v1/languages/:id,New name,N/A,200,200 renamed,200,Language updated successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1058,BE-API-027,POST /api/v1/languages,name contains <script>,N/A,201 or 400,Stored as text (UI escapes) or rejected,201,Language created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1059,BE-API-027,POST /api/v1/languages,name contains \u0000,N/A,400,400 Null characters are not allowed,400,Null characters are not allowed,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1060,BE-API-031,DELETE /api/v1/languages/:id,Delete new item,N/A,200,200 deleted,200,Language deleted successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1061,BE-API-029,GET /api/v1/languages/:id,Deleted id,N/A,404,404 not found (no stale cache),404,Language not found,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1062,BE-API-027,POST /api/v1/languages,Create again with deleted name,N/A,201,201 (unique index ignores deleted rows),201,Language created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1063,BE-API-032,POST /api/v1/difficulties,Valid body,N/A,201,201 created,201,Difficulty created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1064,BE-API-033,GET /api/v1/difficulties,limit=200,N/A,200,200 list contains new id,200,Difficulties fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1065,BE-API-033,GET /api/v1/difficulties,name=<first 6 chars>,N/A,200,200 item found,200,Difficulties fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1066,BE-API-034,GET /api/v1/difficulties/:id,New id,N/A,200,200 item,200,Difficulty fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1067,BE-API-035,PATCH /api/v1/difficulties/:id,New name,N/A,200,200 renamed,200,Difficulty updated successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1069,BE-API-032,POST /api/v1/difficulties,name contains <script>,N/A,201 or 400,Stored as text (UI escapes) or rejected,201,Difficulty created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1070,BE-API-032,POST /api/v1/difficulties,name contains \u0000,N/A,400,400 Null characters are not allowed,400,Null characters are not allowed,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1071,BE-API-036,DELETE /api/v1/difficulties/:id,Delete new item,N/A,200,200 deleted,200,Difficulty deleted successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1072,BE-API-034,GET /api/v1/difficulties/:id,Deleted id,N/A,404,404 not found (no stale cache),404,Difficulty not found,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1073,BE-API-032,POST /api/v1/difficulties,Create again with deleted name,N/A,201,201 (unique index ignores deleted rows),201,Difficulty created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1074,BE-API-037,POST /api/v1/categories,Valid body,N/A,201,201 created,201,Category created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1075,BE-API-038,GET /api/v1/categories,limit=200,N/A,200,200 list contains new id,200,Categories fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1076,BE-API-038,GET /api/v1/categories,name=<first 6 chars>,N/A,200,200 item found,200,Categories fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1077,BE-API-039,GET /api/v1/categories/:id,New id,N/A,200,200 item,200,Category fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1078,BE-API-040,PATCH /api/v1/categories/:id,New name,N/A,200,200 renamed,200,Category updated successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1080,BE-API-037,POST /api/v1/categories,name contains <script>,N/A,201 or 400,Stored as text (UI escapes) or rejected,201,Category created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1081,BE-API-037,POST /api/v1/categories,name contains \u0000,N/A,400,400 Null characters are not allowed,400,Null characters are not allowed,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1082,BE-API-041,DELETE /api/v1/categories/:id,Delete new item,N/A,200,200 deleted,200,Category deleted successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1083,BE-API-039,GET /api/v1/categories/:id,Deleted id,N/A,404,404 not found (no stale cache),404,Category not found,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1084,BE-API-037,POST /api/v1/categories,Create again with deleted name,N/A,201,201 (unique index ignores deleted rows),201,Category created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1085,BE-API-042,POST /api/v1/subjects,Valid body,N/A,201,201 created,201,Subject created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1086,BE-API-043,GET /api/v1/subjects,limit=200,N/A,200,200 list contains new id,200,Subjects fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1087,BE-API-043,GET /api/v1/subjects,name=<first 6 chars>,N/A,200,200 item found,200,Subjects fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1088,BE-API-044,GET /api/v1/subjects/:id,New id,N/A,200,200 item,200,Subject fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1089,BE-API-045,PATCH /api/v1/subjects/:id,New name,N/A,200,200 renamed,200,Subject updated successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1091,BE-API-042,POST /api/v1/subjects,name contains <script>,N/A,201 or 400,Stored as text (UI escapes) or rejected,201,Subject created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1092,BE-API-042,POST /api/v1/subjects,name contains \u0000,N/A,400,400 Null characters are not allowed,400,Null characters are not allowed,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1093,BE-API-046,DELETE /api/v1/subjects/:id,Delete new item,N/A,200,200 deleted,200,Subject deleted successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1094,BE-API-044,GET /api/v1/subjects/:id,Deleted id,N/A,404,404 not found (no stale cache),404,Subject not found,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1095,BE-API-042,POST /api/v1/subjects,Create again with deleted name,N/A,201,201 (unique index ignores deleted rows),201,Subject created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1096,BE-API-047,POST /api/v1/topics,Valid body,N/A,201,201 created,201,Topic created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1097,BE-API-048,GET /api/v1/topics,limit=200,N/A,200,200 list contains new id,200,Topics fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1098,BE-API-048,GET /api/v1/topics,name=<first 6 chars>,N/A,200,200 item found,200,Topics fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1099,BE-API-049,GET /api/v1/topics/:id,New id,N/A,200,200 item,200,Topic fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1100,BE-API-050,PATCH /api/v1/topics/:id,New name,N/A,200,200 renamed,200,Topic updated successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1102,BE-API-047,POST /api/v1/topics,name contains <script>,N/A,201 or 400,Stored as text (UI escapes) or rejected,201,Topic created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1103,BE-API-047,POST /api/v1/topics,name contains \u0000,N/A,400,400 Null characters are not allowed,400,Null characters are not allowed,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1104,BE-API-051,DELETE /api/v1/topics/:id,Delete new item,N/A,200,200 deleted,200,Topic deleted successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1105,BE-API-049,GET /api/v1/topics/:id,Deleted id,N/A,404,404 not found (no stale cache),404,Topic not found,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1106,BE-API-047,POST /api/v1/topics,Create again with deleted name,N/A,201,201 (unique index ignores deleted rows),201,Topic created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1107,BE-API-057,POST /api/v1/instructions,Valid body,N/A,201,201 created,201,Instruction created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1108,BE-API-058,GET /api/v1/instructions,limit=200,N/A,200,200 list contains new id,200,Instructions fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1109,BE-API-058,GET /api/v1/instructions,name=<first 6 chars>,N/A,200,200 item found,200,Instructions fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1110,BE-API-059,GET /api/v1/instructions/:id,New id,N/A,200,200 item,200,Instruction fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1111,BE-API-060,PATCH /api/v1/instructions/:id,New name,N/A,200,200 renamed,200,Instruction updated successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1113,BE-API-057,POST /api/v1/instructions,name contains <script>,N/A,201 or 400,Stored as text (UI escapes) or rejected,201,Instruction created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1114,BE-API-057,POST /api/v1/instructions,name contains \u0000,N/A,400,400 Null characters are not allowed,400,Null characters are not allowed,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1115,BE-API-061,DELETE /api/v1/instructions/:id,Delete new item,N/A,200,200 deleted,200,Instruction deleted successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1116,BE-API-059,GET /api/v1/instructions/:id,Deleted id,N/A,404,404 not found (no stale cache),404,Instruction not found,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1117,BE-API-057,POST /api/v1/instructions,Create again with deleted name,N/A,201,201 (unique index ignores deleted rows),201,Instruction created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1118,BE-API-062,POST /api/v1/groups,Valid body,N/A,201,201 created,201,Group created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1119,BE-API-063,GET /api/v1/groups,limit=200,N/A,200,200 list contains new id,200,Groups fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1120,BE-API-063,GET /api/v1/groups,name=<first 6 chars>,N/A,200,200 item found,200,Groups fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1121,BE-API-064,GET /api/v1/groups/:id,New id,N/A,200,200 item,200,Group fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1122,BE-API-065,PATCH /api/v1/groups/:id,New name,N/A,200,200 renamed,200,Group updated successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1124,BE-API-062,POST /api/v1/groups,name contains <script>,N/A,201 or 400,Stored as text (UI escapes) or rejected,201,Group created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1125,BE-API-062,POST /api/v1/groups,name contains \u0000,N/A,400,400 Null characters are not allowed,400,Null characters are not allowed,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1126,BE-API-066,DELETE /api/v1/groups/:id,Delete new item,N/A,200,200 deleted,200,Group deleted successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1127,BE-API-064,GET /api/v1/groups/:id,Deleted id,N/A,404,404 not found (no stale cache),404,Group not found,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1128,BE-API-062,POST /api/v1/groups,Create again with deleted name,N/A,201,201 (unique index ignores deleted rows),201,Group created successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1138,BE-API-032,POST /api/v1/difficulties,languageId belongs to company B,N/A,404,404 Language not found,404,Language not found,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1139,BE-API-127,PATCH /api/v1/difficulties/:id/status,isActive=false,N/A,200,200 isActive false,200,Difficulty updated successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1140,BE-API-127,PATCH /api/v1/difficulties/:id/status,isActive=true,N/A,200,200 isActive true,200,Difficulty updated successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1142,BE-API-031,DELETE /api/v1/languages/:id,Language used by difficulty and question content,N/A,409,409 language is in use,200,Language deleted successfully,Fail,BE-BUG-010,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1143,BE-API-041,DELETE /api/v1/categories/:id,Category referenced by tests,N/A,409,409 category is in use,200,Category deleted successfully,Fail,BE-BUG-010,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1144,BE-API-061,DELETE /api/v1/instructions/:id,Instruction used by a test,N/A,409,409 instruction is in use,200,Instruction deleted successfully,Fail,BE-BUG-010,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1145,BE-API-066,DELETE /api/v1/groups/:id,Group with a candidate,N/A,409,409 group has candidates,200,Group deleted successfully,Fail,BE-BUG-010,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1146,BE-API-043,GET /api/v1/subjects?categoryId,Category with one mapped subject,N/A,200,200 only mapped subjects,200,Subjects fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1147,BE-API-048,GET /api/v1/topics?categoryId&subjectId,Mapped topic,N/A,200,200 mapped topic only,200,Topics fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1148,BE-API-052,POST /api/v1/category-subject-topic-mappings,topicId of company B,N/A,404,404 Topic not found,404,Topic not found,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1149,BE-API-053,GET /api/v1/category-subject-topic-mappings,Default,N/A,200,200 list,200,Category subject topic mappings fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1150,BE-API-130,GET /api/v1/instructions/:id/languages,Default,N/A,200,200 list with language relation,200,Instruction languages fetched successfully,Pass,N/A,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1151,BE-API-129,POST /api/v1/instructions/:id/languages,content with <script>,N/A,201 or 400,HTML is sanitised server side or rejected,201,Instruction language created successfully,Fail,BE-BUG-025,qa_tests/specs/04-master-data.qa.spec.ts
+BE-TC-1152,BE-API-097,POST /api/v1/tests,Valid test,N/A,201,"201 test with category, template, instruction",201,Test created successfully,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1166,BE-API-097,POST /api/v1/tests,categoryId of company B,N/A,404,404 Category not found,404,Category not found,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1167,BE-API-098,GET /api/v1/tests,Default,N/A,200,200 items with relations,200,Tests fetched successfully,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1168,BE-API-099,GET /api/v1/tests/:id,Existing,N/A,200,200,200,Test fetched successfully,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1169,BE-API-128,GET /api/v1/tests/:id/stats,Fixture test with 1 question,N/A,200,"200 actualQuestions=1, actualMarks=4",200,Test question stats fetched successfully,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1170,BE-API-100,PATCH /api/v1/tests/:id,Rename,N/A,200,200,200,Test updated successfully,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1171,BE-API-100,PATCH /api/v1/tests/:id,Test has 2 questions; set totalQuestions=1,N/A,400,400 total questions cannot be less than questions already added,200,Test updated successfully,Fail,BE-BUG-019,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1172,BE-API-101,DELETE /api/v1/tests/:id,Delete,N/A,200,200,200,Test deleted successfully,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1173,BE-API-101,DELETE /api/v1/tests/:id,Test with candidate mapping and questions,N/A,409,409 test has candidates (or cascade soft delete of mappings),200,Test deleted successfully,Fail,BE-BUG-010,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1174,BE-API-140,GET /api/v1/test-settings/test/:testId,Fixture test,N/A,200,200 settings with defaults,200,Test setting fetched successfully,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1175,BE-API-142,PATCH /api/v1/test-settings/:id,"enableBackspace=true, clockFormat=hh_mm",N/A,200,200,200,Test setting updated successfully,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1176,BE-API-142,PATCH /api/v1/test-settings/:id,testId in update body,N/A,400,400 property testId should not exist,400,property testId should not exist,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1177,BE-API-139,POST /api/v1/test-settings,testId of company B,N/A,404,404 Test not found,404,Test not found,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1179,BE-API-102,POST /api/v1/questions,Valid single choice,N/A,201,201 question with content,201,Question created successfully,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1180,BE-API-102,POST /api/v1/questions,"3 options, 2 correct",N/A,201,201,201,Question created successfully,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1181,BE-API-102,POST /api/v1/questions,"answerType numbers, answer 42",N/A,201,201,201,Question created successfully,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1182,BE-API-102,POST /api/v1/questions,Passage + 2 single choice children,N/A,201,201 with 2 childQuestions,201,Question created successfully,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1193,BE-API-102,POST /api/v1/questions,languageId of company B,N/A,404,404 Language not found,404,Language not found,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1194,BE-API-102,POST /api/v1/questions,testId of company B,N/A,404,404 Test not found,404,Test not found,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1195,BE-API-103,GET /api/v1/questions,testId filter,N/A,200,200 list without children,200,Questions fetched successfully,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1196,BE-API-104,GET /api/v1/questions/:id,Single choice,N/A,200,200 with questionData,200,Question fetched successfully,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1197,BE-API-105,PATCH /api/v1/questions/:id,questionData with existing id,N/A,200,200 new text,200,Question updated successfully,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1198,BE-API-105,PATCH /api/v1/questions/:id,questionData.id from fixture question,N/A,400,400 questionData.id does not belong to this question,400,questionData.id does not belong to this question,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1199,BE-API-106,DELETE /api/v1/questions/:id,Delete single choice,N/A,200,200,200,Question deleted successfully,Pass,N/A,qa_tests/specs/05-tests-questions.qa.spec.ts
+BE-TC-1200,BE-API-107,POST /api/v1/candidates,Valid body,N/A,201,"201 candidate, no password hash",201,Candidate created successfully,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1202,BE-API-107,POST /api/v1/candidates,groupId of company B,N/A,404,404 Group not found,404,Group not found,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1207,BE-API-107,POST /api/v1/candidates,address with <script>,N/A,201 or 400,"Stored as text, escaped by UI",201,Candidate created successfully,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1208,BE-API-108,GET /api/v1/candidates,Default,N/A,200,"200 list, no secrets",200,Candidates fetched successfully,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1209,BE-API-108,GET /api/v1/candidates,groupId,N/A,200,200 only that group,200,Candidates fetched successfully,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1210,BE-API-109,GET /api/v1/candidates/:id,Fixture candidate,N/A,200,200 candidate with documents,200,Candidate fetched successfully,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1211,BE-API-110,PATCH /api/v1/candidates/:id,Change city,N/A,200,200,200,Candidate updated successfully,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1212,BE-API-110,PATCH /api/v1/candidates/:id,"Admin resets fixture candidate password, old token used",N/A,401,401 old candidate token rejected,200,Profile retrieved successfully,Fail,BE-BUG-004,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1213,BE-API-111,DELETE /api/v1/candidates/:id,Delete,N/A,200,200,200,Candidate deleted successfully,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1214,BE-API-134,POST /api/v1/candidates/:id/documents,fileUrl = javascript:alert(1),N/A,400,400 fileUrl must be a storage key or https URL,201,Candidate document created successfully,Fail,BE-BUG-026,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1215,BE-API-135,GET /api/v1/candidates/:id/documents,Fixture,N/A,200,200,200,Candidate documents fetched successfully,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1216,BE-API-136,GET /api/v1/candidates/:cid/documents/:id,Fixture document id with a different candidate id,N/A,404,404,404,Candidate document not found,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1217,BE-API-146,POST /api/v1/candidates/login,Mapped to centre today,N/A,200,200 tokens + exam desk,200,Logged in successfully,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1218,BE-API-146,POST /api/v1/candidates/login,centreCode=NOPE,N/A,400,400 Centre not found,400,Centre not found,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1219,BE-API-146,POST /api/v1/candidates/login,Wrong password,N/A,401,401 Invalid enrollment number or password,401,Invalid enrollment number or password,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1220,BE-API-149,GET /api/v1/candidates/me,Valid token,N/A,200,200 profile + exam desk,200,Profile retrieved successfully,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1221,BE-API-150,GET /api/v1/candidates/tests/:testId,Mapped test,N/A,200,"200 test, instructions, settings",200,Exam details fetched successfully,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1222,BE-API-151,GET /api/v1/candidates/tests/:testId/questions,Single choice question in paper,N/A,200,200 with options but no correctOptions / answer / explanation,200,Exam paper fetched successfully,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1223,BE-API-151,GET /api/v1/candidates/tests/:testId/questions,Fill question with answer 42,N/A,200,answerType only,200,Exam paper fetched successfully,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1224,BE-API-151,GET /api/v1/candidates/tests/:testId/questions,"Fixture test: isPublished=false, isDraft=true, startDate=2030-01-01",N/A,403,403 test is not open yet,200,Exam paper fetched successfully,Fail,BE-BUG-001,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1225,BE-API-150,GET /api/v1/candidates/tests/:testId,Draft test,N/A,403,403 test is not published,200,Exam details fetched successfully,Fail,BE-BUG-001,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1226,BE-API-151,GET /api/v1/candidates/tests/:testId/questions,Question with isActive=false,N/A,200,Inactive question not listed,200,Exam paper fetched successfully,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1231,BE-API-149,GET /api/v1/candidates/me,Admin deactivates candidate during exam,N/A,401,401,401,Invalid access token,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1232,BE-API-147,POST /api/v1/candidates/refresh,Valid refresh token,N/A,200,200 new tokens,200,Token refreshed successfully,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1233,BE-API-148,POST /api/v1/candidates/logout,Logout then use token,N/A,401,401 after logout,401,Please sign in to continue,Pass,N/A,qa_tests/specs/06-candidates-exam.qa.spec.ts
+BE-TC-1235,BE-API-072,POST /api/v1/regions,zoneId of company B,N/A,404,404 Zone not found,404,Zone not found,Pass,N/A,qa_tests/specs/07-locations-mappings.qa.spec.ts
+BE-TC-1238,BE-API-071,DELETE /api/v1/zones/:id,Zone with region + centre,N/A,409,409 zone in use,200,Zone deleted successfully,Fail,BE-BUG-010,qa_tests/specs/07-locations-mappings.qa.spec.ts
+BE-TC-1239,BE-API-081,DELETE /api/v1/centres/:id,Centre with candidate mapping + centre user,N/A,409,409 centre in use,200,Centre deleted successfully,Fail,BE-BUG-010,qa_tests/specs/07-locations-mappings.qa.spec.ts
+BE-TC-1240,BE-API-153,POST /api/v1/centre-users/login,Login with DEFAULT_ADMIN_PASSWORD,N/A,401,401 (no shared default password),200,Logged in successfully,Fail,BE-BUG-002,qa_tests/specs/07-locations-mappings.qa.spec.ts
+BE-TC-1241,BE-API-123,GET /api/v1/centre-users,centreId filter,N/A,200,200 without password,200,Centre users fetched successfully,Pass,N/A,qa_tests/specs/07-locations-mappings.qa.spec.ts
+BE-TC-1242,BE-API-122,POST /api/v1/centre-users,centreId of company B,N/A,404,404 Centre not found,404,Centre not found,Pass,N/A,qa_tests/specs/07-locations-mappings.qa.spec.ts
+BE-TC-1243,BE-API-153,POST /api/v1/centre-users/login,Valid,N/A,200,200 tokens,200,Logged in successfully,Pass,N/A,qa_tests/specs/07-locations-mappings.qa.spec.ts
+BE-TC-1244,BE-API-156,GET /api/v1/centre-users/me,Valid token,N/A,200,200 profile,200,Profile retrieved successfully,Pass,N/A,qa_tests/specs/07-locations-mappings.qa.spec.ts
+BE-TC-1246,BE-API-156,GET /api/v1/centre-users/me,Admin sets isActive=false,N/A,401,401,401,Invalid access token,Pass,N/A,qa_tests/specs/07-locations-mappings.qa.spec.ts
+BE-TC-1249,BE-API-092,POST /api/v1/sessions,Valid session,N/A,201,201 code SES-xx,201,Session created successfully,Pass,N/A,qa_tests/specs/07-locations-mappings.qa.spec.ts
+BE-TC-1251,BE-API-092,POST /api/v1/sessions,5 sessions created at once,N/A,200,All 5 created with different codes,500,"2/5 created; statuses 201,409,409,201,409",Fail,BE-BUG-018,qa_tests/specs/07-locations-mappings.qa.spec.ts
+BE-TC-1252,BE-API-009,POST /api/v1/super-admin/companies,4 companies created at once,N/A,200,All 4 created with unique CO- codes,500,"1/4 created; statuses 201,409,409,409; This company code is already in use",Fail,BE-BUG-018,qa_tests/specs/07-locations-mappings.qa.spec.ts
+BE-TC-1253,BE-API-144,POST /api/v1/test-candidate-mappings/assign-groups,Fixture group,N/A,201,201 assigned >= 1,201,Test assigned to groups successfully,Pass,N/A,qa_tests/specs/07-locations-mappings.qa.spec.ts
+BE-TC-1254,BE-API-145,POST /api/v1/test-candidate-mappings/assign-email,One unknown email,N/A,404,404 Candidate not found: <email>,404,Candidate not found: ghost@qa.test,Pass,N/A,qa_tests/specs/07-locations-mappings.qa.spec.ts
+BE-TC-1255,BE-API-145,POST /api/v1/test-candidate-mappings/assign-email,Company B candidate email,N/A,404,404 Candidate not found,404,Candidate not found: onlyb.mv2s8sne203@qa.test,Pass,N/A,qa_tests/specs/07-locations-mappings.qa.spec.ts
+BE-TC-1260,BE-API-120,PATCH /api/v1/test-candidate-mappings/:id,testId changed to new test,N/A,200,200 and the mapping now points to the new test,200,Test candidate mapping fetched successfully,Fail,BE-BUG-007,qa_tests/specs/07-locations-mappings.qa.spec.ts
+BE-TC-1261,BE-API-118,GET /api/v1/test-candidate-mappings,testId filter,N/A,200,"200, candidate relation without secrets",200,Test candidate mappings fetched successfully,Pass,N/A,qa_tests/specs/07-locations-mappings.qa.spec.ts
+BE-TC-1264,BE-API-062,POST /api/v1/groups,Content-Type text/plain with JSON text,N/A,400 or 415,"415 or 400, nothing created",400,name should not be empty; name must be a string,Pass,N/A,qa_tests/specs/08-errors-security-files.qa.spec.ts
+BE-TC-1265,BE-API-063,GET /api/v1/groups,name=%00,N/A,400,400 Null characters are not allowed,400,Null characters are not allowed,Pass,N/A,qa_tests/specs/08-errors-security-files.qa.spec.ts
+BE-TC-1266,BE-API-062,POST /api/v1/groups,"{""name"":""p"",""__proto__"":{""isAdmin"":true}}",N/A,400 or 201,No crash; __proto__ ignored or rejected,201,Group created successfully,Pass,N/A,qa_tests/specs/08-errors-security-files.qa.spec.ts
+BE-TC-1268,BE-API-002,GET /api/v1/health,Check response headers,N/A,200,"CSP, X-Frame-Options DENY, nosniff, HSTS, no X-Powered-By",200,xfo=DENY nosniff=nosniff hsts=true csp=true powered=none,Pass,N/A,qa_tests/specs/08-errors-security-files.qa.spec.ts
+BE-TC-1269,N/A,OPTIONS /api/v1/auth/login,Origin: https://evil.example,N/A,200 or 204 or 404,No Access-Control-Allow-Origin for evil origin,204,ACAO=none,Pass,N/A,qa_tests/specs/08-errors-security-files.qa.spec.ts
+BE-TC-1270,N/A,OPTIONS /api/v1/auth/login,Origin: http://localhost:5173,N/A,204,ACAO = http://localhost:5173,204,ACAO=http://localhost:5173,Pass,N/A,qa_tests/specs/08-errors-security-files.qa.spec.ts
+BE-TC-1271,N/A,OPTIONS /api/v1/tests,"Access-Control-Request-Headers: authorization,x-workspace-id,x-workspace-slug",N/A,204,Headers allowed (frontend always sends them),500,"allow-headers=content-type,authorization",Fail,BE-BUG-011,qa_tests/specs/08-errors-security-files.qa.spec.ts
+BE-TC-1272,N/A,GET /docs,Open /docs without login,N/A,401 or 404,Docs hidden in production or behind auth,200,{},Fail,BE-BUG-031,qa_tests/specs/08-errors-security-files.qa.spec.ts
+BE-TC-1273,BE-API-002,GET /api/v1/health,Anonymous call,N/A,200,"Only up/down, no internal names (records DB+Redis names today)",200,Health check passed successfully,Fail,BE-BUG-049,qa_tests/specs/08-errors-security-files.qa.spec.ts
+BE-TC-1274,BE-API-157,POST /api/v1/files/upload,Empty multipart,N/A,400,400 No file provided,400,"No file provided. Please upload a file with key ""file"" in form-data",Pass,N/A,qa_tests/specs/08-errors-security-files.qa.spec.ts
+BE-TC-1275,BE-API-157,POST /api/v1/files/upload,virus.exe application/x-msdownload,N/A,400,400 This file type is not allowed,400,This file type is not allowed,Pass,N/A,qa_tests/specs/08-errors-security-files.qa.spec.ts
+BE-TC-1276,BE-API-157,POST /api/v1/files/upload,"MZ header bytes, name photo.jpg, type image/jpeg",N/A,400,400 file content is not an image (magic bytes check),503,File uploads are temporarily unavailable. Please try again later.,Fail,BE-BUG-033,qa_tests/specs/08-errors-security-files.qa.spec.ts
+BE-TC-1277,BE-API-157,POST /api/v1/files/upload,logo.svg image/svg+xml,N/A,400,400 not allowed (SVG can carry script),400,This file type is not allowed,Pass,N/A,qa_tests/specs/08-errors-security-files.qa.spec.ts
+BE-TC-1278,BE-API-160,POST /api/v1/files/download-url,key = ../other/x.png,N/A,400,400 Invalid file path,400,Invalid file path,Pass,N/A,qa_tests/specs/08-errors-security-files.qa.spec.ts
+BE-TC-1279,BE-API-160,POST /api/v1/files/download-url,key = <companyB>/docs/x.png,N/A,400,400 Invalid file path (tenant check),503,Blocked: S3 is disabled in the QA env and the S3 check runs before the tenant-prefix check (503). Tenant check reviewed in code only.,Blocked,N/A,qa_tests/specs/08-errors-security-files.qa.spec.ts
+BE-TC-1280,BE-API-161,DELETE /api/v1/files,key of company B,N/A,400,400 Invalid file path,503,Blocked: S3 is disabled in the QA env and the S3 check runs before the tenant-prefix check (503). Tenant check reviewed in code only.,Blocked,N/A,qa_tests/specs/08-errors-security-files.qa.spec.ts
+BE-TC-1281,BE-API-007,POST /api/v1/super-admin/login,12 wrong logins with different emails from one IP,N/A,429,429 Too many login attempts,429,Too many login attempts. Please try again later.,Pass,N/A,qa_tests/specs/10-rate-limit.qa.spec.ts
+BE-TC-1282,BE-API-004,POST /api/v1/auth/refresh,30 refresh calls with random tokens,N/A,429,429 after a limit,401,Invalid or expired refresh token,Fail,BE-BUG-032,qa_tests/specs/10-rate-limit.qa.spec.ts
+BE-TC-1283,BE-API-003,POST /api/v1/auth/login,X-Forwarded-For differs per request but app reads socket IP,N/A,200,Throttle uses real client IP when behind a trusted proxy (trust proxy setting),500,status 429 for a new client IP after limit used by another IP,Fail,BE-BUG-032,qa_tests/specs/10-rate-limit.qa.spec.ts
+BE-TC-1284,BE-API-020,PUT /api/v1/admins/:id,"id = own super admin id, isActive=false",N/A,400 or 403,400/403 cannot change or lock out the platform owner,200,Admin updated successfully,Fail,BE-BUG-003,qa_tests/specs/99-destructive.qa.spec.ts
+BE-TC-1285,BE-API-021,DELETE /api/v1/admins/:id,id = own super admin id,N/A,400 or 403 or 401,400/403 cannot delete the last super admin,200,Admin deleted successfully,Fail,BE-BUG-003,qa_tests/specs/99-destructive.qa.spec.ts

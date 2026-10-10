@@ -1,0 +1,87 @@
+Edge Case ID,Module,Endpoint,Scenario,Input,Expected Behaviour,Actual Behaviour,Status,Severity,Bug ID
+BE-EC-001,Auth,POST /api/v1/auth/login,Email in upper case with spaces,"{""email"":"" ADMIN.AMV2S7YZ1@QA.TEST ""}",200 login works,200 Logged in successfully,Pass,N/A,N/A
+BE-EC-002,Auth,POST /api/v1/auth/refresh,"Admin logs in on laptop then on phone, laptop refreshes",N/A,Each device keeps its own refresh token,401 Invalid refresh token,Fail,Medium,BE-BUG-034
+BE-EC-003,Auth,GET /api/v1/auth/me,"Header ""bearer <token>"" in lower case",N/A,200 (RFC 7235: auth scheme is case-insensitive),401 Please sign in to continue,Fail,Low,BE-BUG-052
+BE-EC-004,Companies,POST /api/v1/super-admin/companies,Workspace URL already used by company A,N/A,409 This workspace URL is already in use,409 This workspace URL is already in use,Pass,N/A,N/A
+BE-EC-005,Companies,POST /api/v1/super-admin/companies,Same URL in upper case,N/A,409 (URL is lower-cased before save),409 This workspace URL is already in use,Pass,N/A,N/A
+BE-EC-006,Companies,POST /api/v1/super-admin/companies,Email used by company A,N/A,409 This email is already in use,409 This email is already in use,Pass,N/A,N/A
+BE-EC-007,Companies,GET /api/v1/super-admin/companies/:id,Read twice (Redis cache),N/A,Both reads return same JSON,200 Company fetched successfully,Pass,N/A,N/A
+BE-EC-008,Companies,PUT /api/v1/super-admin/companies/:id,"Company has addressLine2, UI toggle sends addressLine2: """"",N/A,addressLine2 kept (backend should ignore empty optional) - see FE bug,200 Company updated successfully,Fail,Low,BE-BUG-053
+BE-EC-009,Companies,POST /api/v1/companies/verify-workspace,planEndsAt yesterday,N/A,403 Company plan has expired,403 Company plan has expired. Please renew your subscription.,Pass,N/A,N/A
+BE-EC-010,Companies,DELETE /api/v1/super-admin/companies/:id,Second delete,N/A,404 Company not found,404 Company not found,Pass,N/A,N/A
+BE-EC-011,Companies,PATCH /api/v1/companies/:id,GST of another company,N/A,409 This GST number is already in use,409 This GST number is already in use,Pass,N/A,N/A
+BE-EC-012,Admins,POST /api/v1/admins,Email of admin A,N/A,409 This email is already in use for this company,409 This email is already in use for this company,Pass,N/A,N/A
+BE-EC-013,Admins,GET /api/v1/admins,isActive=false,N/A,200 only inactive admins,200 Admins fetched successfully,Pass,N/A,N/A
+BE-EC-014,Templates,POST /api/v1/super-admin/templates,Same ranking again,N/A,409 Ranking is already in use,409 Ranking 2649355 is already in use,Pass,N/A,N/A
+BE-EC-015,Languages,GET /api/v1/languages/:id,Read right after rename,N/A,200 with new name,200 Language fetched successfully,Pass,N/A,N/A
+BE-EC-016,Languages,POST /api/v1/languages,Same name twice,N/A,409 already exists,409 A language with this name already exists,Pass,N/A,N/A
+BE-EC-017,Languages,POST /api/v1/languages,Same name in UPPER case,N/A,409 already exists (names should be case-insensitive),201 Language created successfully,Fail,Low,BE-BUG-044
+BE-EC-018,Languages,POST /api/v1/languages,"name = ""Ünïcødé 名前 مرحبا 😀""",N/A,201 stored unchanged,201 Language created successfully,Pass,N/A,N/A
+BE-EC-019,Difficulties,GET /api/v1/difficulties/:id,Read right after rename,N/A,200 with new name,200 Difficulty fetched successfully,Pass,N/A,N/A
+BE-EC-020,Difficulties,POST /api/v1/difficulties,Same name twice,N/A,409 already exists,409 A difficulty with this name already exists for the selected language,Pass,N/A,N/A
+BE-EC-021,Difficulties,POST /api/v1/difficulties,Same name in UPPER case,N/A,409 already exists (names should be case-insensitive),201 Difficulty created successfully,Fail,Low,BE-BUG-044
+BE-EC-022,Difficulties,POST /api/v1/difficulties,"name = ""Ünïcødé 名前 مرحبا 😀""",N/A,201 stored unchanged,201 Difficulty created successfully,Pass,N/A,N/A
+BE-EC-023,Categories,GET /api/v1/categories/:id,Read right after rename,N/A,200 with new name,200 Category fetched successfully,Pass,N/A,N/A
+BE-EC-024,Categories,POST /api/v1/categories,Same name twice,N/A,409 already exists,409 A category with this name already exists,Pass,N/A,N/A
+BE-EC-025,Categories,POST /api/v1/categories,Same name in UPPER case,N/A,409 already exists (names should be case-insensitive),201 Category created successfully,Fail,Low,BE-BUG-044
+BE-EC-026,Categories,POST /api/v1/categories,"name = ""Ünïcødé 名前 مرحبا 😀""",N/A,201 stored unchanged,201 Category created successfully,Pass,N/A,N/A
+BE-EC-027,Subjects,GET /api/v1/subjects/:id,Read right after rename,N/A,200 with new name,200 Subject fetched successfully,Pass,N/A,N/A
+BE-EC-028,Subjects,POST /api/v1/subjects,Same name twice,N/A,409 already exists,409 A subject with this name already exists,Pass,N/A,N/A
+BE-EC-029,Subjects,POST /api/v1/subjects,Same name in UPPER case,N/A,409 already exists (names should be case-insensitive),201 Subject created successfully,Fail,Low,BE-BUG-044
+BE-EC-030,Subjects,POST /api/v1/subjects,"name = ""Ünïcødé 名前 مرحبا 😀""",N/A,201 stored unchanged,201 Subject created successfully,Pass,N/A,N/A
+BE-EC-031,Topics,GET /api/v1/topics/:id,Read right after rename,N/A,200 with new name,200 Topic fetched successfully,Pass,N/A,N/A
+BE-EC-032,Topics,POST /api/v1/topics,Same name twice,N/A,409 already exists,409 A topic with this name already exists,Pass,N/A,N/A
+BE-EC-033,Topics,POST /api/v1/topics,Same name in UPPER case,N/A,409 already exists (names should be case-insensitive),201 Topic created successfully,Fail,Low,BE-BUG-044
+BE-EC-034,Topics,POST /api/v1/topics,"name = ""Ünïcødé 名前 مرحبا 😀""",N/A,201 stored unchanged,201 Topic created successfully,Pass,N/A,N/A
+BE-EC-035,Instructions,GET /api/v1/instructions/:id,Read right after rename,N/A,200 with new name,200 Instruction fetched successfully,Pass,N/A,N/A
+BE-EC-036,Instructions,POST /api/v1/instructions,Same name twice,N/A,409 already exists,409 An instruction with this name already exists,Pass,N/A,N/A
+BE-EC-037,Instructions,POST /api/v1/instructions,Same name in UPPER case,N/A,409 already exists (names should be case-insensitive),201 Instruction created successfully,Fail,Low,BE-BUG-044
+BE-EC-038,Instructions,POST /api/v1/instructions,"name = ""Ünïcødé 名前 مرحبا 😀""",N/A,201 stored unchanged,201 Instruction created successfully,Pass,N/A,N/A
+BE-EC-039,Groups,GET /api/v1/groups/:id,Read right after rename,N/A,200 with new name,200 Group fetched successfully,Pass,N/A,N/A
+BE-EC-040,Groups,POST /api/v1/groups,Same name twice,N/A,409 already exists,409 A group with this name already exists,Pass,N/A,N/A
+BE-EC-041,Groups,POST /api/v1/groups,Same name in UPPER case,N/A,409 already exists (names should be case-insensitive),201 Group created successfully,Fail,Low,BE-BUG-044
+BE-EC-042,Groups,POST /api/v1/groups,"name = ""Ünïcødé 名前 مرحبا 😀""",N/A,201 stored unchanged,201 Group created successfully,Pass,N/A,N/A
+BE-EC-043,Categories,GET /api/v1/categories,page=100000,N/A,"200 empty items, correct total",200 Categories fetched successfully,Pass,N/A,N/A
+BE-EC-044,Categories,GET /api/v1/categories,page=9007199254740993,N/A,"400 or empty page, never 500",200 Categories fetched successfully,Pass,N/A,N/A
+BE-EC-045,Categories,POST /api/v1/categories,ranking=1 already used,N/A,Allowed (ranking only sorts); note order is then by updatedAt,201 Category created successfully,Pass,N/A,N/A
+BE-EC-046,CST Mappings,POST /api/v1/category-subject-topic-mappings,Same category/subject/topic,N/A,409 mapping already exists,"409 This category, subject, and topic mapping already exists",Pass,N/A,N/A
+BE-EC-047,Instruction Languages,POST /api/v1/instructions/:id/languages,Language already has text,N/A,409 This language already has content,409 This language already has content for this instruction,Pass,N/A,N/A
+BE-EC-048,Instruction Languages,POST /api/v1/instructions/:id/languages,"content = 2,000,000 chars",N/A,413 Request body is too large,413 Request body is too large,Pass,N/A,N/A
+BE-EC-049,Tests,POST /api/v1/tests,Body without isDraft/isPublished,N/A,201 isDraft=true and isPublished=false,201 Test created successfully,Fail,High,BE-BUG-009
+BE-EC-050,Tests,POST /api/v1/tests,Same testCode twice,N/A,409 This test code is already in use,409 This test code is already in use for this company,Pass,N/A,N/A
+BE-EC-051,Tests,POST /api/v1/tests,startDate 2028-02-29,N/A,201 saved as 2028-02-29,201 Test created successfully,Pass,N/A,N/A
+BE-EC-052,Tests,POST /api/v1/tests,"startDate ""2030-01-01T23:30:00-05:00""",N/A,Either 400 (date only) or stored as the local date the admin picked,201 Test created successfully,Pass,N/A,N/A
+BE-EC-053,Tests,GET /api/v1/tests,testCode = first 3 chars of a real code,N/A,200 matching tests (like name search),200 Tests fetched successfully,Fail,Low,BE-BUG-057
+BE-EC-054,Tests,PATCH /api/v1/tests/:id,"startDate=null, endDate=null",N/A,200 dates cleared,200 Test updated successfully,Pass,N/A,N/A
+BE-EC-055,Tests,PATCH /api/v1/tests/:id,isPublished=true with 0 questions and no schedule,N/A,400 add questions and schedule before publishing,200 Test updated successfully,Fail,Medium,BE-BUG-020
+BE-EC-056,Tests,PATCH /api/v1/tests/:id,Two PATCH requests in parallel with different names,N/A,Last write wins silently (no version check) - recorded for review,"200 200/200 both saved, no conflict warning",Pass,N/A,N/A
+BE-EC-057,Test Settings,POST /api/v1/test-settings,Test already has settings,N/A,409 Test settings already exist,409 Test settings already exist for this test,Pass,N/A,N/A
+BE-EC-058,Test Settings,POST /api/v1/test-settings,Delete settings then POST for same test,N/A,201 restored,201 Test setting created successfully,Pass,N/A,N/A
+BE-EC-059,Questions,POST /api/v1/questions,Test total 6; 5 used; add comprehension with 2 children,N/A,400 This test already has the maximum number of questions,400 This test already has the maximum number of questions,Pass,N/A,N/A
+BE-EC-060,Questions,PATCH /api/v1/questions/:id,Change type to comprehension without questionData,N/A,400 content type mismatch,400 questionData.questionType must match questionType,Pass,N/A,N/A
+BE-EC-061,Candidate Exam,GET /api/v1/candidates/tests/:testId/questions,Edit fixture question text then read paper,N/A,200 paper shows new text,200 Exam paper fetched successfully,Pass,N/A,N/A
+BE-EC-062,Questions,POST /api/v1/questions,Add a question after delete,N/A,201,201 Question created successfully,Pass,N/A,N/A
+BE-EC-063,Questions,POST /api/v1/questions,"Test total 3, send 6 creates at once",N/A,Exactly 3 succeed (row lock),200 3 of 6 created,Pass,N/A,N/A
+BE-EC-064,Candidates,POST /api/v1/candidates,Email of fixture candidate,N/A,409 This email is already in use for this company,409 This email is already in use for this company,Pass,N/A,N/A
+BE-EC-065,Candidates,POST /api/v1/candidates,Enrollment of fixture candidate,N/A,409 This enrollment number is already in use,409 This enrollment number is already in use for this company,Pass,N/A,N/A
+BE-EC-066,Candidates,POST /api/v1/candidates,Company B candidate email used in company A,N/A,201 (unique per company),201 Candidate created successfully,Pass,N/A,N/A
+BE-EC-067,Candidates,POST /api/v1/candidates,dateOfBirth = 2000-02-29,N/A,201 saved,201 Candidate created successfully,Pass,N/A,N/A
+BE-EC-068,Candidates,POST /api/v1/candidates,"name = ""محمد أحمد""",N/A,201 saved unchanged,201 Candidate created successfully,Pass,N/A,N/A
+BE-EC-069,Candidates,GET /api/v1/candidates,"Read list, create, read list again",N/A,New candidate visible,200 Candidates fetched successfully,Pass,N/A,N/A
+BE-EC-070,Candidates,GET /api/v1/candidates/:id,"Read candidate, add document, read again",N/A,New document is listed,200 Candidate fetched successfully,Fail,Medium,BE-BUG-024
+BE-EC-071,Candidates,GET /api/v1/candidates/:id,After delete (cached before),N/A,404,404 Candidate not found,Pass,N/A,N/A
+BE-EC-072,Candidate Documents,POST /api/v1/candidates/:id/documents,id_proof again,N/A,409 This document type already exists,409 This document type already exists for the candidate,Pass,N/A,N/A
+BE-EC-073,Candidate Auth,POST /api/v1/candidates/login,Valid candidate with no mapping today,N/A,403 You are not mapped to this centre for this date,403 You are not mapped to this centre for this date,Pass,N/A,N/A
+BE-EC-074,Candidate Auth,POST /api/v1/candidates/login,Mapping for tomorrow (UTC). In India after 18:30 UTC it is already tomorrow,N/A,Login allowed when it is the exam date at the centre (Asia/Kolkata),"403 You are not mapped to this centre for this date (IST date 2026-10-11, UTC date 2026-10-10)",Fail,High,BE-BUG-008
+BE-EC-075,Feedback,POST /api/v1/candidates/tests/:testId/feedback,Test not started/published (2030),N/A,400 feedback only after the test,201 Feedback submitted successfully,Fail,Low,BE-BUG-047
+BE-EC-076,Feedback,POST /api/v1/candidates/tests/:testId/feedback,Submit twice,N/A,409 already submitted,409 You have already submitted feedback for this test,Pass,N/A,N/A
+BE-EC-077,Feedback,POST /api/v1/candidates/tests/:testId/feedback,Double-click submit (2 parallel),N/A,"One 201 and one 409, never 500",200 statuses 201/409,Pass,N/A,N/A
+BE-EC-078,Centres,POST /api/v1/centres,Code of fixture centre,N/A,409 This centre code is already in use,409 This centre code is already in use for this company,Pass,N/A,N/A
+BE-EC-079,Centres,POST /api/v1/centres,Code in lower case,N/A,409 (candidates type codes in any case),201 Centre created successfully,Fail,Low,BE-BUG-044
+BE-EC-080,Events,POST /api/v1/events,Same eventCode twice,N/A,409 This event code is already in use,409 This event code is already in use for this company,Pass,N/A,N/A
+BE-EC-081,Test-Candidate Mappings,POST /api/v1/test-candidate-mappings/assign-groups,Repeat,N/A,"201 assigned 0, alreadyAssigned >= 1",201 Test assigned to groups successfully,Pass,N/A,N/A
+BE-EC-082,Test-Candidate Mappings,POST /api/v1/test-candidate-mappings/assign-groups,Group with 1 inactive candidate,N/A,assigned 0 (inactive skipped),201 Test assigned to groups successfully,Fail,Medium,BE-BUG-029
+BE-EC-083,Test-Candidate Mappings,POST /api/v1/test-candidate-mappings/assign-email,"email = "" X , Y "" style list",N/A,201 emails trimmed and lower-cased,201 Test assigned to candidates successfully,Pass,N/A,N/A
+BE-EC-084,Candidate-Centre Mappings,POST /api/v1/candidate-centre-mappings,Duplicate of fixture mapping,N/A,409 already mapped on this date,409 This candidate is already mapped to this centre on this date,Pass,N/A,N/A
+BE-EC-085,Files,POST /api/v1/files/upload,60 MB PNG (limit 50 MB),N/A,413 File too large,413 Request body is too large,Pass,N/A,N/A
+BE-EC-086,Files,POST /api/v1/files/upload,0 byte empty.png,N/A,400 empty file,503 File uploads are temporarily unavailable. Please try again later.,Fail,Medium,BE-BUG-033

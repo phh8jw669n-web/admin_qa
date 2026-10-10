@@ -1,0 +1,31 @@
+Module,Main Files,Models/Tables Used,Endpoints,Description,Notes
+Health,"src/health/*, app.controller.ts",-,"GET /, GET /health",Liveness and DB/Redis health,Public
+Auth (admin),"modules/auth/*, common/guards/jwt-auth.guard.ts, roles.guard.ts, common/auth/login-lockout.service.ts","admins, companies","POST /auth/login, /auth/refresh, /auth/logout, GET /auth/me","Company admin login with company token, JWT access + refresh",Lockout in Redis or memory
+Super-Admin,modules/super-admin/*,"admins, companies","POST /super-admin/login, /logout, CRUD /super-admin/companies",Platform login and company management,SuperAdminGuard
+Companies,modules/companies/*,"companies, admins","POST /companies/verify-workspace, GET/PATCH /companies/:id",Workspace lookup and own company profile,verify-workspace is public
+Admins,modules/admins/*,admins,CRUD /admins,Manage admin accounts (super admin only),@Roles(SUPER_ADMIN)
+Templates,modules/templates/*,templates,CRUD /super-admin/templates,Global test templates,"Read for all admins, write for super admin"
+Languages,modules/languages/*,languages,CRUD /languages,Tenant languages,N/A
+Difficulties,modules/difficulties/*,difficulties,"CRUD /difficulties, PATCH /difficulties/:id/status",Difficulty levels per language,N/A
+Categories,modules/categories/*,categories,CRUD /categories,Test categories,N/A
+Subjects,modules/subjects/*,"subjects, cst mappings",CRUD /subjects (filter by categoryId),Subjects,N/A
+Topics,modules/topics/*,"topics, cst mappings",CRUD /topics (filter by categoryId/subjectId),Topics,N/A
+CST Mappings,modules/category-subject-topic-mappings/*,category_subject_topic_mappings,CRUD /category-subject-topic-mappings,Links category-subject-topic,N/A
+Instructions,modules/instructions/* (+ instruction-languages),"instructions, instruction_languages","CRUD /instructions, CRUD /instructions/:id/languages",Test instructions per language,HTML content
+Tests,modules/tests/*,"tests, questions","CRUD /tests, GET /tests/:id/stats",Test definition and schedule,N/A
+Test Settings,modules/test-settings/*,test_settings,"POST /test-settings, GET /test-settings/test/:testId, GET/PATCH/DELETE /test-settings/:id",30 delivery flags per test,N/A
+Questions,modules/questions/*,"questions, question_content",CRUD /questions,"Single/multiple choice, fill blank, comprehension",Multi-language content
+Groups,modules/groups/*,"groups, candidate_groups",CRUD /groups,Candidate batches,N/A
+Candidates,modules/candidates/*,"candidates, candidate_groups",CRUD /candidates,Candidate records,Admin side
+Candidate Documents,modules/candidates/documents/*,candidate_documents,CRUD /candidates/:id/documents,"ID proof, photo, signature",N/A
+Candidate Auth,"modules/candidates/candidates-auth.service.ts, guards/candidate-jwt-auth.guard.ts","candidates, centres, candidate_centre_mappings","POST /candidates/login, /refresh, /logout, GET /candidates/me",Candidate login at a centre on exam day,Separate JWT secrets
+Candidate Exam,modules/candidates/candidate-exam.*,"tests, questions, question_content, test_settings, instruction_languages","GET /candidates/tests/:testId, GET /candidates/tests/:testId/questions",Exam details and paper for mapped candidates,Redis cache + build lock
+Feedback,modules/feedbacks/*,feedbacks,POST /candidates/tests/:testId/feedback,Candidate rating after test,N/A
+Zones / Regions / Centres / Labs,"modules/zones, regions, centres, labs","zones, regions, centres, labs",CRUD for each,Exam location hierarchy,N/A
+Centre Users,modules/centre-users/*,centre_users,"CRUD /centre-users, POST /centre-users/login, /refresh, /logout, GET /centre-users/me",Centre staff accounts,No centre features yet
+Events,modules/events/*,events,CRUD /events,Exam events with open/close times,N/A
+Sessions,modules/sessions/*,sessions,CRUD /sessions,Exam sessions with generated code,N/A
+Test-Candidate Mappings,modules/test-candidate-mappings/*,test_candidate_mappings,"CRUD + POST assign-groups, assign-email","Who takes which test, attempt results",N/A
+Candidate-Centre Mappings,modules/candidate-centre-mappings/*,candidate_centre_mappings,CRUD /candidate-centre-mappings,Which centre and date a candidate sits,N/A
+Files,"modules/files/*, common/storage/s3.service.ts",- (S3),"POST /files/upload, PUT /files, POST /files/upload-url, /files/download-url, DELETE /files","S3 uploads and presigned URLs, tenant prefix",S3 off in QA (503)
+Email,common/email/ses.service.ts,-,-,SES client (no endpoint uses it),Mocked/disabled

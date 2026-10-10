@@ -1,0 +1,10 @@
+Category,Total,Passed,Failed,Blocked,Not Run,Critical Bugs,High Bugs,Medium Bugs,Low Bugs,Key Takeaway
+API functional tests,317,280,35,2,0,2,6,8,4,Tenant isolation and auth checks hold; data rules and exam window checks are missing
+Auth and permissions,737,736,1,0,0,0,0,1,0,Every endpoint rejects no-login and wrong-role calls; no cross-tenant (IDOR) leak found
+Validation,231,193,38,0,0,0,2,7,8,"DTOs catch types and formats; business rules (dates, marks, passwords) and string-to-boolean are weak"
+Edge cases,86,67,19,0,0,0,2,5,5,"Case-insensitive duplicates, multi-day times, time zone, parallel creates fail"
+Error handling,17,10,7,0,0,0,0,1,2,Consistent JSON errors; numeric overflow and bad dates still give 500
+Business flow simulations,8,2,6,0,0,2,2,3,0,"Onboarding, exam day and concurrent editing flows have blocking gaps"
+Static checks,12,3,9,0,0,0,4,2,2,"Install, lint, type check, audit and CI need work"
+Load tests (autocannon),10,10,0,0,0,0,0,0,0,0% errors at 10 connections; big lists 130-180 ms avg
+ALL TESTS,1408,1291,115,2,0,2,13,24,20,59 bugs in bugs.csv; fix the Critical/High list first

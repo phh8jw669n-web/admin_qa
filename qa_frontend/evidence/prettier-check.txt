@@ -1,0 +1,34 @@
+Checking formatting...
+[warn] src/app/test-manager/list/page.tsx
+[warn] src/app/test-manager/wizard/page.tsx
+[warn] src/components/shared/filter-drawer/filter-drawer.tsx
+[warn] src/components/shared/rich-text-editor/ckeditor-instance.tsx
+[warn] src/components/shared/rich-text-editor/editor-extras.ts
+[warn] src/components/shared/rich-text-editor/editor-upload-adapter.ts
+[warn] src/features/test-manager/api/fetch-question-entry-options.ts
+[warn] src/features/test-manager/api/fetch-questions.ts
+[warn] src/features/test-manager/api/fetch-test-settings.ts
+[warn] src/features/test-manager/api/fetch-test.ts
+[warn] src/features/test-manager/api/fetch-tests-list.ts
+[warn] src/features/test-manager/api/questions-mutations.ts
+[warn] src/features/test-manager/api/test-settings-mutations.ts
+[warn] src/features/test-manager/components/candidate-authentication-panel.tsx
+[warn] src/features/test-manager/components/choice-question-form.tsx
+[warn] src/features/test-manager/components/comprehension-question-form.tsx
+[warn] src/features/test-manager/components/question-list.tsx
+[warn] src/features/test-manager/components/question-translation-form.tsx
+[warn] src/features/test-manager/components/shuffle-question-panel.tsx
+[warn] src/features/test-manager/components/step-1-create-form.tsx
+[warn] src/features/test-manager/components/step-3-questions.tsx
+[warn] src/features/test-manager/components/test-list-filter-bar.tsx
+[warn] src/features/test-manager/components/test-table-columns.tsx
+[warn] src/features/test-manager/constants/step-2-settings.ts
+[warn] src/features/test-manager/lib/to-create-test-payload.ts
+[warn] src/features/test-manager/lib/to-question-payload.ts
+[warn] src/features/test-manager/lib/to-test-settings-payload.ts
+[warn] src/features/test-manager/schema/step-1-create.schema.ts
+[warn] src/features/test-manager/schema/step-3-questions.schema.ts
+[warn] src/lib/axios.ts
+[warn] src/lib/files/upload-file.ts
+[warn] Code style issues found in 31 files. Run Prettier with --write to fix.
+exit=1

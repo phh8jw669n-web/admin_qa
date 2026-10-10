@@ -1,0 +1,163 @@
+API ID,Method,Path,Purpose,Auth Required,Allowed Roles,Request Body/Params,Success Response,Used By Frontend (Yes/No),Notes
+BE-API-001,GET,/api/v1,Welcome message,No,Anyone,None,"200 {success, message}",No,Not used by the frontend
+BE-API-002,GET,/api/v1/health,DB and Redis health,No,Anyone,None,200 {data.status: ok},No,Not used by the frontend
+BE-API-003,POST,/api/v1/auth/login,Company admin login,No,Anyone,"companyToken (JWT), email, password (min 8)","200 {accessToken, refreshToken, admin}",Yes,Used by frontend
+BE-API-004,POST,/api/v1/auth/refresh,Rotate admin tokens,No,Anyone,refreshToken,"201 {accessToken, refreshToken}",No,Not used by the frontend
+BE-API-005,POST,/api/v1/auth/logout,Admin logout (revokes tokens),Yes,"Company admin, Super admin",None,200 message,Yes,Used by frontend
+BE-API-006,GET,/api/v1/auth/me,Current admin profile,Yes,"Company admin, Super admin",None,200 admin profile,No,Not used by the frontend
+BE-API-007,POST,/api/v1/super-admin/login,Super admin login,No,Anyone,"email, password",200 tokens,Yes,Used by frontend
+BE-API-008,POST,/api/v1/super-admin/logout,Super admin logout,Yes,Super admin,None,200 message,No,Not used by the frontend
+BE-API-009,POST,/api/v1/super-admin/companies,Create company and its first admin,Yes,Super admin,"Company fields + firstName, lastName, adminPassword?",201 company,Yes,Used by frontend
+BE-API-010,GET,/api/v1/super-admin/companies,List companies,Yes,Super admin,"page, limit, name, city, plan, isActive","200 {items, metadata}",Yes,Used by frontend
+BE-API-011,GET,/api/v1/super-admin/companies/:id,Get company,Yes,Super admin,id (uuid),200 company,Yes,Used by frontend
+BE-API-012,PUT,/api/v1/super-admin/companies/:id,Update company,Yes,Super admin,Partial company fields,200 company,Yes,Used by frontend
+BE-API-013,DELETE,/api/v1/super-admin/companies/:id,Soft delete company,Yes,Super admin,id,200 message,Yes,Used by frontend
+BE-API-014,POST,/api/v1/companies/verify-workspace,Resolve workspace URL to a company token,No,Anyone,workspaceUrl,"200 {companyToken, name, colors}",Yes,Used by frontend
+BE-API-015,GET,/api/v1/companies/:id,Get own company,Yes,Company admin,id,200 company,No,Not used by the frontend
+BE-API-016,PATCH,/api/v1/companies/:id,Update own company profile,Yes,Company admin,Profile fields,200 company,No,Not used by the frontend
+BE-API-017,POST,/api/v1/admins,Create admin,Yes,Super admin,"companyId, firstName, lastName, role, email, password?",201 admin,No,Not used by the frontend
+BE-API-018,GET,/api/v1/admins,List admins,Yes,Super admin,"page, limit, search, isActive","200 {items, metadata}",No,Not used by the frontend
+BE-API-019,GET,/api/v1/admins/:id,Get admin,Yes,Super admin,id,200 admin,No,Not used by the frontend
+BE-API-020,PUT,/api/v1/admins/:id,Update admin,Yes,Super admin,Partial admin fields,200 admin,No,Not used by the frontend
+BE-API-021,DELETE,/api/v1/admins/:id,Soft delete admin,Yes,Super admin,id,200 message,No,Not used by the frontend
+BE-API-022,POST,/api/v1/super-admin/templates,Create global template,Yes,Super admin,"name, ranking, imageKey, htmlKey",201 template,No,Not used by the frontend
+BE-API-023,GET,/api/v1/super-admin/templates,List templates,Yes,"Company admin, Super admin","page, limit, name, ranking, isActive","200 {items, metadata}",Yes,Used by frontend
+BE-API-024,GET,/api/v1/super-admin/templates/:id,Get template,Yes,"Company admin, Super admin",id,200 template,No,Not used by the frontend
+BE-API-025,PATCH,/api/v1/super-admin/templates/:id,Update template,Yes,Super admin,Partial,200 template,No,Not used by the frontend
+BE-API-026,DELETE,/api/v1/super-admin/templates/:id,Soft delete template,Yes,Super admin,id,200 message,No,Not used by the frontend
+BE-API-027,POST,/api/v1/languages,Create Languages,Yes,Company admin,"name, isActive?",201 created item,No,Not used by the frontend
+BE-API-028,GET,/api/v1/languages,List Languages,Yes,Company admin,"page, limit, filters","200 {items, metadata}",Yes,Used by frontend
+BE-API-029,GET,/api/v1/languages/:id,Get Languages,Yes,Company admin,id,200 item,No,Not used by the frontend
+BE-API-030,PATCH,/api/v1/languages/:id,Update Languages,Yes,Company admin,Partial fields,200 item,No,Not used by the frontend
+BE-API-031,DELETE,/api/v1/languages/:id,Soft delete Languages,Yes,Company admin,id,200 message,No,Not used by the frontend
+BE-API-032,POST,/api/v1/difficulties,Create Difficulties,Yes,Company admin,"name, languageId",201 created item,No,Not used by the frontend
+BE-API-033,GET,/api/v1/difficulties,List Difficulties,Yes,Company admin,"page, limit, filters","200 {items, metadata}",Yes,Used by frontend
+BE-API-034,GET,/api/v1/difficulties/:id,Get Difficulties,Yes,Company admin,id,200 item,No,Not used by the frontend
+BE-API-035,PATCH,/api/v1/difficulties/:id,Update Difficulties,Yes,Company admin,Partial fields,200 item,No,Not used by the frontend
+BE-API-036,DELETE,/api/v1/difficulties/:id,Soft delete Difficulties,Yes,Company admin,id,200 message,No,Not used by the frontend
+BE-API-037,POST,/api/v1/categories,Create Categories,Yes,Company admin,"name, ranking, languageId?, isActive?",201 created item,No,Not used by the frontend
+BE-API-038,GET,/api/v1/categories,List Categories,Yes,Company admin,"page, limit, filters","200 {items, metadata}",Yes,Used by frontend
+BE-API-039,GET,/api/v1/categories/:id,Get Categories,Yes,Company admin,id,200 item,No,Not used by the frontend
+BE-API-040,PATCH,/api/v1/categories/:id,Update Categories,Yes,Company admin,Partial fields,200 item,No,Not used by the frontend
+BE-API-041,DELETE,/api/v1/categories/:id,Soft delete Categories,Yes,Company admin,id,200 message,No,Not used by the frontend
+BE-API-042,POST,/api/v1/subjects,Create Subjects,Yes,Company admin,"name, ranking, languageId?",201 created item,No,Not used by the frontend
+BE-API-043,GET,/api/v1/subjects,List Subjects,Yes,Company admin,"page, limit, filters","200 {items, metadata}",Yes,Used by frontend
+BE-API-044,GET,/api/v1/subjects/:id,Get Subjects,Yes,Company admin,id,200 item,No,Not used by the frontend
+BE-API-045,PATCH,/api/v1/subjects/:id,Update Subjects,Yes,Company admin,Partial fields,200 item,No,Not used by the frontend
+BE-API-046,DELETE,/api/v1/subjects/:id,Soft delete Subjects,Yes,Company admin,id,200 message,No,Not used by the frontend
+BE-API-047,POST,/api/v1/topics,Create Topics,Yes,Company admin,"name, ranking, languageId?",201 created item,No,Not used by the frontend
+BE-API-048,GET,/api/v1/topics,List Topics,Yes,Company admin,"page, limit, filters","200 {items, metadata}",Yes,Used by frontend
+BE-API-049,GET,/api/v1/topics/:id,Get Topics,Yes,Company admin,id,200 item,No,Not used by the frontend
+BE-API-050,PATCH,/api/v1/topics/:id,Update Topics,Yes,Company admin,Partial fields,200 item,No,Not used by the frontend
+BE-API-051,DELETE,/api/v1/topics/:id,Soft delete Topics,Yes,Company admin,id,200 message,No,Not used by the frontend
+BE-API-052,POST,/api/v1/category-subject-topic-mappings,Create CST Mappings,Yes,Company admin,"categoryId, subjectId, topicId, ranking",201 created item,No,Not used by the frontend
+BE-API-053,GET,/api/v1/category-subject-topic-mappings,List CST Mappings,Yes,Company admin,"page, limit, filters","200 {items, metadata}",No,Not used by the frontend
+BE-API-054,GET,/api/v1/category-subject-topic-mappings/:id,Get CST Mappings,Yes,Company admin,id,200 item,No,Not used by the frontend
+BE-API-055,PATCH,/api/v1/category-subject-topic-mappings/:id,Update CST Mappings,Yes,Company admin,Partial fields,200 item,No,Not used by the frontend
+BE-API-056,DELETE,/api/v1/category-subject-topic-mappings/:id,Soft delete CST Mappings,Yes,Company admin,id,200 message,No,Not used by the frontend
+BE-API-057,POST,/api/v1/instructions,Create Instructions,Yes,Company admin,"name, ranking, isActive?",201 created item,No,Not used by the frontend
+BE-API-058,GET,/api/v1/instructions,List Instructions,Yes,Company admin,"page, limit, filters","200 {items, metadata}",Yes,Used by frontend
+BE-API-059,GET,/api/v1/instructions/:id,Get Instructions,Yes,Company admin,id,200 item,No,Not used by the frontend
+BE-API-060,PATCH,/api/v1/instructions/:id,Update Instructions,Yes,Company admin,Partial fields,200 item,No,Not used by the frontend
+BE-API-061,DELETE,/api/v1/instructions/:id,Soft delete Instructions,Yes,Company admin,id,200 message,No,Not used by the frontend
+BE-API-062,POST,/api/v1/groups,Create Groups,Yes,Company admin,"name, description?, isActive?",201 created item,No,Not used by the frontend
+BE-API-063,GET,/api/v1/groups,List Groups,Yes,Company admin,"page, limit, filters","200 {items, metadata}",No,Not used by the frontend
+BE-API-064,GET,/api/v1/groups/:id,Get Groups,Yes,Company admin,id,200 item,No,Not used by the frontend
+BE-API-065,PATCH,/api/v1/groups/:id,Update Groups,Yes,Company admin,Partial fields,200 item,No,Not used by the frontend
+BE-API-066,DELETE,/api/v1/groups/:id,Soft delete Groups,Yes,Company admin,id,200 message,No,Not used by the frontend
+BE-API-067,POST,/api/v1/zones,Create Zones,Yes,Company admin,"name, isActive?",201 created item,No,Not used by the frontend
+BE-API-068,GET,/api/v1/zones,List Zones,Yes,Company admin,"page, limit, filters","200 {items, metadata}",No,Not used by the frontend
+BE-API-069,GET,/api/v1/zones/:id,Get Zones,Yes,Company admin,id,200 item,No,Not used by the frontend
+BE-API-070,PATCH,/api/v1/zones/:id,Update Zones,Yes,Company admin,Partial fields,200 item,No,Not used by the frontend
+BE-API-071,DELETE,/api/v1/zones/:id,Soft delete Zones,Yes,Company admin,id,200 message,No,Not used by the frontend
+BE-API-072,POST,/api/v1/regions,Create Regions,Yes,Company admin,"zoneId, name, latitude, longitude, stateName",201 created item,No,Not used by the frontend
+BE-API-073,GET,/api/v1/regions,List Regions,Yes,Company admin,"page, limit, filters","200 {items, metadata}",No,Not used by the frontend
+BE-API-074,GET,/api/v1/regions/:id,Get Regions,Yes,Company admin,id,200 item,No,Not used by the frontend
+BE-API-075,PATCH,/api/v1/regions/:id,Update Regions,Yes,Company admin,Partial fields,200 item,No,Not used by the frontend
+BE-API-076,DELETE,/api/v1/regions/:id,Soft delete Regions,Yes,Company admin,id,200 message,No,Not used by the frontend
+BE-API-077,POST,/api/v1/centres,Create Centres,Yes,Company admin,"zoneId, regionId, name, code, address, coordinator*, phones, counts, lat/long",201 created item,No,Not used by the frontend
+BE-API-078,GET,/api/v1/centres,List Centres,Yes,Company admin,"page, limit, filters","200 {items, metadata}",No,Not used by the frontend
+BE-API-079,GET,/api/v1/centres/:id,Get Centres,Yes,Company admin,id,200 item,No,Not used by the frontend
+BE-API-080,PATCH,/api/v1/centres/:id,Update Centres,Yes,Company admin,Partial fields,200 item,No,Not used by the frontend
+BE-API-081,DELETE,/api/v1/centres/:id,Soft delete Centres,Yes,Company admin,id,200 message,No,Not used by the frontend
+BE-API-082,POST,/api/v1/labs,Create Labs,Yes,Company admin,"zoneId, regionId, centreId, name, sessionCount, seats",201 created item,No,Not used by the frontend
+BE-API-083,GET,/api/v1/labs,List Labs,Yes,Company admin,"page, limit, filters","200 {items, metadata}",No,Not used by the frontend
+BE-API-084,GET,/api/v1/labs/:id,Get Labs,Yes,Company admin,id,200 item,No,Not used by the frontend
+BE-API-085,PATCH,/api/v1/labs/:id,Update Labs,Yes,Company admin,Partial fields,200 item,No,Not used by the frontend
+BE-API-086,DELETE,/api/v1/labs/:id,Soft delete Labs,Yes,Company admin,id,200 message,No,Not used by the frontend
+BE-API-087,POST,/api/v1/events,Create Events,Yes,Company admin,"name, eventCode, examType, eventType, eventOpeningAt, eventClosingAt",201 created item,No,Not used by the frontend
+BE-API-088,GET,/api/v1/events,List Events,Yes,Company admin,"page, limit, filters","200 {items, metadata}",No,Not used by the frontend
+BE-API-089,GET,/api/v1/events/:id,Get Events,Yes,Company admin,id,200 item,No,Not used by the frontend
+BE-API-090,PATCH,/api/v1/events/:id,Update Events,Yes,Company admin,Partial fields,200 item,No,Not used by the frontend
+BE-API-091,DELETE,/api/v1/events/:id,Soft delete Events,Yes,Company admin,id,200 message,No,Not used by the frontend
+BE-API-092,POST,/api/v1/sessions,Create Sessions,Yes,Company admin,"name, startDate, endDate, startTime, endTime",201 created item,No,Not used by the frontend
+BE-API-093,GET,/api/v1/sessions,List Sessions,Yes,Company admin,"page, limit, filters","200 {items, metadata}",No,Not used by the frontend
+BE-API-094,GET,/api/v1/sessions/:id,Get Sessions,Yes,Company admin,id,200 item,No,Not used by the frontend
+BE-API-095,PATCH,/api/v1/sessions/:id,Update Sessions,Yes,Company admin,Partial fields,200 item,No,Not used by the frontend
+BE-API-096,DELETE,/api/v1/sessions/:id,Soft delete Sessions,Yes,Company admin,id,200 message,No,Not used by the frontend
+BE-API-097,POST,/api/v1/tests,Create Tests,Yes,Company admin,Test fields (see DTO),201 created item,Yes,Used by frontend
+BE-API-098,GET,/api/v1/tests,List Tests,Yes,Company admin,"page, limit, filters","200 {items, metadata}",Yes,Used by frontend
+BE-API-099,GET,/api/v1/tests/:id,Get Tests,Yes,Company admin,id,200 item,Yes,Used by frontend
+BE-API-100,PATCH,/api/v1/tests/:id,Update Tests,Yes,Company admin,Partial fields,200 item,Yes,Used by frontend
+BE-API-101,DELETE,/api/v1/tests/:id,Soft delete Tests,Yes,Company admin,id,200 message,Yes,Used by frontend
+BE-API-102,POST,/api/v1/questions,Create Questions,Yes,Company admin,"testId, subjectId, topicId, questionType, questionData[], childQuestions[]?",201 created item,Yes,Used by frontend
+BE-API-103,GET,/api/v1/questions,List Questions,Yes,Company admin,"page, limit, filters","200 {items, metadata}",Yes,Used by frontend
+BE-API-104,GET,/api/v1/questions/:id,Get Questions,Yes,Company admin,id,200 item,Yes,Used by frontend
+BE-API-105,PATCH,/api/v1/questions/:id,Update Questions,Yes,Company admin,Partial fields,200 item,Yes,Used by frontend
+BE-API-106,DELETE,/api/v1/questions/:id,Soft delete Questions,Yes,Company admin,id,200 message,Yes,Used by frontend
+BE-API-107,POST,/api/v1/candidates,Create Candidates,Yes,Company admin,Candidate fields + groupIds[],201 created item,No,Not used by the frontend
+BE-API-108,GET,/api/v1/candidates,List Candidates,Yes,Company admin,"page, limit, filters","200 {items, metadata}",No,Not used by the frontend
+BE-API-109,GET,/api/v1/candidates/:id,Get Candidates,Yes,Company admin,id,200 item,No,Not used by the frontend
+BE-API-110,PATCH,/api/v1/candidates/:id,Update Candidates,Yes,Company admin,Partial fields,200 item,No,Not used by the frontend
+BE-API-111,DELETE,/api/v1/candidates/:id,Soft delete Candidates,Yes,Company admin,id,200 message,No,Not used by the frontend
+BE-API-112,POST,/api/v1/candidate-centre-mappings,Create Candidate-Centre Mappings,Yes,Company admin,"candidateId, centreId, examDate",201 created item,No,Not used by the frontend
+BE-API-113,GET,/api/v1/candidate-centre-mappings,List Candidate-Centre Mappings,Yes,Company admin,"page, limit, filters","200 {items, metadata}",No,Not used by the frontend
+BE-API-114,GET,/api/v1/candidate-centre-mappings/:id,Get Candidate-Centre Mappings,Yes,Company admin,id,200 item,No,Not used by the frontend
+BE-API-115,PATCH,/api/v1/candidate-centre-mappings/:id,Update Candidate-Centre Mappings,Yes,Company admin,Partial fields,200 item,No,Not used by the frontend
+BE-API-116,DELETE,/api/v1/candidate-centre-mappings/:id,Soft delete Candidate-Centre Mappings,Yes,Company admin,id,200 message,No,Not used by the frontend
+BE-API-117,POST,/api/v1/test-candidate-mappings,Create Test-Candidate Mappings,Yes,Company admin,"groupId, candidateId, testId, attemptNo?, status?, scores?",201 created item,No,Not used by the frontend
+BE-API-118,GET,/api/v1/test-candidate-mappings,List Test-Candidate Mappings,Yes,Company admin,"page, limit, filters","200 {items, metadata}",No,Not used by the frontend
+BE-API-119,GET,/api/v1/test-candidate-mappings/:id,Get Test-Candidate Mappings,Yes,Company admin,id,200 item,No,Not used by the frontend
+BE-API-120,PATCH,/api/v1/test-candidate-mappings/:id,Update Test-Candidate Mappings,Yes,Company admin,Partial fields,200 item,No,Not used by the frontend
+BE-API-121,DELETE,/api/v1/test-candidate-mappings/:id,Soft delete Test-Candidate Mappings,Yes,Company admin,id,200 message,No,Not used by the frontend
+BE-API-122,POST,/api/v1/centre-users,Create Centre Users,Yes,Company admin,"centreId, name, email, password?",201 created item,No,Not used by the frontend
+BE-API-123,GET,/api/v1/centre-users,List Centre Users,Yes,Company admin,"page, limit, filters","200 {items, metadata}",No,Not used by the frontend
+BE-API-124,GET,/api/v1/centre-users/:id,Get Centre Users,Yes,Company admin,id,200 item,No,Not used by the frontend
+BE-API-125,PATCH,/api/v1/centre-users/:id,Update Centre Users,Yes,Company admin,Partial fields,200 item,No,Not used by the frontend
+BE-API-126,DELETE,/api/v1/centre-users/:id,Soft delete Centre Users,Yes,Company admin,id,200 message,No,Not used by the frontend
+BE-API-127,PATCH,/api/v1/difficulties/:id/status,Toggle difficulty active flag,Yes,Company admin,isActive,200 item,No,Not used by the frontend
+BE-API-128,GET,/api/v1/tests/:id/stats,Question count and marks for a test,Yes,Company admin,id,200 stats,No,Not used by the frontend
+BE-API-129,POST,/api/v1/instructions/:instructionId/languages,Add instruction text for a language,Yes,Company admin,"languageId, content",201 item,No,Not used by the frontend
+BE-API-130,GET,/api/v1/instructions/:instructionId/languages,List instruction texts,Yes,Company admin,"page, limit, languageId, isActive",200 list,No,Not used by the frontend
+BE-API-131,GET,/api/v1/instructions/:instructionId/languages/:id,Get instruction text,Yes,Company admin,"instructionId, id",200 item,No,Not used by the frontend
+BE-API-132,PATCH,/api/v1/instructions/:instructionId/languages/:id,Update instruction text,Yes,Company admin,"languageId?, content?, isActive?",200 item,No,Not used by the frontend
+BE-API-133,DELETE,/api/v1/instructions/:instructionId/languages/:id,Delete instruction text,Yes,Company admin,"instructionId, id",200 message,No,Not used by the frontend
+BE-API-134,POST,/api/v1/candidates/:candidateId/documents,Add candidate document,Yes,Company admin,"fileUrl?, documentType?, documentName?",201 item,No,Not used by the frontend
+BE-API-135,GET,/api/v1/candidates/:candidateId/documents,List candidate documents,Yes,Company admin,"page, limit, documentType, isActive",200 list,No,Not used by the frontend
+BE-API-136,GET,/api/v1/candidates/:candidateId/documents/:id,Get candidate document,Yes,Company admin,"candidateId, id",200 item,No,Not used by the frontend
+BE-API-137,PATCH,/api/v1/candidates/:candidateId/documents/:id,Update candidate document,Yes,Company admin,Partial,200 item,No,Not used by the frontend
+BE-API-138,DELETE,/api/v1/candidates/:candidateId/documents/:id,Delete candidate document,Yes,Company admin,"candidateId, id",200 message,No,Not used by the frontend
+BE-API-139,POST,/api/v1/test-settings,Create settings for a test,Yes,Company admin,testId + 30 flags,201 item,Yes,Used by frontend
+BE-API-140,GET,/api/v1/test-settings/test/:testId,Get settings by test id,Yes,Company admin,testId,200 item,Yes,Used by frontend
+BE-API-141,GET,/api/v1/test-settings/:id,Get settings,Yes,Company admin,id,200 item,No,Not used by the frontend
+BE-API-142,PATCH,/api/v1/test-settings/:id,Update settings,Yes,Company admin,Flags,200 item,Yes,Used by frontend
+BE-API-143,DELETE,/api/v1/test-settings/:id,Delete settings,Yes,Company admin,id,200 message,No,Not used by the frontend
+BE-API-144,POST,/api/v1/test-candidate-mappings/assign-groups,Assign a test to all candidates in groups,Yes,Company admin,"testId, groupIds[]","201 {assigned, alreadyAssigned}",No,Not used by the frontend
+BE-API-145,POST,/api/v1/test-candidate-mappings/assign-email,Assign a test by candidate emails,Yes,Company admin,"testId, email (comma list), groupId?","201 {assigned, alreadyAssigned}",No,Not used by the frontend
+BE-API-146,POST,/api/v1/candidates/login,Candidate login at an exam centre,No,Anyone,"companyToken, enrollmentNumber, password, centreCode",200 tokens + exam desk,No,Not used by the frontend
+BE-API-147,POST,/api/v1/candidates/refresh,Rotate candidate tokens,No,Anyone,refreshToken,200 tokens,No,Not used by the frontend
+BE-API-148,POST,/api/v1/candidates/logout,Candidate logout,Yes,Candidate,None,200 message,No,Not used by the frontend
+BE-API-149,GET,/api/v1/candidates/me,Candidate profile + exam desk,Yes,Candidate,None,200 profile,No,Not used by the frontend
+BE-API-150,GET,/api/v1/candidates/tests/:testId,Exam details for a mapped test,Yes,Candidate,testId,200 details,No,Not used by the frontend
+BE-API-151,GET,/api/v1/candidates/tests/:testId/questions,Exam paper (no answers),Yes,Candidate,testId,200 paper,No,Not used by the frontend
+BE-API-152,POST,/api/v1/candidates/tests/:testId/feedback,Candidate feedback for a test,Yes,Candidate,"rating 1-5, comment?",201 feedback,No,Not used by the frontend
+BE-API-153,POST,/api/v1/centre-users/login,Centre user login,No,Anyone,"companyToken, email, password",200 tokens,No,Not used by the frontend
+BE-API-154,POST,/api/v1/centre-users/refresh,Rotate centre user tokens,No,Anyone,refreshToken,200 tokens,No,Not used by the frontend
+BE-API-155,POST,/api/v1/centre-users/logout,Centre user logout,Yes,Centre user,None,200 message,No,Not used by the frontend
+BE-API-156,GET,/api/v1/centre-users/me,Centre user profile,Yes,Centre user,None,200 profile,No,Not used by the frontend
+BE-API-157,POST,/api/v1/files/upload,Upload file to S3 (multipart),Yes,"Company admin, Super admin","multipart: file, folderType?, filename?","201 {key, url}",Yes,Used by frontend
+BE-API-158,PUT,/api/v1/files,Replace file at key (multipart),Yes,"Company admin, Super admin","multipart: file, key, filename?","200 {key, url}",No,Not used by the frontend
+BE-API-159,POST,/api/v1/files/upload-url,Presigned PUT URL,Yes,"Company admin, Super admin","fileName, contentType, folder?, key?, expiresIn?",201 {uploadUrl},No,Not used by the frontend
+BE-API-160,POST,/api/v1/files/download-url,Presigned GET URL,Yes,"Company admin, Super admin","key, expiresIn?",201 {url},Yes,Used by frontend
+BE-API-161,DELETE,/api/v1/files,Delete file by key (query),Yes,"Company admin, Super admin","query: key, previousKey?",200 message,No,Not used by the frontend
+N/A,Various,(missing),Endpoints the frontend calls that do not exist: POST /auth/forgot-password; POST /auth/forgot-password/verify; POST /auth/forgot-password/reset; GET /workspaces; GET /dashboard; POST /tests/import-qti,N/A,N/A,N/A,N/A,Yes,Calls return 404 (see qa_frontend/frontend_backend_map.csv)

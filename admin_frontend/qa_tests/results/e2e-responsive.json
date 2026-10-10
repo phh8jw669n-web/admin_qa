@@ -1,0 +1,128 @@
+[
+ {
+  "key": "resp.login.1366",
+  "category": "responsive",
+  "module": "Workspace login",
+  "page": "Workspace login",
+  "title": "Workspace login at 1366px",
+  "steps": "1) Set viewport 1366px 2) Open Workspace login",
+  "expected": "No sideways scroll, readable content, menu collapses on small screens",
+  "actual": "OK",
+  "status": "Pass",
+  "evidence": "qa_frontend/screenshots/resp-login-1366.png",
+  "extra": {
+   "width": 1366,
+   "browser": "Chromium 141",
+   "overflowX": 0,
+   "mainWidth": null,
+   "asideWidth": null,
+   "asideVisible": false,
+   "tinyTargets": 1
+  }
+ },
+ {
+  "key": "resp.login.1920",
+  "category": "responsive",
+  "module": "Workspace login",
+  "page": "Workspace login",
+  "title": "Workspace login at 1920px",
+  "steps": "1) Set viewport 1920px 2) Open Workspace login",
+  "expected": "No sideways scroll, readable content, menu collapses on small screens",
+  "actual": "OK",
+  "status": "Pass",
+  "evidence": "qa_frontend/screenshots/resp-login-1920.png",
+  "extra": {
+   "width": 1920,
+   "browser": "Chromium 141",
+   "overflowX": 0,
+   "mainWidth": null,
+   "asideWidth": null,
+   "asideVisible": false,
+   "tinyTargets": 1
+  }
+ },
+ {
+  "key": "resp.workspace-missing.360",
+  "category": "responsive",
+  "module": "Workspace not found",
+  "page": "Workspace not found",
+  "title": "Workspace not found at 360px",
+  "steps": "1) Set viewport 360px 2) Open Workspace not found",
+  "expected": "No sideways scroll, readable content, menu collapses on small screens",
+  "actual": "OK",
+  "status": "Pass",
+  "evidence": "qa_frontend/screenshots/resp-workspace-missing-360.png",
+  "extra": {
+   "width": 360,
+   "browser": "Chromium 141",
+   "overflowX": 0,
+   "mainWidth": null,
+   "asideWidth": null,
+   "asideVisible": false,
+   "tinyTargets": 0
+  }
+ },
+ {
+  "key": "resp.workspace-missing.768",
+  "category": "responsive",
+  "module": "Workspace not found",
+  "page": "Workspace not found",
+  "title": "Workspace not found at 768px",
+  "steps": "1) Set viewport 768px 2) Open Workspace not found",
+  "expected": "No sideways scroll, readable content, menu collapses on small screens",
+  "actual": "OK",
+  "status": "Pass",
+  "evidence": "qa_frontend/screenshots/resp-workspace-missing-768.png",
+  "extra": {
+   "width": 768,
+   "browser": "Chromium 141",
+   "overflowX": 0,
+   "mainWidth": null,
+   "asideWidth": null,
+   "asideVisible": false,
+   "tinyTargets": 0
+  }
+ },
+ {
+  "key": "resp.workspace-missing.1366",
+  "category": "responsive",
+  "module": "Workspace not found",
+  "page": "Workspace not found",
+  "title": "Workspace not found at 1366px",
+  "steps": "1) Set viewport 1366px 2) Open Workspace not found",
+  "expected": "No sideways scroll, readable content, menu collapses on small screens",
+  "actual": "OK",
+  "status": "Pass",
+  "evidence": "qa_frontend/screenshots/resp-workspace-missing-1366.png",
+  "extra": {
+   "width": 1366,
+   "browser": "Chromium 141",
+   "overflowX": 0,
+   "mainWidth": null,
+   "asideWidth": null,
+   "asideVisible": false,
+   "tinyTargets": 0
+  }
+ },
+ {
+  "key": "resp.workspace-missing.1920",
+  "category": "responsive",
+  "module": "Workspace not found",
+  "page": "Workspace not found",
+  "title": "Workspace not found at 1920px",
+  "steps": "1) Set viewport 1920px 2) Open Workspace not found",
+  "expected": "No sideways scroll, readable content, menu collapses on small screens",
+  "actual": "OK",
+  "status": "Pass",
+  "evidence": "qa_frontend/screenshots/resp-workspace-missing-1920.png",
+  "extra": {
+   "width": 1920,
+   "browser": "Chromium 141",
+   "overflowX": 0,
+   "mainWidth": null,
+   "asideWidth": null,
+   "asideVisible": false,
+   "tinyTargets": 0
+  }
+ }
+]

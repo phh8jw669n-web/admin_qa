@@ -1,0 +1,261 @@
+{
+  "@ckeditor/ckeditor5-react": {
+    "current": "11.2.0",
+    "wanted": "11.2.0",
+    "latest": "12.0.0",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@ckeditor/ckeditor5-react"
+  },
+  "@hookform/resolvers": {
+    "current": "5.7.1",
+    "wanted": "5.9.1",
+    "latest": "5.9.1",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@hookform/resolvers"
+  },
+  "@radix-ui/react-accordion": {
+    "current": "1.2.20",
+    "wanted": "1.2.21",
+    "latest": "1.2.21",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@radix-ui/react-accordion"
+  },
+  "@radix-ui/react-checkbox": {
+    "current": "1.3.11",
+    "wanted": "1.3.12",
+    "latest": "1.3.12",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@radix-ui/react-checkbox"
+  },
+  "@radix-ui/react-dialog": {
+    "current": "1.1.23",
+    "wanted": "1.2.0",
+    "latest": "1.2.0",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@radix-ui/react-dialog"
+  },
+  "@radix-ui/react-dropdown-menu": {
+    "current": "2.1.24",
+    "wanted": "2.1.25",
+    "latest": "2.1.25",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@radix-ui/react-dropdown-menu"
+  },
+  "@radix-ui/react-label": {
+    "current": "2.1.15",
+    "wanted": "2.1.16",
+    "latest": "2.1.16",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@radix-ui/react-label"
+  },
+  "@radix-ui/react-popover": {
+    "current": "1.1.23",
+    "wanted": "1.2.0",
+    "latest": "1.2.0",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@radix-ui/react-popover"
+  },
+  "@radix-ui/react-progress": {
+    "current": "1.1.16",
+    "wanted": "1.1.17",
+    "latest": "1.1.17",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@radix-ui/react-progress"
+  },
+  "@radix-ui/react-scroll-area": {
+    "current": "1.2.18",
+    "wanted": "1.3.0",
+    "latest": "1.3.0",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@radix-ui/react-scroll-area"
+  },
+  "@radix-ui/react-select": {
+    "current": "2.3.7",
+    "wanted": "2.3.8",
+    "latest": "2.3.8",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@radix-ui/react-select"
+  },
+  "@radix-ui/react-separator": {
+    "current": "1.1.15",
+    "wanted": "1.1.16",
+    "latest": "1.1.16",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@radix-ui/react-separator"
+  },
+  "@radix-ui/react-slot": {
+    "current": "1.3.3",
+    "wanted": "1.4.0",
+    "latest": "1.4.0",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@radix-ui/react-slot"
+  },
+  "@radix-ui/react-switch": {
+    "current": "1.3.7",
+    "wanted": "1.3.8",
+    "latest": "1.3.8",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@radix-ui/react-switch"
+  },
+  "@radix-ui/react-tabs": {
+    "current": "1.1.21",
+    "wanted": "1.1.22",
+    "latest": "1.1.22",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@radix-ui/react-tabs"
+  },
+  "@radix-ui/react-tooltip": {
+    "current": "1.2.16",
+    "wanted": "1.3.0",
+    "latest": "1.3.0",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@radix-ui/react-tooltip"
+  },
+  "@tanstack/react-query": {
+    "current": "5.101.4",
+    "wanted": "5.104.1",
+    "latest": "5.104.1",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@tanstack/react-query"
+  },
+  "@tanstack/react-table": {
+    "current": "8.21.3",
+    "wanted": "8.21.3",
+    "latest": "9.2.8",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@tanstack/react-table"
+  },
+  "@types/node": {
+    "current": "24.13.3",
+    "wanted": "24.19.2",
+    "latest": "26.6.5",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@types/node"
+  },
+  "@types/react": {
+    "current": "19.2.18",
+    "wanted": "19.3.0",
+    "latest": "19.3.0",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@types/react"
+  },
+  "@types/react-dom": {
+    "current": "19.2.4",
+    "wanted": "19.3.0",
+    "latest": "19.3.0",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@types/react-dom"
+  },
+  "@vitejs/plugin-react": {
+    "current": "6.0.5",
+    "wanted": "6.1.2",
+    "latest": "6.1.2",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/@vitejs/plugin-react"
+  },
+  "axios": {
+    "current": "1.19.0",
+    "wanted": "1.20.0",
+    "latest": "1.20.0",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/axios"
+  },
+  "ckeditor5": {
+    "current": "48.5.2",
+    "wanted": "48.5.2",
+    "latest": "49.0.0",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/ckeditor5"
+  },
+  "lucide-react": {
+    "current": "1.31.0",
+    "wanted": "1.55.0",
+    "latest": "1.55.0",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/lucide-react"
+  },
+  "oxlint": {
+    "current": "1.78.0",
+    "wanted": "1.87.0",
+    "latest": "1.87.0",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/oxlint"
+  },
+  "prettier": {
+    "current": "3.9.6",
+    "wanted": "3.9.10",
+    "latest": "3.9.10",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/prettier"
+  },
+  "react": {
+    "current": "19.2.8",
+    "wanted": "19.3.0",
+    "latest": "19.3.0",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/react"
+  },
+  "react-day-picker": {
+    "current": "10.0.1",
+    "wanted": "10.0.2",
+    "latest": "10.0.2",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/react-day-picker"
+  },
+  "react-dom": {
+    "current": "19.2.8",
+    "wanted": "19.3.0",
+    "latest": "19.3.0",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/react-dom"
+  },
+  "react-hook-form": {
+    "current": "7.85.0",
+    "wanted": "7.89.0",
+    "latest": "7.89.0",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/react-hook-form"
+  },
+  "react-router-dom": {
+    "current": "7.18.2",
+    "wanted": "7.18.4",
+    "latest": "7.18.4",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/react-router-dom"
+  },
+  "tailwind-merge": {
+    "current": "3.6.0",
+    "wanted": "3.7.0",
+    "latest": "3.7.0",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/tailwind-merge"
+  },
+  "typescript": {
+    "current": "6.0.3",
+    "wanted": "6.0.3",
+    "latest": "7.0.2",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/typescript"
+  },
+  "vite": {
+    "current": "8.2.1",
+    "wanted": "8.3.4",
+    "latest": "8.3.4",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/vite"
+  },
+  "zod": {
+    "current": "3.25.76",
+    "wanted": "3.25.76",
+    "latest": "4.6.5",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/zod"
+  },
+  "zustand": {
+    "current": "5.0.14",
+    "wanted": "5.0.15",
+    "latest": "5.0.15",
+    "dependent": "admin_frontend",
+    "location": "/home/user/admin_qa/admin_frontend/node_modules/zustand"
+  }
+}

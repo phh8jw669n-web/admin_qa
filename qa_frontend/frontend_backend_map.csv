@@ -1,0 +1,37 @@
+Page/Component,Endpoint Called,Exists In Backend (Yes/No),Backend API ID,Notes
+Login (platform),POST /super-admin/login,Yes,BE-API-007,Works
+Login (workspace),POST /auth/login,Yes,BE-API-003,Works
+Profile menu,POST /auth/logout,Yes,BE-API-005,Works
+Workspace gate,POST /companies/verify-workspace,Yes,BE-API-014,Works
+Forgot password,POST /auth/forgot-password,No,N/A,Missing in backend: returns 404
+Forgot password,POST /auth/forgot-password/verify,No,N/A,Missing in backend: returns 404
+Forgot password,POST /auth/forgot-password/reset,No,N/A,Missing in backend: returns 404
+Workspaces,GET /workspaces,No,N/A,Missing in backend: returns 404
+Companies,GET /super-admin/companies,Yes,BE-API-010,Works
+Companies,POST /super-admin/companies,Yes,BE-API-009,Works
+Companies,GET /super-admin/companies/:id,Yes,BE-API-011,Works
+Companies,PUT /super-admin/companies/:id,Yes,BE-API-012,Works
+Companies,DELETE /super-admin/companies/:id,Yes,BE-API-013,Works
+Dashboard,GET /dashboard,No,N/A,Missing in backend: returns 404
+Test Manager,GET /tests,Yes,BE-API-098,Works
+Test Manager,DELETE /tests/:id,Yes,BE-API-101,Works
+Test Manager,POST /tests/import-qti,No,N/A,Missing in backend: returns 404
+Test Manager / Wizard,GET /categories,Yes,BE-API-038,Works
+Test Manager / Wizard,GET /super-admin/templates,Yes,BE-API-023,Works
+Wizard step 1,GET /instructions,Yes,BE-API-058,Works
+Wizard step 1,POST /tests,Yes,BE-API-097,Works
+Wizard step 1,PATCH /tests/:id,Yes,BE-API-100,Works
+Wizard,GET /tests/:id,Yes,BE-API-099,Works
+Wizard step 2,GET /test-settings/test/:testId,Yes,BE-API-140,Works
+Wizard step 2,POST /test-settings,Yes,BE-API-139,Works
+Wizard step 2,PATCH /test-settings/:id,Yes,BE-API-142,Works
+Wizard step 3,GET /questions,Yes,BE-API-103,Works
+Wizard step 3,GET /questions/:id,Yes,BE-API-104,Works
+Wizard step 3,POST /questions,Yes,BE-API-102,Works
+Wizard step 3,PATCH /questions/:id,Yes,BE-API-105,Works
+Wizard step 3,GET /subjects,Yes,BE-API-043,Works
+Wizard step 3,GET /topics,Yes,BE-API-048,Works
+Wizard step 3,GET /difficulties,Yes,BE-API-033,Works
+Wizard step 3,GET /languages,Yes,BE-API-028,Works
+Rich text editor / template picker,POST /files/upload,Yes,BE-API-157,Works
+Rich text editor / template picker,POST /files/download-url,Yes,BE-API-160,Works
