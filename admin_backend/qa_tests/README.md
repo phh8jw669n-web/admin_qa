@@ -20,10 +20,14 @@ LOGIN_THROTTLE_LIMIT=500 PORT=3000 node dist/main.js &
 # second server with default throttle (10/min) for the rate-limit spec
 LOGIN_THROTTLE_LIMIT=10  PORT=3001 node dist/main.js &
 
-QA_THROTTLE_URL=http://localhost:3001 ./qa_tests/run-all.sh      # all specs (~2 min)
-npx ts-node -P qa_tests/tsconfig.json qa_tests/seed/seed-large.ts # 1,200 candidates, 1,100 tests, 35+ companies
-node qa_tests/load/load.js                                        # moderate load (autocannon)
+# ONE command: all specs, endpoint dump, demo seed (1,200 candidates, 1,100 tests, 35+ companies), load test
+QA_THROTTLE_URL=http://localhost:3001 ./qa_tests/run-all.sh
+
+# then rebuild the CSVs in qa_backend/ and qa_frontend/
+python3 ../qa_tools/generate_csvs.py
 ```
+
+Set `QA_SKIP_LOAD=1` to skip the seed and load test.
 
 A failing Jest test = the API does not behave as expected = a bug (see `qa_backend/bugs.csv`).
 
