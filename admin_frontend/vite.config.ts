@@ -5,7 +5,8 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 const rootDir = path.dirname(fileURLToPath(import.meta.url))
-const API_PROXY_TARGET = 'http://35.154.32.169:3000'
+// QA: allow overriding the hard-coded proxy target (FE-CHG-001)
+const API_PROXY_TARGET = process.env.QA_API_PROXY_TARGET ?? 'http://35.154.32.169:3000'
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
