@@ -35,11 +35,10 @@ Also create:
 ## 4. Language and Writing Rules (Very Important)
 
 All text inside the CSV files must be:
-- **Simple English.** Write so a non-technical manager can understand it.
+- **Simple English.** Write so a developer can understand it clearly.
 - **Short and to the point.** One idea per cell. Prefer 1–2 sentences.
 - **Specific.** Bad: "Form has issues." Good: "Save button stays active after clicking, so the user can create the same record twice."
 - **Actionable.** Every problem must have a clear suggested fix.
-- If a technical word is unavoidable, explain it briefly. Example: "SQL injection (a way to attack the database through input fields)".
 - No vague words like "maybe", "some issues", "etc." without details.
 - Same terms everywhere (use the same name for a module/page in every file).
 
