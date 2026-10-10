@@ -14,7 +14,7 @@ BE-ERR-012,POST /api/v1/groups,200 KB JSON,413 Request body is too large,413 Req
 BE-ERR-013,POST /api/v1/groups,"Body [1,2,3]","400 validation error, not 500",400 property 0 should not exist; property 1 should not exist; property 2 should not exist; name should not be empty; name must be a string,No,Pass,None needed
 BE-ERR-014,POST /api/v1/tests,Trigger DB overflow (totalMarks 1e9),"Generic message, no SQL/stack",500 Something went wrong. Please try again.,No,Pass,None needed
 BE-ERR-015,GET /api/v1/candidates/:id,Compare shape with other modules,success + message + data,200 Candidate fetched successfully,No,Pass,None needed
-BE-ERR-016,PUT /api/v1/groups/:id,Wrong HTTP method,404/405 with JSON body,404 Cannot PUT /api/v1/groups/bf56307a-1142-477a-88a6-5aa286255251,No,Pass,None needed
+BE-ERR-016,PUT /api/v1/groups/:id,Wrong HTTP method,404/405 with JSON body,404 Cannot PUT /api/v1/groups/67417e73-c939-4c79-bc97-ad5face8c08a,No,Pass,None needed
 BE-ERR-017,POST /api/v1/files/upload,AWS_ENABLED=false (QA env),503 File uploads are temporarily unavailable,503 File uploads are temporarily unavailable. Please try again later.,No,Pass,None needed
 BE-ERR-018,Global,Validation error format,Same shape everywhere,"Code review only: validation errors use an 'errors' array, other errors a 'message' string; clients must handle both",No,Not Run,Document the envelope; always send message plus errors
 BE-ERR-019,Logging,"Login success/failure, delete, permission/password change",Audit entries with who/when/what,Code review only: nothing is logged except 5xx errors (ApiExceptionFilter),No,Not Run,"Add audit logging for logins, deletes and password/role changes"

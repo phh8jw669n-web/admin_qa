@@ -15,7 +15,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 64
+  "ms": 65
  },
  {
   "key": "candidates.create.dup-email",
@@ -33,7 +33,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 62
+  "ms": 61
  },
  {
   "key": "candidates.create.dup-enrollment",
@@ -51,7 +51,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 59
+  "ms": 58
  },
  {
   "key": "candidates.create.same-email-other-company",
@@ -69,7 +69,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 65
+  "ms": 60
  },
  {
   "key": "candidates.create.no-group",
@@ -89,7 +89,7 @@
   "field": "groupIds",
   "rule": "Not empty",
   "leaks": "No",
-  "ms": 10
+  "ms": 5
  },
  {
   "key": "candidates.create.other-tenant-group",
@@ -107,7 +107,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 4
+  "ms": 5
  },
  {
   "key": "candidates.create.bad-mobile",
@@ -127,7 +127,7 @@
   "field": "mobile",
   "rule": "Phone format",
   "leaks": "No",
-  "ms": 59
+  "ms": 60
  },
  {
   "key": "candidates.create.future-dob",
@@ -165,7 +165,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 62
+  "ms": 61
  },
  {
   "key": "candidates.create.bad-dob",
@@ -185,7 +185,7 @@
   "field": "dateOfBirth",
   "rule": "Real calendar date",
   "leaks": "No",
-  "ms": 15
+  "ms": 5
  },
  {
   "key": "candidates.create.weak-password",
@@ -205,7 +205,7 @@
   "field": "password",
   "rule": "Strength",
   "leaks": "No",
-  "ms": 61
+  "ms": 60
  },
  {
   "key": "candidates.create.rtl",
@@ -241,7 +241,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 63
+  "ms": 70
  },
  {
   "key": "candidates.list.ok",
@@ -259,7 +259,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 10
+  "ms": 13
  },
  {
   "key": "candidates.list.group-filter",
@@ -277,7 +277,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 7
+  "ms": 8
  },
  {
   "key": "candidates.list.stale-after-create",
@@ -295,7 +295,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 92
+  "ms": 97
  },
  {
   "key": "candidates.get.ok",
@@ -331,7 +331,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 82
+  "ms": 84
  },
  {
   "key": "candidates.update.ok",
@@ -367,7 +367,7 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 207
+  "ms": 195
  },
  {
   "key": "candidates.delete.ok",
@@ -385,7 +385,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 6
+  "ms": 5
  },
  {
   "key": "candidates.get.deleted-cache",
@@ -403,7 +403,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 6
+  "ms": 4
  },
  {
   "key": "documents.dup-type",
@@ -421,7 +421,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 8
+  "ms": 5
  },
  {
   "key": "documents.file-url-js",
@@ -441,7 +441,7 @@
   "field": "fileUrl",
   "rule": "Key or https URL",
   "leaks": "No",
-  "ms": 8
+  "ms": 5
  },
  {
   "key": "documents.list",
@@ -459,7 +459,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 6
+  "ms": 5
  },
  {
   "key": "documents.other-candidate",
@@ -477,7 +477,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 66
+  "ms": 64
  },
  {
   "key": "cand.login.ok",
@@ -495,7 +495,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 62
+  "ms": 59
  },
  {
   "key": "cand.login.wrong-centre",
@@ -531,7 +531,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 121
+  "ms": 117
  },
  {
   "key": "cand.login.timezone",
@@ -549,7 +549,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 130
+  "ms": 131
  },
  {
   "key": "cand.login.wrong-password",
@@ -567,7 +567,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 59
+  "ms": 58
  },
  {
   "key": "cand.me",
@@ -585,7 +585,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 6
+  "ms": 8
  },
  {
   "key": "exam.details",
@@ -603,7 +603,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 10
+  "ms": 6
  },
  {
   "key": "exam.paper.no-answers",
@@ -621,7 +621,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 8
+  "ms": 5
  },
  {
   "key": "exam.paper.fill-no-answer",
@@ -639,7 +639,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 29
+  "ms": 19
  },
  {
   "key": "exam.paper.before-window",
@@ -657,7 +657,7 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 6
+  "ms": 5
  },
  {
   "key": "exam.details.before-window",
@@ -675,7 +675,7 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 7
+  "ms": 4
  },
  {
   "key": "exam.paper.inactive-question",
@@ -693,7 +693,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 22
+  "ms": 18
  },
  {
   "key": "exam.unmapped-test",
@@ -711,7 +711,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 20
+  "ms": 14
  },
  {
   "key": "feedback.rating-high",
@@ -731,7 +731,7 @@
   "field": "rating",
   "rule": "1-5",
   "leaks": "No",
-  "ms": 4
+  "ms": 3
  },
  {
   "key": "feedback.rating-decimal",
@@ -751,7 +751,7 @@
   "field": "rating",
   "rule": "Integer",
   "leaks": "No",
-  "ms": 4
+  "ms": 5
  },
  {
   "key": "feedback.before-exam",
@@ -805,7 +805,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 45
+  "ms": 42
  },
  {
   "key": "feedback.comment-long",
@@ -825,7 +825,7 @@
   "field": "comment",
   "rule": "Max 2000",
   "leaks": "No",
-  "ms": 9
+  "ms": 5
  },
  {
   "key": "cand.deactivated",
@@ -843,7 +843,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 166
+  "ms": 148
  },
  {
   "key": "cand.refresh",
@@ -861,7 +861,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 70
+  "ms": 64
  },
  {
   "key": "cand.logout",

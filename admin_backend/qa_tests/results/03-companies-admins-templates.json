@@ -15,7 +15,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 63
+  "ms": 62
  },
  {
   "key": "companies.create.dup-workspace",
@@ -33,7 +33,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 6
+  "ms": 5
  },
  {
   "key": "companies.create.dup-workspace-case",
@@ -69,7 +69,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 5
+  "ms": 12
  },
  {
   "key": "companies.create.bad-gst",
@@ -89,7 +89,7 @@
   "field": "gstNo",
   "rule": "GST pattern",
   "leaks": "No",
-  "ms": 3
+  "ms": 8
  },
  {
   "key": "companies.create.long-name",
@@ -109,7 +109,7 @@
   "field": "name",
   "rule": "Max length 200 (DB)",
   "leaks": "No",
-  "ms": 6
+  "ms": 11
  },
  {
   "key": "companies.create.spaces-name",
@@ -129,7 +129,7 @@
   "field": "name",
   "rule": "Required, trimmed",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "companies.create.bad-color",
@@ -149,7 +149,7 @@
   "field": "primaryColor",
   "rule": "Hex color",
   "leaks": "No",
-  "ms": 59
+  "ms": 60
  },
  {
   "key": "companies.create.bad-workspace-url",
@@ -169,7 +169,7 @@
   "field": "workspaceUrl",
   "rule": "URL / slug format",
   "leaks": "No",
-  "ms": 58
+  "ms": 59
  },
  {
   "key": "companies.create.bad-phone",
@@ -189,7 +189,7 @@
   "field": "phone",
   "rule": "Phone format",
   "leaks": "No",
-  "ms": 61
+  "ms": 59
  },
  {
   "key": "companies.create.future-year",
@@ -229,7 +229,7 @@
   "field": "planEndsAt",
   "rule": "Future date",
   "leaks": "No",
-  "ms": 61
+  "ms": 59
  },
  {
   "key": "companies.create.xss-name",
@@ -247,7 +247,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 60
+  "ms": 58
  },
  {
   "key": "companies.list.ok",
@@ -303,7 +303,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 3
  },
  {
   "key": "companies.list.sqli",
@@ -357,7 +357,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 7
+  "ms": 5
  },
  {
   "key": "companies.update.ok",
@@ -393,7 +393,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 8
+  "ms": 5
  },
  {
   "key": "companies.update.addressline2-wipe",
@@ -411,7 +411,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 10
+  "ms": 11
  },
  {
   "key": "companies.inactive.blocks-login",
@@ -429,7 +429,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 11
+  "ms": 12
  },
  {
   "key": "companies.plan-expired",
@@ -465,7 +465,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 5
+  "ms": 3
  },
  {
   "key": "companies.delete.twice",
@@ -483,7 +483,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 21
+  "ms": 2
  },
  {
   "key": "companies.delete.admins-orphaned",
@@ -501,7 +501,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 69
+  "ms": 66
  },
  {
   "key": "companies.verify.ok",
@@ -537,7 +537,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 4
+  "ms": 3
  },
  {
   "key": "companies.verify.enumeration",
@@ -555,7 +555,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 84
+  "ms": 93
  },
  {
   "key": "own.get",
@@ -573,7 +573,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "own.update",
@@ -591,7 +591,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 6
+  "ms": 7
  },
  {
   "key": "own.update.status-forbidden",
@@ -609,7 +609,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "own.update.gst-taken",
@@ -627,7 +627,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 8
+  "ms": 11
  },
  {
   "key": "own.update.pan-length",
@@ -647,7 +647,7 @@
   "field": "panNo",
   "rule": "PAN pattern",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "admins.create.ok",
@@ -665,7 +665,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 60
+  "ms": 62
  },
  {
   "key": "admins.create.super-role",
@@ -701,7 +701,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 59
+  "ms": 58
  },
  {
   "key": "admins.create.missing-company",
@@ -719,7 +719,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 4
+  "ms": 7
  },
  {
   "key": "admins.create.weak-password",
@@ -739,7 +739,7 @@
   "field": "password",
   "rule": "Strength rule (UI requires it)",
   "leaks": "No",
-  "ms": 58
+  "ms": 59
  },
  {
   "key": "admins.list.ok",
@@ -757,7 +757,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 5
+  "ms": 4
  },
  {
   "key": "admins.list.boolean-string",
@@ -775,7 +775,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 3
  },
  {
   "key": "admins.update.ok",
@@ -793,7 +793,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 8
+  "ms": 6
  },
  {
   "key": "admins.update.empty-name",
@@ -887,7 +887,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 5
+  "ms": 6
  },
  {
   "key": "templates.create.dup-ranking",
@@ -899,13 +899,13 @@
   "expectedStatus": "409",
   "expected": "409 Ranking is already in use",
   "actualStatus": "409",
-  "actual": "Ranking 2649355 is already in use",
+  "actual": "Ranking 2382939 is already in use",
   "status": "Pass",
   "evidence": "qa_tests/specs/03-companies-admins-templates.qa.spec.ts",
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "templates.create.admin-forbidden",
@@ -943,7 +943,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 5
+  "ms": 6
  },
  {
   "key": "templates.update.ok",
@@ -961,7 +961,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 5
+  "ms": 6
  },
  {
   "key": "templates.delete.in-use",
@@ -979,7 +979,7 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 17
+  "ms": 18
  },
  {
   "key": "templates.delete.ok",
@@ -997,6 +997,6 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 3
  }
 ]

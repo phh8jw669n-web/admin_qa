@@ -15,7 +15,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 14
+  "ms": 12
  },
  {
   "key": "tests.create.default-published",
@@ -33,7 +33,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 8
+  "ms": 10
  },
  {
   "key": "tests.create.draft-and-published",
@@ -113,7 +113,7 @@
   "field": "passingMarks",
   "rule": "<= totalMarks",
   "leaks": "No",
-  "ms": 5
+  "ms": 6
  },
  {
   "key": "tests.create.grace-gt-total",
@@ -153,7 +153,7 @@
   "field": "totalMarks",
   "rule": "Max 99,999,999.99",
   "leaks": "No",
-  "ms": 9
+  "ms": 7
  },
  {
   "key": "tests.create.decimal-duration",
@@ -173,7 +173,7 @@
   "field": "durationMinutes",
   "rule": "Integer",
   "leaks": "No",
-  "ms": 6
+  "ms": 5
  },
  {
   "key": "tests.create.negative",
@@ -213,7 +213,7 @@
   "field": "totalQuestions",
   "rule": "Max int4",
   "leaks": "No",
-  "ms": 9
+  "ms": 7
  },
  {
   "key": "tests.create.code-long",
@@ -251,7 +251,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 20
+  "ms": 22
  },
  {
   "key": "tests.create.end-before-start",
@@ -271,7 +271,7 @@
   "field": "endDate",
   "rule": ">= startDate",
   "leaks": "No",
-  "ms": 5
+  "ms": 7
  },
  {
   "key": "tests.create.multiday-time",
@@ -291,7 +291,7 @@
   "field": "endTime",
   "rule": "Compare date+time, not time only",
   "leaks": "No",
-  "ms": 5
+  "ms": 7
  },
  {
   "key": "tests.create.leap-day",
@@ -309,7 +309,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 10
+  "ms": 14
  },
  {
   "key": "tests.create.invalid-date",
@@ -329,7 +329,7 @@
   "field": "startDate",
   "rule": "Real calendar date",
   "leaks": "No",
-  "ms": 6
+  "ms": 8
  },
  {
   "key": "tests.create.past-dates",
@@ -349,7 +349,7 @@
   "field": "startDate",
   "rule": "Not in past",
   "leaks": "No",
-  "ms": 11
+  "ms": 10
  },
  {
   "key": "tests.create.timezone-date",
@@ -367,7 +367,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 9
+  "ms": 10
  },
  {
   "key": "tests.create.buffer-format",
@@ -387,7 +387,7 @@
   "field": "startBufferTime",
   "rule": "HH:MM(:SS)",
   "leaks": "No",
-  "ms": 3
+  "ms": 6
  },
  {
   "key": "tests.create.other-tenant-category",
@@ -405,7 +405,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 7
+  "ms": 6
  },
  {
   "key": "tests.list.ok",
@@ -423,7 +423,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 15
+  "ms": 14
  },
  {
   "key": "tests.list.code-filter",
@@ -459,7 +459,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 7
+  "ms": 8
  },
  {
   "key": "tests.stats.ok",
@@ -477,7 +477,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 7
+  "ms": 13
  },
  {
   "key": "tests.update.ok",
@@ -495,7 +495,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 12
+  "ms": 17
  },
  {
   "key": "tests.update.clear-dates",
@@ -513,7 +513,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 11
+  "ms": 24
  },
  {
   "key": "tests.update.total-below-actual",
@@ -531,7 +531,7 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 44
+  "ms": 45
  },
  {
   "key": "tests.publish.no-questions",
@@ -549,7 +549,7 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 19
+  "ms": 25
  },
  {
   "key": "tests.concurrent-edit",
@@ -567,7 +567,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 21
+  "ms": 18
  },
  {
   "key": "tests.delete.ok",
@@ -603,7 +603,7 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 55
+  "ms": 26
  },
  {
   "key": "settings.get-by-test",
@@ -621,7 +621,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 3
  },
  {
   "key": "settings.duplicate",
@@ -657,7 +657,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 7
+  "ms": 8
  },
  {
   "key": "settings.move-test",
@@ -713,7 +713,7 @@
   "field": "submissionMessage",
   "rule": "Max length",
   "leaks": "No",
-  "ms": 10
+  "ms": 9
  },
  {
   "key": "settings.delete-recreate",
@@ -731,7 +731,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 32
+  "ms": 29
  },
  {
   "key": "questions.single.ok",
@@ -749,7 +749,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 13
+  "ms": 12
  },
  {
   "key": "questions.multiple.ok",
@@ -785,7 +785,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 12
+  "ms": 9
  },
  {
   "key": "questions.comprehension.ok",
@@ -803,7 +803,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 20
+  "ms": 21
  },
  {
   "key": "questions.limit",
@@ -821,7 +821,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 8
+  "ms": 9
  },
  {
   "key": "questions.single.two-correct",
@@ -841,7 +841,7 @@
   "field": "questionData.options",
   "rule": "Exactly 1 correct",
   "leaks": "No",
-  "ms": 4
+  "ms": 5
  },
  {
   "key": "questions.single.dup-option-id",
@@ -861,7 +861,7 @@
   "field": "questionData.options",
   "rule": "Unique option ids",
   "leaks": "No",
-  "ms": 5
+  "ms": 4
  },
  {
   "key": "questions.single.blank-option",
@@ -881,7 +881,7 @@
   "field": "questionData.options",
   "rule": "Non-empty text",
   "leaks": "No",
-  "ms": 4
+  "ms": 3
  },
  {
   "key": "questions.single.one-option",
@@ -921,7 +921,7 @@
   "field": "questionData.options.answer",
   "rule": "Numeric when answerType=numbers",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "questions.type-mismatch",
@@ -981,7 +981,7 @@
   "field": "negativeMarks",
   "rule": "<= rightMarks",
   "leaks": "No",
-  "ms": 43
+  "ms": 11
  },
  {
   "key": "questions.negative-right-marks",
@@ -1001,7 +1001,7 @@
   "field": "rightMarks",
   "rule": "Min 0",
   "leaks": "No",
-  "ms": 11
+  "ms": 9
  },
  {
   "key": "questions.marks-overflow",
@@ -1021,7 +1021,7 @@
   "field": "rightMarks",
   "rule": "Max 99,999,999.99",
   "leaks": "No",
-  "ms": 11
+  "ms": 10
  },
  {
   "key": "questions.topic-not-mapped",
@@ -1041,7 +1041,7 @@
   "field": "topicId",
   "rule": "Must be mapped (CST)",
   "leaks": "No",
-  "ms": 16
+  "ms": 14
  },
  {
   "key": "questions.other-tenant-language",
@@ -1059,7 +1059,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 6
+  "ms": 5
  },
  {
   "key": "questions.other-tenant-test",
@@ -1095,7 +1095,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 6
+  "ms": 4
  },
  {
   "key": "questions.get",
@@ -1131,7 +1131,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 19
+  "ms": 14
  },
  {
   "key": "questions.update.foreign-content-id",
@@ -1149,7 +1149,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 15
+  "ms": 10
  },
  {
   "key": "questions.update.child-to-comprehension",
@@ -1167,7 +1167,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 8
+  "ms": 5
  },
  {
   "key": "questions.paper-cache-cleared",
@@ -1185,7 +1185,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 35
+  "ms": 26
  },
  {
   "key": "questions.delete",
@@ -1203,7 +1203,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 7
+  "ms": 6
  },
  {
   "key": "questions.slot-freed",
@@ -1221,7 +1221,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 10
+  "ms": 11
  },
  {
   "key": "questions.parallel-limit",
@@ -1239,6 +1239,6 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 53
+  "ms": 47
  }
 ]

@@ -15,7 +15,7 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 73
+  "ms": 75
  },
  {
   "key": "admins.super-self-delete",
@@ -33,6 +33,6 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 80
+  "ms": 82
  }
 ]

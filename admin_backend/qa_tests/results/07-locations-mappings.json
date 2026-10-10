@@ -35,7 +35,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 7
+  "ms": 5
  },
  {
   "key": "centres.region-zone-mismatch",
@@ -53,7 +53,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 14
+  "ms": 11
  },
  {
   "key": "centres.dup-code",
@@ -71,7 +71,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 8
+  "ms": 6
  },
  {
   "key": "centres.dup-code-case",
@@ -89,7 +89,7 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 9
+  "ms": 8
  },
  {
   "key": "centres.seats-vs-labs",
@@ -109,7 +109,7 @@
   "field": "seats",
   "rule": "<= centre seats",
   "leaks": "No",
-  "ms": 12
+  "ms": 9
  },
  {
   "key": "labs.huge-seats",
@@ -129,7 +129,7 @@
   "field": "seats",
   "rule": "Max int4",
   "leaks": "No",
-  "ms": 7
+  "ms": 6
  },
  {
   "key": "zones.delete-in-use",
@@ -147,7 +147,7 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 20
+  "ms": 16
  },
  {
   "key": "centres.delete-in-use",
@@ -165,7 +165,7 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 75
+  "ms": 69
  },
  {
   "key": "cu.create.default-password",
@@ -183,7 +183,7 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 126
+  "ms": 114
  },
  {
   "key": "cu.list",
@@ -201,7 +201,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 7
+  "ms": 4
  },
  {
   "key": "cu.other-tenant-centre",
@@ -237,7 +237,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 60
+  "ms": 57
  },
  {
   "key": "cu.me",
@@ -255,7 +255,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 5
+  "ms": 4
  },
  {
   "key": "cu.no-features",
@@ -274,7 +274,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 3
+  "ms": 2
  },
  {
   "key": "cu.deactivated",
@@ -292,7 +292,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 140
+  "ms": 122
  },
  {
   "key": "events.closing-before-opening",
@@ -312,7 +312,7 @@
   "field": "eventClosingAt",
   "rule": "> eventOpeningAt",
   "leaks": "No",
-  "ms": 5
+  "ms": 3
  },
  {
   "key": "events.dup-code",
@@ -330,7 +330,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 21
+  "ms": 9
  },
  {
   "key": "events.instruction-after-close",
@@ -350,7 +350,7 @@
   "field": "instructionAt",
   "rule": "Within window",
   "leaks": "No",
-  "ms": 7
+  "ms": 4
  },
  {
   "key": "sessions.code",
@@ -368,7 +368,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 7
+  "ms": 6
  },
  {
   "key": "sessions.same-day",
@@ -388,7 +388,7 @@
   "field": "endDate",
   "rule": ">= startDate",
   "leaks": "No",
-  "ms": 5
+  "ms": 4
  },
  {
   "key": "sessions.parallel-codes",
@@ -406,7 +406,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 31
+  "ms": 16
  },
  {
   "key": "companies.parallel-codes",
@@ -424,7 +424,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 74
+  "ms": 64
  },
  {
   "key": "tcm.assign-groups",
@@ -442,7 +442,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 14
+  "ms": 10
  },
  {
   "key": "tcm.assign-groups-again",
@@ -460,7 +460,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 8
+  "ms": 7
  },
  {
   "key": "tcm.assign-inactive",
@@ -478,7 +478,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 98
+  "ms": 76
  },
  {
   "key": "tcm.assign-email",
@@ -496,7 +496,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 23
+  "ms": 22
  },
  {
   "key": "tcm.assign-email-unknown",
@@ -514,7 +514,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 7
+  "ms": 5
  },
  {
   "key": "tcm.assign-email-other-tenant",
@@ -526,13 +526,13 @@
   "expectedStatus": "404",
   "expected": "404 Candidate not found",
   "actualStatus": "404",
-  "actual": "Candidate not found: onlyb.mv2s8sne203@qa.test",
+  "actual": "Candidate not found: onlyb.mv2upayz906@qa.test",
   "status": "Pass",
   "evidence": "qa_tests/specs/07-locations-mappings.qa.spec.ts",
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 73
+  "ms": 66
  },
  {
   "key": "tcm.candidate-not-in-group",
@@ -552,7 +552,7 @@
   "field": "groupId",
   "rule": "Candidate in group",
   "leaks": "No",
-  "ms": 21
+  "ms": 15
  },
  {
   "key": "tcm.result-overflow",
@@ -572,7 +572,7 @@
   "field": "result",
   "rule": "Max 999.99",
   "leaks": "No",
-  "ms": 10
+  "ms": 11
  },
  {
   "key": "tcm.percentage-over-100",
@@ -592,7 +592,7 @@
   "field": "percentage",
   "rule": "0-100",
   "leaks": "No",
-  "ms": 10
+  "ms": 11
  },
  {
   "key": "tcm.answers-gt-attempted",
@@ -612,7 +612,7 @@
   "field": "correctAnswers",
   "rule": "correct+wrong <= attempted",
   "leaks": "No",
-  "ms": 12
+  "ms": 11
  },
  {
   "key": "tcm.completed-before-started",
@@ -632,7 +632,7 @@
   "field": "completedAt",
   "rule": "> startedAt",
   "leaks": "No",
-  "ms": 14
+  "ms": 16
  },
  {
   "key": "tcm.move-test",
@@ -650,7 +650,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 36
+  "ms": 31
  },
  {
   "key": "tcm.list",
@@ -668,7 +668,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 10
+  "ms": 11
  },
  {
   "key": "ccm.dup",
@@ -686,7 +686,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 6
+  "ms": 5
  },
  {
   "key": "ccm.two-centres-same-day",
@@ -706,7 +706,7 @@
   "field": "examDate",
   "rule": "One centre per day",
   "leaks": "No",
-  "ms": 21
+  "ms": 16
  },
  {
   "key": "ccm.past-date",
@@ -746,6 +746,6 @@
   "field": "examDate",
   "rule": "Real date",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  }
 ]

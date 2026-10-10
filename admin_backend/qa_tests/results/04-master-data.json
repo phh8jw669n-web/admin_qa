@@ -15,7 +15,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 8
+  "ms": 7
  },
  {
   "key": "languages.crud.list",
@@ -51,7 +51,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 10
+  "ms": 4
  },
  {
   "key": "languages.crud.get",
@@ -87,7 +87,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 6
+  "ms": 8
  },
  {
   "key": "languages.crud.get-after-update",
@@ -123,7 +123,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 5
+  "ms": 11
  },
  {
   "key": "languages.crud.duplicate-case",
@@ -161,7 +161,7 @@
   "field": "name",
   "rule": "Max length",
   "leaks": "No",
-  "ms": 4
+  "ms": 6
  },
  {
   "key": "languages.crud.unicode",
@@ -179,7 +179,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 11
  },
  {
   "key": "languages.crud.html",
@@ -197,7 +197,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 8
  },
  {
   "key": "languages.crud.null-byte",
@@ -215,7 +215,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "languages.crud.delete",
@@ -233,7 +233,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 5
  },
  {
   "key": "languages.crud.get-deleted",
@@ -269,7 +269,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 6
  },
  {
   "key": "difficulties.crud.create",
@@ -287,7 +287,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 9
+  "ms": 11
  },
  {
   "key": "difficulties.crud.list",
@@ -305,7 +305,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 6
+  "ms": 7
  },
  {
   "key": "difficulties.crud.search",
@@ -341,7 +341,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 6
+  "ms": 7
  },
  {
   "key": "difficulties.crud.update",
@@ -359,7 +359,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 7
+  "ms": 10
  },
  {
   "key": "difficulties.crud.get-after-update",
@@ -377,7 +377,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 5
  },
  {
   "key": "difficulties.crud.duplicate",
@@ -413,7 +413,7 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 6
+  "ms": 7
  },
  {
   "key": "difficulties.crud.long-name",
@@ -433,7 +433,7 @@
   "field": "name",
   "rule": "Max length",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "difficulties.crud.unicode",
@@ -451,7 +451,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 6
+  "ms": 9
  },
  {
   "key": "difficulties.crud.html",
@@ -469,7 +469,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 6
+  "ms": 7
  },
  {
   "key": "difficulties.crud.null-byte",
@@ -505,7 +505,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 5
+  "ms": 4
  },
  {
   "key": "difficulties.crud.get-deleted",
@@ -595,7 +595,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 5
  },
  {
   "key": "categories.crud.get",
@@ -667,7 +667,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 5
+  "ms": 4
  },
  {
   "key": "categories.crud.duplicate-case",
@@ -685,7 +685,7 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 6
+  "ms": 5
  },
  {
   "key": "categories.crud.long-name",
@@ -759,7 +759,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 3
+  "ms": 5
  },
  {
   "key": "categories.crud.delete",
@@ -777,7 +777,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 5
+  "ms": 6
  },
  {
   "key": "categories.crud.get-deleted",
@@ -795,7 +795,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 4
+  "ms": 8
  },
  {
   "key": "categories.crud.reuse-name",
@@ -813,7 +813,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 5
+  "ms": 8
  },
  {
   "key": "subjects.crud.create",
@@ -831,7 +831,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 6
+  "ms": 7
  },
  {
   "key": "subjects.crud.list",
@@ -849,7 +849,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 6
  },
  {
   "key": "subjects.crud.search",
@@ -867,7 +867,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 5
  },
  {
   "key": "subjects.crud.get",
@@ -885,7 +885,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 5
  },
  {
   "key": "subjects.crud.update",
@@ -903,7 +903,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 6
+  "ms": 10
  },
  {
   "key": "subjects.crud.get-after-update",
@@ -921,7 +921,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 7
  },
  {
   "key": "subjects.crud.duplicate",
@@ -939,7 +939,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 7
+  "ms": 5
  },
  {
   "key": "subjects.crud.duplicate-case",
@@ -957,7 +957,7 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 6
+  "ms": 13
  },
  {
   "key": "subjects.crud.long-name",
@@ -995,7 +995,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 5
+  "ms": 6
  },
  {
   "key": "subjects.crud.html",
@@ -1013,7 +1013,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 5
  },
  {
   "key": "subjects.crud.null-byte",
@@ -1067,7 +1067,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "subjects.crud.reuse-name",
@@ -1085,7 +1085,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 6
  },
  {
   "key": "topics.crud.create",
@@ -1139,7 +1139,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 5
+  "ms": 4
  },
  {
   "key": "topics.crud.get",
@@ -1229,7 +1229,7 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 6
+  "ms": 5
  },
  {
   "key": "topics.crud.long-name",
@@ -1249,7 +1249,7 @@
   "field": "name",
   "rule": "Max length",
   "leaks": "No",
-  "ms": 4
+  "ms": 5
  },
  {
   "key": "topics.crud.unicode",
@@ -1267,7 +1267,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 5
  },
  {
   "key": "topics.crud.html",
@@ -1285,7 +1285,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 5
  },
  {
   "key": "topics.crud.null-byte",
@@ -1303,7 +1303,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "topics.crud.delete",
@@ -1411,7 +1411,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 3
+  "ms": 5
  },
  {
   "key": "instructions.crud.get",
@@ -1429,7 +1429,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "instructions.crud.update",
@@ -1483,7 +1483,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 4
+  "ms": 5
  },
  {
   "key": "instructions.crud.duplicate-case",
@@ -1521,7 +1521,7 @@
   "field": "name",
   "rule": "Max length",
   "leaks": "No",
-  "ms": 4
+  "ms": 5
  },
  {
   "key": "instructions.crud.unicode",
@@ -1539,7 +1539,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 7
+  "ms": 6
  },
  {
   "key": "instructions.crud.html",
@@ -1557,7 +1557,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 5
+  "ms": 7
  },
  {
   "key": "instructions.crud.null-byte",
@@ -1575,7 +1575,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 4
+  "ms": 3
  },
  {
   "key": "instructions.crud.delete",
@@ -1611,7 +1611,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "instructions.crud.reuse-name",
@@ -1665,7 +1665,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 6
  },
  {
   "key": "groups.crud.search",
@@ -1683,7 +1683,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "groups.crud.get",
@@ -1701,7 +1701,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "groups.crud.update",
@@ -1719,7 +1719,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 5
+  "ms": 7
  },
  {
   "key": "groups.crud.get-after-update",
@@ -1737,7 +1737,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "groups.crud.duplicate",
@@ -1755,7 +1755,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 6
+  "ms": 4
  },
  {
   "key": "groups.crud.duplicate-case",
@@ -1811,7 +1811,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 5
  },
  {
   "key": "groups.crud.html",
@@ -1847,7 +1847,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "groups.crud.delete",
@@ -1865,7 +1865,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 5
+  "ms": 4
  },
  {
   "key": "groups.crud.get-deleted",
@@ -1921,7 +1921,7 @@
   "field": "page",
   "rule": "Min 1",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "page.negative-limit",
@@ -1961,7 +1961,7 @@
   "field": "limit",
   "rule": "Integer",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "page.decimal",
@@ -1981,7 +1981,7 @@
   "field": "page",
   "rule": "Integer",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "page.far",
@@ -1999,7 +1999,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 5
  },
  {
   "key": "page.huge-page",
@@ -2017,7 +2017,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 6
  },
  {
   "key": "page.unknown-param",
@@ -2037,7 +2037,7 @@
   "field": "sort",
   "rule": "Whitelist",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "page.ranking-negative",
@@ -2097,7 +2097,7 @@
   "field": "ranking",
   "rule": "Max int4",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "page.ranking-string",
@@ -2117,7 +2117,7 @@
   "field": "ranking",
   "rule": "Integer",
   "leaks": "No",
-  "ms": 7
+  "ms": 5
  },
  {
   "key": "page.ranking-dup",
@@ -2153,7 +2153,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "difficulty.status",
@@ -2171,7 +2171,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 7
+  "ms": 8
  },
  {
   "key": "difficulty.status-restore",
@@ -2189,7 +2189,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 8
+  "ms": 9
  },
  {
   "key": "boolean.string-false",
@@ -2209,7 +2209,7 @@
   "field": "isActive",
   "rule": "Boolean type (implicit conversion makes \"false\" true)",
   "leaks": "No",
-  "ms": 9
+  "ms": 11
  },
  {
   "key": "language.delete-in-use",
@@ -2227,7 +2227,7 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 16
+  "ms": 50
  },
  {
   "key": "category.delete-in-use",
@@ -2245,7 +2245,7 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 19
+  "ms": 23
  },
  {
   "key": "instruction.delete-in-use",
@@ -2263,7 +2263,7 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 17
+  "ms": 21
  },
  {
   "key": "group.delete-in-use",
@@ -2299,7 +2299,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 9
+  "ms": 7
  },
  {
   "key": "topics.by-subject",
@@ -2317,7 +2317,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 8
+  "ms": 7
  },
  {
   "key": "cst.duplicate",
@@ -2335,7 +2335,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 6
+  "ms": 7
  },
  {
   "key": "cst.other-tenant",
@@ -2407,7 +2407,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 4
+  "ms": 3
  },
  {
   "key": "il.xss-content",
@@ -2425,7 +2425,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 11
+  "ms": 12
  },
  {
   "key": "il.huge-content",
@@ -2443,6 +2443,6 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 35
+  "ms": 19
  }
 ]

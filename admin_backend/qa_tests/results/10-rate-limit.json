@@ -15,7 +15,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 629
+  "ms": 583
  },
  {
   "key": "throttle.refresh",
@@ -33,7 +33,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 64
+  "ms": 62
  },
  {
   "key": "throttle.proxy",
@@ -51,6 +51,6 @@
   "shouldAllow": "Yes",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 5
+  "ms": 2
  }
 ]

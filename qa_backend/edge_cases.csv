@@ -1,5 +1,5 @@
 Edge Case ID,Module,Endpoint,Scenario,Input,Expected Behaviour,Actual Behaviour,Status,Severity,Bug ID
-BE-EC-001,Auth,POST /api/v1/auth/login,Email in upper case with spaces,"{""email"":"" ADMIN.AMV2S7YZ1@QA.TEST ""}",200 login works,200 Logged in successfully,Pass,N/A,N/A
+BE-EC-001,Auth,POST /api/v1/auth/login,Email in upper case with spaces,"{""email"":"" ADMIN.AMV2UOYVG@QA.TEST ""}",200 login works,200 Logged in successfully,Pass,N/A,N/A
 BE-EC-002,Auth,POST /api/v1/auth/refresh,"Admin logs in on laptop then on phone, laptop refreshes",N/A,Each device keeps its own refresh token,401 Invalid refresh token,Fail,Medium,BE-BUG-034
 BE-EC-003,Auth,GET /api/v1/auth/me,"Header ""bearer <token>"" in lower case",N/A,200 (RFC 7235: auth scheme is case-insensitive),401 Please sign in to continue,Fail,Low,BE-BUG-052
 BE-EC-004,Companies,POST /api/v1/super-admin/companies,Workspace URL already used by company A,N/A,409 This workspace URL is already in use,409 This workspace URL is already in use,Pass,N/A,N/A
@@ -12,7 +12,7 @@ BE-EC-010,Companies,DELETE /api/v1/super-admin/companies/:id,Second delete,N/A,4
 BE-EC-011,Companies,PATCH /api/v1/companies/:id,GST of another company,N/A,409 This GST number is already in use,409 This GST number is already in use,Pass,N/A,N/A
 BE-EC-012,Admins,POST /api/v1/admins,Email of admin A,N/A,409 This email is already in use for this company,409 This email is already in use for this company,Pass,N/A,N/A
 BE-EC-013,Admins,GET /api/v1/admins,isActive=false,N/A,200 only inactive admins,200 Admins fetched successfully,Pass,N/A,N/A
-BE-EC-014,Templates,POST /api/v1/super-admin/templates,Same ranking again,N/A,409 Ranking is already in use,409 Ranking 2649355 is already in use,Pass,N/A,N/A
+BE-EC-014,Templates,POST /api/v1/super-admin/templates,Same ranking again,N/A,409 Ranking is already in use,409 Ranking 2382939 is already in use,Pass,N/A,N/A
 BE-EC-015,Languages,GET /api/v1/languages/:id,Read right after rename,N/A,200 with new name,200 Language fetched successfully,Pass,N/A,N/A
 BE-EC-016,Languages,POST /api/v1/languages,Same name twice,N/A,409 already exists,409 A language with this name already exists,Pass,N/A,N/A
 BE-EC-017,Languages,POST /api/v1/languages,Same name in UPPER case,N/A,409 already exists (names should be case-insensitive),201 Language created successfully,Fail,Low,BE-BUG-044

@@ -5,7 +5,7 @@
   "module": "Auth",
   "endpoint": "POST /api/v1/auth/login",
   "scenario": "Valid company token, email and password",
-  "request": "{\"email\":\"admin.amv2s7yz1@qa.test\",\"password\":\"***\",\"companyToken\":\"<A>\"}",
+  "request": "{\"email\":\"admin.amv2uoyvg@qa.test\",\"password\":\"***\",\"companyToken\":\"<A>\"}",
   "expectedStatus": "200",
   "expected": "200 with access and refresh token",
   "actualStatus": "200",
@@ -15,7 +15,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 62
+  "ms": 61
  },
  {
   "key": "auth.login.case",
@@ -23,7 +23,7 @@
   "module": "Auth",
   "endpoint": "POST /api/v1/auth/login",
   "scenario": "Email in upper case with spaces",
-  "request": "{\"email\":\"  ADMIN.AMV2S7YZ1@QA.TEST  \"}",
+  "request": "{\"email\":\"  ADMIN.AMV2UOYVG@QA.TEST  \"}",
   "expectedStatus": "200",
   "expected": "200 login works",
   "actualStatus": "200",
@@ -33,7 +33,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 63
+  "ms": 59
  },
  {
   "key": "auth.login.wrong-password",
@@ -41,7 +41,7 @@
   "module": "Auth",
   "endpoint": "POST /api/v1/auth/login",
   "scenario": "Correct email, wrong password",
-  "request": "{\"email\":\"fresh.wrongpw.1791660206080@qa.test\",\"password\":\"Wrong@12345\"}",
+  "request": "{\"email\":\"fresh.wrongpw.1791664358115@qa.test\",\"password\":\"Wrong@12345\"}",
   "expectedStatus": "401",
   "expected": "401 Invalid email or password",
   "actualStatus": "401",
@@ -51,7 +51,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 59
+  "ms": 61
  },
  {
   "key": "auth.login.unknown-email",
@@ -69,7 +69,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 60
+  "ms": 57
  },
  {
   "key": "auth.login.wrong-tenant",
@@ -87,7 +87,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 58
+  "ms": 57
  },
  {
   "key": "auth.login.super-via-company",
@@ -123,7 +123,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 3
+  "ms": 4
  },
  {
   "key": "auth.login.short-password",
@@ -143,7 +143,7 @@
   "field": "password",
   "rule": "MinLength 8",
   "leaks": "No",
-  "ms": 3
+  "ms": 2
  },
  {
   "key": "auth.login.inactive-enumeration",
@@ -161,7 +161,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 61
+  "ms": 59
  },
  {
   "key": "auth.default-password",
@@ -179,7 +179,7 @@
   "shouldAllow": "No",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 59
+  "ms": 57
  },
  {
   "key": "auth.me.ok",
@@ -197,7 +197,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 11
+  "ms": 5
  },
  {
   "key": "auth.refresh.ok",
@@ -215,7 +215,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 6
+  "ms": 5
  },
  {
   "key": "auth.refresh.reuse",
@@ -233,7 +233,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 3
+  "ms": 2
  },
  {
   "key": "auth.refresh.status-code",
@@ -251,7 +251,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 6
+  "ms": 4
  },
  {
   "key": "auth.refresh.single-session",
@@ -287,7 +287,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 6
+  "ms": 5
  },
  {
   "key": "auth.logout.access-revoked",
@@ -305,7 +305,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 3
+  "ms": 2
  },
  {
   "key": "auth.logout.refresh-revoked",
@@ -413,7 +413,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 7
+  "ms": 1
  },
  {
   "key": "auth.token.escalation",
@@ -449,7 +449,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 1
+  "ms": 2
  },
  {
   "key": "auth.token.scheme-case",
@@ -504,7 +504,7 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 3
+  "ms": 5
  },
  {
   "key": "auth.lockout.dos",
@@ -522,7 +522,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 2
+  "ms": 3
  },
  {
   "key": "auth.lockout.cross-tenant",
@@ -540,7 +540,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 3
+  "ms": 2
  },
  {
   "key": "auth.candidate-lockout.cross-tenant",
@@ -576,7 +576,7 @@
   "shouldAllow": "Yes",
   "wasAllowed": "Yes",
   "leaks": "No",
-  "ms": 58
+  "ms": 59
  },
  {
   "key": "sa.login.company-admin",
@@ -612,6 +612,6 @@
   "shouldAllow": "No",
   "wasAllowed": "No",
   "leaks": "No",
-  "ms": 56
+  "ms": 57
  }
 ]
