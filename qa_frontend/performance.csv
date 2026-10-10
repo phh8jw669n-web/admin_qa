@@ -1,9 +1,9 @@
 Perf ID,Page/Area,Metric,Measured Value,Target Value,Problem,Suggested Fix,Priority
-FE-PERF-001,Workspace login,"Login page timings (Vite dev, unbundled)","{""domContentLoaded"":610,""load"":613,""fcp"":652,""requests"":202,""jsRequests"":201,""transferKB"":19260}",FCP < 1800 ms,OK,None needed,P3
-FE-PERF-002,Test Manager list,Time until first row shows,448 ms,< 1000 ms,OK,None needed,P3
-FE-PERF-003,Test Manager list,Test list on Slow 3G (production build),9134 ms,< 10 s to first row,OK,None needed,P3
-FE-PERF-004,/w/:slug/test-manager,Requests needed to show the list,"50 sequential GET /tests calls, 2425 ms until settled",1 request per page shown (server pagination),Slower than target,Server-side pagination: pass page/limit from the table to the API and use metadata.total,P2
-FE-PERF-005,Workspace login,"Login page timings (production build, vite preview, localhost)","{""domContentLoaded"":133,""load"":134,""fcp"":148,""requests"":3,""jsRequests"":1,""transferKB"":371}",FCP < 1800 ms,OK,None needed,P3
+FE-PERF-001,Workspace login,"Login page timings (Vite dev, unbundled)","{""domContentLoaded"":486,""load"":488,""fcp"":520,""requests"":202,""jsRequests"":201,""transferKB"":19260}",FCP < 1800 ms,OK,None needed,P3
+FE-PERF-002,Test Manager list,Time until first row shows,387 ms,< 1000 ms,OK,None needed,P3
+FE-PERF-003,Workspace login,"Login page timings (production build, vite preview, localhost)","{""domContentLoaded"":134,""load"":135,""fcp"":168,""requests"":3,""jsRequests"":1,""transferKB"":371}",FCP < 1800 ms,OK,None needed,P3
+FE-PERF-004,Test Manager list,Test list on Slow 3G (production build),9118 ms,< 10 s to first row,OK,None needed,P3
+FE-PERF-005,/w/:slug/test-manager,Requests needed to show the list,"50 sequential GET /tests calls, 2527 ms until settled",1 request per page shown (server pagination),Slower than target,Server-side pagination: pass page/limit from the table to the API and use metadata.total,P2
 FE-PERF-006,Bundle: index-CXWO4O0t.css,Production asset size (vite build),57.80 kB (14.50 kB gzip),< 500 kB raw / < 170 kB gzip per chunk,OK,None needed,P3
 FE-PERF-007,Bundle: ckeditor-instance-DMEpidyv.css,Production asset size (vite build),218.92 kB (34.30 kB gzip),< 500 kB raw / < 170 kB gzip per chunk,OK,None needed,P3
 FE-PERF-008,Bundle: ckeditor-instance-CcgKAa6c.js,Production asset size (vite build),"1,165.02 kB (303.25 kB gzip)",< 500 kB raw / < 170 kB gzip per chunk,Too large,Code-split routes and lazy-load CKEditor,P2

@@ -9,4 +9,4 @@ FE-TC-023,Test Manager list,GET /tests (mocked 401),error,Redirect to login with
 FE-TC-024,Companies page,GET /super-admin/companies (mocked 500),error,Error message,Companies Manage platform companies. Create Company Request failed with status code 500,Pass,N/A
 FE-TC-028,Workspaces page,GET /workspaces,success,"List of workspaces, or an error message if loading fails",GET /workspaces -> 404; cards=0; error text shown=false,Fail,FE-BUG-014
 FE-TC-042,Import Tests dialog,POST /tests/import-qti,success,Test imported,"POST /tests/import-qti -> 404; toast """"",Fail,FE-BUG-016
-FE-TC-055,/w/:slug/test-manager/wizard/step-1 (template picker),N/A,success,"Each template card shows a placeholder, no endless spinner","16 cards, 0 spinners after 10 s; download-url calls: 2 (503)",Pass,N/A
+FE-TC-055,/w/:slug/test-manager/wizard/step-1 (template picker),N/A,success,"Each template card shows a placeholder, no endless spinner","18 cards, 0 spinners after 10 s; download-url calls: 2 (503)",Pass,N/A
