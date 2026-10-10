@@ -1,0 +1,33 @@
+import path from 'path'
+import { fileURLToPath } from 'url'
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+const rootDir = path.dirname(fileURLToPath(import.meta.url))
+const API_PROXY_TARGET = 'http://35.154.32.169:3000'
+
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+  resolve: {
+    alias: {
+      '@': path.resolve(rootDir, './src'),
+    },
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: API_PROXY_TARGET,
+        changeOrigin: true,
+      },
+    },
+  },
+  preview: {
+    proxy: {
+      '/api': {
+        target: API_PROXY_TARGET,
+        changeOrigin: true,
+      },
+    },
+  },
+})

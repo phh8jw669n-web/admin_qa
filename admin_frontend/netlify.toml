@@ -1,0 +1,15 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Same target as Vite's /api proxy in vite.config.ts
+[[redirects]]
+  from = "/api/*"
+  to = "http://35.154.32.169:3000/api/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

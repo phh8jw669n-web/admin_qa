@@ -1,0 +1,78 @@
+.ck.ck-editor {
+  --ck-border-radius: 0;
+  --ck-color-base-border: #d1d5db;
+  --ck-color-toolbar-background: #f8f8f8;
+  --ck-color-toolbar-border: #d1d5db;
+  --ck-focus-ring: 1px solid var(--primary);
+  --ck-inner-shadow: none;
+}
+
+.dark .ck.ck-editor {
+  --ck-color-base-border: #334155;
+  --ck-color-toolbar-background: #1e293b;
+  --ck-color-toolbar-border: #334155;
+  --ck-color-base-background: #0f172a;
+  --ck-color-text: #f8fafc;
+}
+
+.rich-text-editor {
+  overflow: hidden;
+  border: 1px solid var(--border, #d1d5db);
+  background: var(--card, #fff);
+}
+
+.rich-text-editor .ck.ck-editor {
+  width: 100%;
+}
+
+.rich-text-editor .ck.ck-toolbar {
+  border: 0;
+  border-bottom: 1px solid var(--ck-color-base-border);
+  background: var(--ck-color-toolbar-background);
+}
+
+.rich-text-editor .ck.ck-editor__top .ck-sticky-panel .ck-sticky-panel__content,
+.rich-text-editor .ck.ck-editor__main > .ck-editor__editable {
+  border: 0;
+  box-shadow: none;
+}
+
+.rich-text-editor .ck.ck-editor__main > .ck-editor__editable {
+  min-height: var(--rte-min-height, 16rem);
+}
+
+.rich-text-editor .ck-content .image {
+  display: table;
+  clear: both;
+  margin: 0.9em auto;
+  min-width: 50px;
+}
+
+.rich-text-editor .ck-content img {
+  max-width: 100%;
+}
+
+.rich-text-editor .ck.ck-editor__editable.ck-focused {
+  box-shadow: none;
+}
+
+.rich-text-editor__status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border-top: 1px solid var(--border, #d1d5db);
+  background: #fafafa;
+  padding: 0.15rem 0.5rem;
+  font-size: 11px;
+  color: var(--muted-foreground, #6b7280);
+}
+
+.dark .rich-text-editor__status {
+  background: #1e293b;
+}
+
+.rich-text-editor__status .ck-word-count {
+  display: flex;
+  gap: 0.75rem;
+}
