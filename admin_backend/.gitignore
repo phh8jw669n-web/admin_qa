@@ -40,3 +40,7 @@ lerna-debug.log*
 
 # temp
 README.md.bak
+
+# QA fixtures (contains short-lived test tokens)
+qa_tests/.fixtures.json
+dump.rdb

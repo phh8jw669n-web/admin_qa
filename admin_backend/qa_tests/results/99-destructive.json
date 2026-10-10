@@ -1,0 +1,38 @@
+[
+ {
+  "key": "admins.super-self-deactivate",
+  "category": "security",
+  "module": "Admins",
+  "endpoint": "PUT /api/v1/admins/:id",
+  "scenario": "id = own super admin id, isActive=false",
+  "request": "N/A",
+  "expectedStatus": "400 or 403",
+  "expected": "400/403 cannot change or lock out the platform owner",
+  "actualStatus": "200",
+  "actual": "Admin updated successfully",
+  "status": "Fail",
+  "evidence": "qa_tests/specs/99-destructive.qa.spec.ts",
+  "shouldAllow": "No",
+  "wasAllowed": "Yes",
+  "leaks": "No",
+  "ms": 73
+ },
+ {
+  "key": "admins.super-self-delete",
+  "category": "security",
+  "module": "Admins",
+  "endpoint": "DELETE /api/v1/admins/:id",
+  "scenario": "id = own super admin id",
+  "request": "N/A",
+  "expectedStatus": "400 or 403 or 401",
+  "expected": "400/403 cannot delete the last super admin",
+  "actualStatus": "200",
+  "actual": "Admin deleted successfully",
+  "status": "Fail",
+  "evidence": "qa_tests/specs/99-destructive.qa.spec.ts",
+  "shouldAllow": "No",
+  "wasAllowed": "Yes",
+  "leaks": "No",
+  "ms": 80
+ }
+]

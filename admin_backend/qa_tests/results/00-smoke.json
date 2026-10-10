@@ -1,0 +1,38 @@
+[
+ {
+  "key": "health.ok",
+  "category": "api",
+  "module": "Health",
+  "endpoint": "GET /api/v1/health",
+  "scenario": "Health check with DB and Redis up",
+  "request": "N/A",
+  "expectedStatus": "200",
+  "expected": "200 with database and redis status up",
+  "actualStatus": "200",
+  "actual": "Health check passed successfully",
+  "status": "Pass",
+  "evidence": "qa_tests/specs/00-smoke.qa.spec.ts",
+  "shouldAllow": "Yes",
+  "wasAllowed": "Yes",
+  "leaks": "No",
+  "ms": 3
+ },
+ {
+  "key": "root.ok",
+  "category": "api",
+  "module": "Health",
+  "endpoint": "GET /api/v1",
+  "scenario": "Root welcome message",
+  "request": "N/A",
+  "expectedStatus": "200",
+  "expected": "200 with welcome message",
+  "actualStatus": "200",
+  "actual": "Hello, welcome to the CBT admin backend",
+  "status": "Pass",
+  "evidence": "qa_tests/specs/00-smoke.qa.spec.ts",
+  "shouldAllow": "Yes",
+  "wasAllowed": "Yes",
+  "leaks": "No",
+  "ms": 1
+ }
+]
